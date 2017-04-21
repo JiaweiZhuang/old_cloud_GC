@@ -35,10 +35,16 @@ Modify hemcoDataDownload.rc:
 Your HEMCO data path   | /home/ubuntu/gcdata/HEMCO
 comment out
 #NEI2011 regional anthro/biof  | $ROOT/NEI2011/v2015-03
-#GMI strat chem mechanism      | $ROOT/GMI/v2015-02
 to save space
 
 run with
 $nohup ./hemcoDataDownload.pl &
 
-Also in HEMCO_Config.rc turn off NEI2011
+In HEMCO_Config.rc turn off NEI2011
+
+also turn off those new data set that are not downloaded by default 
+POET
+DECAYING_PLANTS 
+
+Transfer the missing seaflux data from Odyssey:
+/net/seasasfs01/srv/export/seasasfs01/share_root/gcgrid/gcdata/ExtData/HEMCO/ALD2

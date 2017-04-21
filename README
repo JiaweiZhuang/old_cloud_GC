@@ -12,7 +12,7 @@ $git clone https://bitbucket.org/gcst/ut_bleeding_edge.git
 $git checkout Dev
 
 modify CopyRunDirs.input:
-DATA_ROOT      : /home/ubuntu/gcdata
+DATA_ROOT      : /home/ubuntu/gcdata/ExtData
 UNIT_TEST_ROOT : /home/ubuntu/GCv11-02/ut_bleeding_edg
 COPY_PATH      : /home/ubuntu/GCv11-02/
 
@@ -28,4 +28,16 @@ ifeq ($(COMPILER),gfortran-6)
 But there's still some error
 
 # === download HEMCO data for GCv11
-git clone https://bitbucket.org/gcst/hemco_data_download.git
+$git clone https://bitbucket.org/gcst/hemco_data_download.git
+
+Modify hemcoDataDownload.rc:
+Your HEMCO data path   | /home/ubuntu/gcdata/HEMCO
+comment out
+#NEI2011 regional anthro/biof  | $ROOT/NEI2011/v2015-03
+#GMI strat chem mechanism      | $ROOT/GMI/v2015-02
+to save space
+
+run with
+$nohup ./hemcoDataDownload.pl &
+
+Also in HEMCO_Config.rc turn off NEI2011

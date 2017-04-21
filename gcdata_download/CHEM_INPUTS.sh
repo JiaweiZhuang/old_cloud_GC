@@ -4,7 +4,7 @@
 # http://wiki.seas.harvard.edu/geos-chem/index.php/Setting_up_the_ExtData_directory#Creating_the_ExtData_directory_structure
 
 # Assume that parent dir is already created
-cd /home/ubuntu/gcdata/CHEM_INPUTS 
+cd /home/ubuntu/gcdata/ExtData/CHEM_INPUTS 
 
 # different from downloading HEMCO data, here only need to cut the first 3 dir components
 wget -r -nH --cut-dirs=3 "ftp://ftp.as.harvard.edu/gcgrid/data/GEOS_NATIVE/FastJ_201204"

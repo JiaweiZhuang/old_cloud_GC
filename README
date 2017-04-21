@@ -1,10 +1,22 @@
 Trying to set up GEOS-Chem on Amazon EC2 cloud computing platform
 
 # === for the latest v11-02-Dev
+for source code:
 $git clone https://bitbucket.org/gcst/gc_bleeding_edge.git
 $git checkout Dev
 $make MET=geos-fp GRID=4x5
 It compiles smoothly
+
+for run directory:
+$git clone https://bitbucket.org/gcst/ut_bleeding_edge.git
+$git checkout Dev
+
+modify CopyRunDirs.input:
+DATA_ROOT      : /home/ubuntu/gcdata
+UNIT_TEST_ROOT : /home/ubuntu/GCv11-02/ut_bleeding_edg
+COPY_PATH      : /home/ubuntu/GCv11-02/
+
+It runs until reading data
 
 # === for the public-release v11-01
 To compile with gfortran-6:
@@ -14,3 +26,6 @@ to
 ifeq ($(COMPILER),gfortran-6)
 
 But there's still some error
+
+# === download HEMCO data for GCv11
+git clone https://bitbucket.org/gcst/hemco_data_download.git

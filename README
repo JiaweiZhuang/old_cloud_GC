@@ -1,8 +1,16 @@
 Trying to set up GEOS-Chem on Amazon EC2 cloud computing platform
 
+# === for the latest v11-02-Dev
+$git clone https://bitbucket.org/gcst/gc_bleeding_edge.git
+$git checkout Dev
+$make MET=geos-fp GRID=4x5
+It compiles smoothly
+
+# === for the public-release v11-01
 To compile with gfortran-6:
 in Makefile_header.mk, change
 ifeq ($(COMPILER),gfortran)
 to
 ifeq ($(COMPILER),gfortran-6)
 
+But there's still some error

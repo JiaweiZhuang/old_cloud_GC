@@ -15,9 +15,8 @@ sudo apt install build-essential -y
 # see https://www.scivision.co/install-latest-gfortran-on-ubuntu/
 #==========================
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-sudo apt upgrade -y
+sudo apt update
 sudo apt install gfortran-6 -y
-#sudo apt install gfortran -y
 
 #==========================
 # install pre-compiled netcdf
@@ -30,4 +29,4 @@ sudo apt install gfortran-6 -y
 # for m4 (needed by NetCDF4, not on default ubuntu) 
 # see https://www.howtoinstall.co/en/ubuntu/trusty/m4
 #==========================
-sudo apt-get install m4
+sudo apt-get install m4 -y

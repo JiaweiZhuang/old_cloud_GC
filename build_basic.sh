@@ -7,8 +7,8 @@
 # for gitk and git-gui 
 # use "ssh -Y" to login to allow x11 forwarding 
 #==========================
-sudo apt install git-gui
-sudo apt install gitk
+sudo apt install git-gui -y
+sudo apt install gitk -y
 
 #==========================
 # for gcc5 and GNU make

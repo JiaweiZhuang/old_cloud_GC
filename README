@@ -1,1 +1,8 @@
 Trying to set up GEOS-Chem on Amazon EC2 cloud computing platform
+
+To compile with gfortran-6:
+in Makefile_header.mk, change
+ifeq ($(COMPILER),gfortran)
+to
+ifeq ($(COMPILER),gfortran-6)
+

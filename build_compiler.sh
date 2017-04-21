@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# Install gcc and gfortran on EC2 ubuntu-xenial-16.04 (ami-80861296)
+# Install basic software (including gcc and gfortran) 
+# Tested on EC2 ubuntu-xenial-16.04 (ami-80861296)
+
+#==========================
+# for gitk and git-gui 
+# use "ssh -Y" to login to allow x11 forwarding 
+#==========================
+sudo apt install git-gui
+sudo apt install gitk
 
 #==========================
 # for gcc5 and GNU make
@@ -11,7 +19,7 @@ sudo apt install build-essential -y
 #sudo apt install g++ -y
 
 #==========================
-# for gfortran6/5
+# for gfortran6
 # see https://www.scivision.co/install-latest-gfortran-on-ubuntu/
 #==========================
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y

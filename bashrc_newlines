@@ -1,0 +1,52 @@
+#==========================
+# New lines to be added to .bashrc 
+# Usage
+# $cat bashrc_newlines >> ~/.bashrc
+#==========================
+
+#==========================
+# Finish up NetCDF environment settings after installation
+#==========================
+export PATH=$HOME/local/bin:$PATH
+export NETCDF_HOME=$HOME/local
+export NETCDF_FORTRAN_HOME=$HOME/local
+
+#==========================
+# GEOS-Chem environment variables
+# see http://wiki.seas.harvard.edu/geos-chem/index.php/Setting_Unix_environment_variables_for_GEOS-Chem
+#==========================
+export FC=gfortran-6
+export CC=gcc
+export CXX=g++
+export COMPILER=$FC
+
+# Tell GEOS-Chem where to find netCDF library files
+export GC_BIN=$NETCDF_HOME/bin
+export GC_INCLUDE=$NETCDF_HOME/include
+export GC_LIB=$NETCDF_HOME/lib
+export LD_LIBRARY_PATH=$GC_LIB:$LD_LIBRARY_PATH
+
+# NOTE: If netCDF-Fortran was loaded as a separate module, then
+# also define these variables.  (Otherwise comment these out.)
+export GC_F_BIN=$NETCDF_FORTRAN_HOME/bin
+export GC_F_INCLUDE=$NETCDF_FORTRAN_HOME/include
+export GC_F_LIB=$NETCDF_FORTRAN_HOME/lib
+
+#==========================
+# personal settings
+#==========================
+# auto "ls" after "cd". I can't live without this
+alias cd=cdls
+function cdls() {
+# first do 'cd'
+command cd $@  #'command' ensures we use original 'cd'
+# then do 'ls'
+nfiles=$(ls -1 | wc -l) # how many files
+if [ $nfiles -lt 60 ] # list all files if not too many
+then
+  ls  
+else
+  ls | head -n 4
+  echo $nfiles ' files in total, only list a few'
+fi
+}

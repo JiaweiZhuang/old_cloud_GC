@@ -22,7 +22,7 @@ After entering some basic information, you will be required to enter you credit 
 
 <img src="img/2.png" width="480">
 
-Don't worry, which tutorial will only cost you $0.1 :) <br />
+Don't worry, this tutorial will only cost you $0.1 :) <br />
 
 View the pricing at: <br />
 https://aws.amazon.com/ec2/pricing/

@@ -7,9 +7,7 @@
 cd /home/ubuntu/gcdata/ExtData/
 
 # 4x5x72L fullchem netcdf restart
-wget -r -nH --cut-dirs=3
-"ftp://ftp.as.harvard.edu/gcgrid/data/ExtData/NC_RESTARTS/initial_GEOSChem_rst.4x5_benchmark.nc"
+wget -r -nH --cut-dirs=3 "ftp://ftp.as.harvard.edu/gcgrid/data/ExtData/NC_RESTARTS/initial_GEOSChem_rst.4x5_benchmark.nc"
 
 # this is for timing
-wget -r -nH --cut-dirs=3
-"ftp://ftp.as.harvard.edu/gcgrid/data/ExtData/SPC_RESTARTS/initial_GEOSChem_rst.4x5_standard.nc"
+wget -r -nH --cut-dirs=3 "ftp://ftp.as.harvard.edu/gcgrid/data/ExtData/SPC_RESTARTS/initial_GEOSChem_rst.4x5_standard.nc"

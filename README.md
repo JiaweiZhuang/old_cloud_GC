@@ -105,7 +105,7 @@ Now your own server appears on the cloud!
 
 #### Step 3: log in to the virtual server and run GEOS-Chem
 
-Select your instance, click on the "Connect" button near the "Launch Instance Button", then you should see this page:
+Select your instance, click on the "Connect" button near the blue "Launch Instance" Button, then you should see this page:
 
 <img src="img/9.png" width="480">
 

@@ -292,8 +292,6 @@ Other tutorials beyond this one has almost nothing to do with scientific computi
 
 [3] Consoles are excellent to start with. But as you become familiar with AWS, 
 you might feel using the command line (https://aws.amazon.com/cli) more efficient 
-for managing your cloud servers.
-
-Again, just like any other AWS documents, you are likely to see a lot of information 
+for managing your cloud servers. Again, just like any other AWS documents, you are likely to see a lot of information 
 that is totally unnecessary for a scientist to know, even for a computational scientist.
 

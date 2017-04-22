@@ -1,14 +1,14 @@
 # Cloud-GC
 ## Running the GEOS-Chem CTM on cloud computing platforms
 
-* Run GEOS-Chem without buying local machines -- get a virtual Linux server in the cloud in seconds 
+* Run GEOS-Chem without buying local machines -- get a virtual Linux server on the cloud in seconds 
 * 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model
 * No compilation error anymore-- all software and libraries are pre-installed
 
 (All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
 
 ## Tutorial
-### Actually start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.
+### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.
 
 #### Step 1: sign up an AWS account
 Go to <br />
@@ -52,14 +52,17 @@ I started with a brand new Linux operating system, and built GEOS-Chem
 (and all the necessary software, of course) on it. 
 Then, everyone is able to get a copy of my system, with everything installed correctly.
 
-You have chosen your "software"/"system", now it's time to choose the hardware, mostly about CPUs.
+You have chosen your "software" or "operating system", now it's time to choose the hardware, mostly about CPUs.
+
 In this toy example, choose "Memory optimized"-"r4.large" to test GEOS-Chem with the minimum fee.
 
 <img src="img/6.png" width="480">
 
-There are different numbers and types of CPUs to choose. The free tier  
+There are many CPU options (including numbers and types) to choose. AWS free tier also gives you 750 free hours of "t2.micro", which
+is the tiniest CPU. Its memory is too small to run GEOS-Chem, but it is good for testing library installation.
 
-<br \>
+
+<br />
 
 For the first time of using EC2, you need to create and download a "KeyPair". 
 This is equivalent to the password you enter to ssh to your local server. 
@@ -77,25 +80,50 @@ Use any name you like for that KeyPair - click on "Download Key Pair" - click on
 Log in the run GEOS-Chem
 <img src="img/10.png" width="480">
 
-**Always remember to shut down the instance when you finish the simulation**
+**Very important! Always remember to shut down the instance when you finish the simulation!**
 <img src="img/11.png" width="480">
 
-## Advanced Skills 
+## Advanced Usages 
+
+### Change the underlining hardware while keeping the operating system (software) untouched
 
 ### Use the "Spot Instance" to minimize the cost
 
+https://aws.amazon.com/ec2/spot/spot-and-science/
 
-## Future Plans ann Possible Directions
+<br/><br/><br/>
+## Future Plans and Possible Directions
 
-### Design a long-term, economical workflow.
+#### Update GEOS-Chem source code and post-processing tools 
 
-* Strategy for cheaper and more efficient data storage and sharing in cloud.
+* Make the public release of GEOS-Chem fully compatible with gfortran
+v11-01 is compatible with gfortran5 and v11-02 (in development) works with gfortran6.
 
-* How to handle unexpected shut-down with spot instances while still minimizing the cost?
+* Replace IDL with python, which is free and open-source 
+I developed a python tool(https://bitbucket.org/gcst/gcpy) primarily for GCHP, but we will make it fully compatible with GEOS-Chem classic too.
 
-* May refer to the CESM work: http://www.sciencedirect.com/science/article/pii/S0098300416304721
+It actually requires more change to the GEOS-Chem code than to the python code. 
+Once GEOS-Chem diagnostics are all in NetCDF format instead of bpch format,
+they can be handled by any languages.
 
-### Provide friendly tutorials for more complicated scientific computing tasks
+#### Design a strategy for long-term, economical workflow.
+
+* Cheaper and more efficient data storage and sharing in cloud.
+
+Currently I put all the input data under the root directory, 
+which is convenient for illustration but bad for actual practice. 
+
+Should make use of standalone Amazon Elastic Block Store(EBS) volumes and Simple Storage Service (S3) to store and share
+data.
+
+May refer to the CESM work: http://www.sciencedirect.com/science/article/pii/S0098300416304721
+
+* How to handle unexpected shut-down for spot instances while still minimizing the cost?
+
+Although there's only very little chance for spot instances to shut down, 
+there should be a strategy to ensure the model runs safely.
+
+#### Provide friendly tutorials for more complicated scientific computing tasks
 
 Most of the documents on AWS cloud computing are not for scientists. They are full of computer system jargons.
 They are not like GEOS-Chem wiki where you can often find useful solutions. 
@@ -104,21 +132,37 @@ That's the basic reason why I wrote this tutorial.
 
 But that's not their fault.
 Although cloud computing is getting popular among the scientific computing community, 
-the majorities the cloud platform users are still web developers or system engineers, not scientists.
+the majorities of the cloud platform users are still web developers or system engineers, not scientists.
 
 *Scientific Computing on Cloud --  the Guide for Dummies* has yet to be written. 
 
-### Looking at more cloud computing platforms and seek collaborations
+#### Look at more cloud computing platforms and seek collaborations
 
 Besides Amazon EC2, Google Compute Engine and Microsoft Azure also provide similar services.
 
+Many of their services have one-to-one mappings to AWS: <br/>
+https://cloud.google.com/docs/compare/aws/compute <br/>
+https://docs.microsoft.com/en-us/azure/architecture/aws-professional/
+
 * Possible to get some research grants from them?
 
-### Cooperate with other free, opensource community models like CESM and WRF?
+For example,
+
+https://aws.amazon.com/research-credits/
+
+https://research.google.com/research-outreach.html#/research-outreach/faculty-engagement/faculty-research-awards
+
+#### Cooperate with other free, open-source community models like CESM and WRF?
 
 * Something like cloud-computing-for-atmospheric-modeling-project?
+
+Think of launching a virtual server with all commonly used models installed, and with the input data available.
 
 The biggest trouble for users seems to be building the NetCDF library. 
 Almost all earth science models need NetCDF, so it would be an one-for-all work.
 
+## Additional resources
 
+*Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
+gives a nice overview of various cloud computing applications in our field.
+It doesn't tell you how to actually do cloud computing, though.

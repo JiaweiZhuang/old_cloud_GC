@@ -86,7 +86,7 @@ There are many CPU options, including numbers and types. AWS free tier also give
 is the tiniest CPU. Its memory is too small to run GEOS-Chem, but it is good for testing library installation if you
 need to.
 
-<br />
+**Then, just click on "Review and Launch". You don't need to touch most of the detailed options.**
 
 For the first time of using EC2, you need to create and download a "KeyPair". 
 This is equivalent to the password you enter to ssh to your local server. 

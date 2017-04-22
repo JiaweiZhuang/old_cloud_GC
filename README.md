@@ -39,10 +39,12 @@ Don't worry, this tutorial will only cost you $0.1 :) <br />
 
 You can view the pricing at: <br />
 https://aws.amazon.com/ec2/pricing/ <br />
-We will cover some of the jargons in the above page throughout this tutorial.
+We will cover some of the jargons in that page throughout this tutorial.
 
 (Optional) If you are in academia, checkout the $100 credit for AWS cloud computing: <br />
 https://aws.amazon.com/education/
+I haven't used up my credit for after playing with EC2 for several months, 
+and so haven't actually paid any money to it :)
 
 Simply choose the basic plan when you encounter this page:
 <img src="img/3.png" width="480">

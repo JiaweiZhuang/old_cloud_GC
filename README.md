@@ -3,12 +3,22 @@
 
 * Run GEOS-Chem without buying local machines -- get a virtual Linux server on the cloud in seconds 
 * 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model
-* No compilation error anymore-- all software and libraries are pre-installed
+* No compilation error anymore -- all software and libraries are pre-installed
 
 (All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
 
 ## Tutorial
 ### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.
+
+Disclaimer:
+
+This tutorial is a proof of concept, aiming to show the capability of GEOS-Chem to run on commercial clouds.
+You will be able to finish a GEOS-Chem run successfully in this tutorial, 
+but for real applications (i.e. long-term, data-intensive simulations), there are much more discuss. 
+See "Future Plans and Possible Directions" at the end of this page for more information. 
+
+I came up with this idea and finished all the current work in 2 days, 
+so things are still preliminary although promising. All feedback will be appreciated.
 
 #### Step 1: sign up an Amazon Web Service(AWS) account
 Go to <br />

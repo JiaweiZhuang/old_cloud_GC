@@ -22,7 +22,7 @@ but for real applications (i.e. long-term, data-intensive simulations), there ar
 See "Future Plans and Possible Directions" at the end of this page for more information. 
 
 I came up with this idea and finished all the current work in 2 days, 
-so things are still very preliminary although promising. All feedback will be appreciated.
+so things are still very preliminary although promising. Any feedback will be appreciated.
 
 #### Step 1: sign up an Amazon Web Service(AWS) account
 Go to <br />

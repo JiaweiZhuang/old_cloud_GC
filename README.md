@@ -15,7 +15,7 @@ Disclaimer:
 This tutorial is a proof of concept, aiming to show the capability of GEOS-Chem to run on commercial clouds.
 
 You will be able to finish a GEOS-Chem simulation successfully in this tutorial, 
-but for real applications (i.e. long-term, data-intensive simulations), there are much more discuss. 
+but for real applications (i.e. long-term, data-intensive simulations), there are much more to discuss. 
 See "Future Plans and Possible Directions" at the end of this page for more information. 
 
 I came up with this idea and finished all the current work in 2 days, 
@@ -56,13 +56,19 @@ Other options are other services such as storage. You don't need to care about t
 
 In the EC2 console, click on "AMI" (Amazon Machine Image) under "IMAGES" on the left of the page.
 
-Select "Public images" and search for the AMI with GEOS-Chem installed. Select it and click on "Launch" 
+Select "Public images" and search for "ami-0b851a1d" or "cloud_GC_20170421" -- 
+that's the system with GEOS-Chem installed. Select it and click on "Launch": 
 <img src="img/5.png" width="480">
 
 **This one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
 I started with a brand new Linux operating system, and built GEOS-Chem 
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a copy of my system, with everything installed correctly.
+
+**Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" as shown 
+in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
+better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.**
+<img src="img/5a.png" width="480">
 
 You have already specified your operating system, or the "software" side of the virtual server. 
 Then it's time to specify the "hardware" side, mostly about CPUs.
@@ -128,7 +134,7 @@ You should get the same results as in those log files: <br/>
 [test\_run.log](log/test_run.log) <br/>
 
 Here we only test an 1-hour run to demonstrate the capability of running GEOS-Chem in cloud.
-The "r4.large" instance type we chose has only a single core (so it is cheap), 
+The "r4.large" instance type we chose has only a single core (so it is cheap, ~$0.1/hour), 
 while its memory is large enough for GEOS-Chem to start.
 To test longer runs, it is recommended to use "Compute Optimized" instance types with multiple cores such as "c4.4xlarge".
 
@@ -136,17 +142,40 @@ To test longer runs, it is recommended to use "Compute Optimized" instance types
 
 <img src="img/11.png" width="480">
 
-The lifetime of an "instance" is from launching to termination. 
+There are two different ways to stop being charged:
+
+- "stop" will make the system inactive, so that you'll not be charged by the CPU time, 
+and only be charged by the negligible storage fee. (~0.1$/GB/mo, see https://aws.amazon.com/ebs/pricing/)
+- "terminate" will completely remove that virtual server so you won't be charged at all after that.
+Unless you save your system (see below), you will lose all your data and software.
 
 ## Advanced Usages 
 
 #### Save your system's current status (e.g. all the files and software) so the information is not lost after termination
 
+Click on "Create Image" to save
+<img src="img/12.png" width="480">
+Then, you will be only charged by the storage 
+
+The lifetime of an "instance" is from launching to termination. 
+The lifetime of an "AMI" can be infinitely long if you don't delete it. 
+And it can be used to launch any number of instances. 
+That's how I share the system-with-GEOSChem with you. 
 
 #### Use the "Spot Instance" to minimize the cost
 
-https://aws.amazon.com/ec2/spot/spot-and-science/
+https://aws.amazon.com/ec2/spot/spot-and-science/ <br/>
+It can be 70%~80% cheaper than the standard ("on-demand") method.
 
+A typical spot price is 0.01$/core/hour, 
+which means less than $2.0 for a 1-month 4x5 run (need ~100 core\*hours).
+
+The "price" you pay for this free lunch is the server is not guaranteed to be 100% stable.
+It has very little chance of shutting down (although I've never encountered this situation)
+For maintaining a web server that's intolerable, but it suits scientific computing pretty well.
+
+Also, spot instance doesn't allow "stop", and only allows "terminate", 
+which means you should have clever use of saving AMIs and transfering data to other Amazon storage services.
 
 <br/>
 ============================================================
@@ -226,7 +255,7 @@ Almost all earth science models need NetCDF, so it would be an one-for-all work.
 Most of the documents on AWS cloud computing are NOT for scientists. There are so many computer system jargons.
 It's not like the GEOS-Chem wiki where you can often find useful solutions. 
 That means, if you encounter any technical issues, you are likely to get more confused by looking through their documents.
-That's the basic reason why I wrote this tutorial even though they already provide a huge amount of tutorials (for non-scientists) online. 
+That's the basic reason why I wrote this tutorial even though AWS already provides a huge amount of tutorials (for non-scientists) online. 
 
 But that's not their fault.
 Although cloud computing is getting popular among the scientific computing community, 

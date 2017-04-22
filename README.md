@@ -37,7 +37,7 @@ Now you should have an AWS account! It's time to run the model in cloud.
 
 #### Step 2: launch a virtual server with GEOS-Chem installed 
 
-Log into AWS console, and click on **EC2**(Elastic Compute Cloud), which is the cloud computing platform. 
+Log in to AWS console, and click on **EC2**(Elastic Compute Cloud), which is the cloud computing platform. 
 Other options are other services such as storage. You don't need to care about them at this time.
 <img src="img/4.png" width="480">
 
@@ -73,7 +73,10 @@ Use any name you like for that KeyPair, click on "Download Key Pair", and finall
 
 <img src="img/7.png" width="480">
 
+
 <img src="img/8.png" width="480">
+
+#### Step 3: log in to the virtual server and run GEOS-Chem
 
 <img src="img/9.png" width="480">
 
@@ -99,7 +102,7 @@ https://aws.amazon.com/ec2/spot/spot-and-science/
 
 ## Future Plans and Possible Directions
 
-#### [1] Update GEOS-Chem source code and post-processing tools 
+#### Update GEOS-Chem source code and post-processing tools 
 
 * Make the public release of GEOS-Chem fully compatible with gfortran
 
@@ -119,7 +122,7 @@ they can be very easily handled by any languages. This is expected to be finishe
 
 GCHP is not compatible with gfortran now.
 
-#### [2] Design a strategy for long-term, economical workflow.
+#### Design a strategy for long-term, economical workflow.
 
 * Cheaper and more efficient data storage and sharing in cloud.
 
@@ -137,7 +140,7 @@ http://www.sciencedirect.com/science/article/pii/S0098300416304721
 Although there's only very little chance for spot instances to shut down, 
 there should be a strategy to ensure the model runs safely.
 
-#### [3] Provide friendly tutorials for more complicated scientific computing tasks
+#### Provide friendly tutorials for more complicated scientific computing tasks
 
 Most of the documents on AWS cloud computing are not for scientists. They are full of computer system jargons.
 They are not like GEOS-Chem wiki where you can often find useful solutions. 
@@ -150,7 +153,7 @@ the majorities of the cloud platform users are still web developers and system e
 
 *Scientific Computing on Cloud --  the Guide for Dummies* has yet to be written. 
 
-#### [4] Look at more cloud computing platforms and seek collaborations
+#### Look at more cloud computing platforms and seek collaborations
 
 Besides Amazon EC2, Google Compute Engine and Microsoft Azure also provide similar services.
 
@@ -166,7 +169,7 @@ https://aws.amazon.com/research-credits/
 
 https://research.google.com/research-outreach.html#/research-outreach/faculty-engagement/faculty-research-awards
 
-#### [5] Cooperate with other free, open-source community models like CESM and WRF?
+#### Cooperate with other free, open-source community models like CESM and WRF?
 
 * Something like cloud-computing-for-atmospheric-modeling-project?
 

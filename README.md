@@ -165,6 +165,9 @@ and only be charged by the negligible storage fee. (~$0.1/GB/month, see https://
 - "terminate" will completely remove that virtual server so you won't be charged at all after that.
 Unless you save your system (see below), you will lose all your data and software.
 
+That's the end of the basic tutorial. 
+Check out some advanced usages below if you want to more about cloud computing workflow.
+
 ## Advanced Usages 
 
 #### Save your system's current status (i.e. all the files and software) so the information is not lost after termination
@@ -177,8 +180,15 @@ This is the way to safely archive your system. You will only be charged by the s
 
 The lifetime of an "instance" is from launching to termination. 
 The lifetime of an "AMI" can be infinitely long if you don't delete it. 
-AMI can be used to launch any number of instances. 
+An AMI can be used to launch any number of instances. 
+You've already launched an instance from an AMI in Step 2 of the basic tutorial.
 That's how I share the system-with-GEOSChem with you. 
+
+I don't recommend to save this GEOS-Chem instance but because it containts large amounts of data. 
+A better practice is to separate the core operating system and the data storage, 
+but it is beyond the scope of this basic tutorial.
+
+However, this "saving-and-relaunching" method is crucial to building you own system in cloud.
 
 #### Use the "Spot Instance" to minimize the cost
 

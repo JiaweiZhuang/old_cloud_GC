@@ -1,5 +1,6 @@
 # Cloud-GC
-Author: Jiawei Zhuang Email:jiaweizhuang@g.harvard.edu 
+Author: Jiawei Zhuang  Email:jiaweizhuang@g.harvard.edu <br/>
+Last main edit: 4/22/2017
 
 ## Running the GEOS-Chem CTM on cloud computing platforms
 
@@ -21,7 +22,7 @@ but for real applications (i.e. long-term, data-intensive simulations), there ar
 See "Future Plans and Possible Directions" at the end of this page for more information. 
 
 I came up with this idea and finished all the current work in 2 days, 
-so things are still very preliminary although promising. All feedback will be appreciated.
+so things are still very preliminary although promising. Any feedback will be appreciated.
 
 #### Step 1: sign up an Amazon Web Service(AWS) account
 Go to <br />
@@ -37,11 +38,14 @@ After entering some basic information, you will be required to enter your credit
 
 Don't worry, this tutorial will only cost you $0.1 :) <br />
 
-View the pricing at: <br />
-https://aws.amazon.com/ec2/pricing/
+You can view the pricing at: <br />
+https://aws.amazon.com/ec2/pricing/ <br />
+We will cover some of the jargons in that page throughout this tutorial.
 
-If you are in academia, checkout the $100 credit for AWS cloud computing: <br />
-https://aws.amazon.com/education/
+(Optional) If you are a student, check out the $100 credit for AWS cloud computing: <br />
+https://aws.amazon.com/education/awseducate/ <br />
+I haven't used up my credit for after playing with AWS for several months, 
+so haven't actually paid any money to them :)
 
 Simply choose the basic plan when you encounter this page:
 <img src="img/3.png" width="480">
@@ -64,12 +68,12 @@ that's the system with GEOS-Chem installed. Select it and click on "Launch":
 
 <img src="img/5.png" width="480">
 
-**This one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
+**This is one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
 I started with a brand new Linux operating system, and built GEOS-Chem 
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a copy of my system, with everything installed correctly.
 
-**Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" as shown 
+**Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" region as shown 
 in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
 better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.**
 
@@ -86,7 +90,7 @@ There are many CPU options, including numbers and types. AWS free tier also give
 is the tiniest CPU. Its memory is too small to run GEOS-Chem, but it is good for testing library installation if you
 need to.
 
-<br />
+**Then, just click on "Review and Launch". You don't need to touch most of the detailed options.**
 
 For the first time of using EC2, you need to create and download a "KeyPair". 
 This is equivalent to the password you enter to ssh to your local server. 
@@ -107,7 +111,7 @@ Now your own server appears on the cloud!
 
 #### Step 3: log in to the virtual server and run GEOS-Chem
 
-Select your instance, click on the "Connect" button near the blue "Launch Instance" Button, then you should see this page:
+Select your instance, click on the "Connect" button near the blue "Launch Instance" button, then you should see this page:
 
 <img src="img/9.png" width="480">
 
@@ -122,7 +126,7 @@ Before using it to ssh to your server, you need to make some minor changes:
 
 Your terminal will look like this:
 
-<img src="img/10.png" width="480">
+<img src="img/10.png" width="720">
 
 That's a system with GEOS-Chem already built!
 
@@ -141,12 +145,16 @@ You should get the same results as in those log files: <br/>
 [test\_compile.log](log/test_compile.log) <br/>
 [test\_run.log](log/test_run.log) <br/>
 
+Congratulations! You've just finished a GEOS-Chem simulation in cloud.
+
 Here we only test an 1-hour run to demonstrate the capability of running GEOS-Chem in cloud.
 The "r4.large" instance type we chose has only a single core (so it is cheap, ~$0.1/hour), 
 while its memory is large enough for GEOS-Chem to start.
 To test longer runs, it is recommended to use "Compute Optimized" instance types with multiple cores such as "c4.4xlarge".
 
 #### Step 4:**(Very important!) Always remember to shut down the instance when you finish the simulation!**
+
+Right-click on the instance in your console to get a menu:
 
 <img src="img/11.png" width="480">
 
@@ -157,20 +165,32 @@ and only be charged by the negligible storage fee. (~$0.1/GB/month, see https://
 - "terminate" will completely remove that virtual server so you won't be charged at all after that.
 Unless you save your system (see below), you will lose all your data and software.
 
+<br/>
+
+That's the end of the basic tutorial. 
+Check out some advanced usages below if you want to know more about cloud computing workflow.
+
 ## Advanced Usages 
 
-#### Save your system's current status (e.g. all the files and software) so the information is not lost after termination
+#### Save your system's current status (i.e. all the files and software) so the information is not lost after termination
 
 Click on "Create Image" to convert a snapshot of your system to an "AMI":
 
 <img src="img/12.png" width="480">
 
-Then, you will be only charged by the storage. 
+This is the way to safely archive your system. You will only be charged by the storage for it.
 
 The lifetime of an "instance" is from launching to termination. 
 The lifetime of an "AMI" can be infinitely long if you don't delete it. 
-And it can be used to launch any number of instances. 
+An AMI can be used to launch any number of instances. 
+You've already launched an instance from an AMI in Step 2 of the basic tutorial.
 That's how I share the system-with-GEOSChem with you. 
+
+I don't recommend to save this GEOS-Chem instance because it containts large amounts of data. 
+A better practice is to separate the core operating system and the data storage, 
+but it is beyond the scope of this basic tutorial.
+
+However, this "saving-and-relaunching" method is crucial to building you own sustainable system in cloud.
 
 #### Use the "Spot Instance" to minimize the cost
 
@@ -180,17 +200,15 @@ It can be 70%~80% cheaper than the standard ("on-demand") method.
 A typical spot price is 0.01$/core/hour, 
 which means less than $2.0 for a 1-month 4x5 run (need ~100 core\*hours).
 
-The "price" you pay for this "free lunch" is the server is not guaranteed to be 100% stable.
+The "price" you pay for this "free lunch" is that your server is not guaranteed to be 100% stable.
 It has very little chance of shutting down 
-(although I've launched an spot instance for weeks and never encountered this situation)
+(although I've launched a spot instance for weeks and never encountered this situation)
 For maintaining a web server, that's intolerable, but it suits scientific computing pretty well.
 
 Also, spot instance doesn't allow "stop", but only allows "terminate", 
 which means you should have a clever use of saving AMIs and transfering data to other Amazon storage services.
 
 <br/>
-============================================================
-============================================================
 <br/>
 
 ## Future Plans and Possible Directions
@@ -199,12 +217,12 @@ which means you should have a clever use of saving AMIs and transfering data to 
 
 * Make the public release version of GEOS-Chem fully compatible with gfortran
 
+gfortran is the key to make this entire thing possible. 
+Unlike ifort, it is free and can be quickly installed on any systems.
+
 The public release of v11-01 is now compatible with gfortran-5 but not gfortran-6. 
 
 v11-02 (in development) works with gfortran-6.
-
-gfortran is the key to make this entire thing possible. 
-Unlike ifort, it is free and can be quickly installed on any systems.
 
 * Replace IDL with python, which is free and open-source 
 
@@ -288,8 +306,6 @@ Other tutorials beyond this one has almost nothing to do with scientific computi
 
 [3] Consoles are excellent to start with. But as you become familiar with AWS, 
 you might feel using the command line (https://aws.amazon.com/cli) more efficient 
-for managing your cloud servers.
-
-Again, just like any other AWS documents, you are likely to see a lot of information 
+for managing your cloud servers. Again, just like any other AWS documents, you are likely to see a lot of information 
 that is totally unnecessary for a scientist to know, even for a computational scientist.
 

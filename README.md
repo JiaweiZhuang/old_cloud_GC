@@ -145,12 +145,16 @@ You should get the same results as in those log files: <br/>
 [test\_compile.log](log/test_compile.log) <br/>
 [test\_run.log](log/test_run.log) <br/>
 
+Congratulations! You've just finished a GEOS-Chem simulation in cloud.
+
 Here we only test an 1-hour run to demonstrate the capability of running GEOS-Chem in cloud.
 The "r4.large" instance type we chose has only a single core (so it is cheap, ~$0.1/hour), 
 while its memory is large enough for GEOS-Chem to start.
 To test longer runs, it is recommended to use "Compute Optimized" instance types with multiple cores such as "c4.4xlarge".
 
 #### Step 4:**(Very important!) Always remember to shut down the instance when you finish the simulation!**
+
+Right-click on the instance in your console to get a menu:
 
 <img src="img/11.png" width="480">
 

@@ -188,7 +188,7 @@ I don't recommend to save this GEOS-Chem instance but because it containts large
 A better practice is to separate the core operating system and the data storage, 
 but it is beyond the scope of this basic tutorial.
 
-However, this "saving-and-relaunching" method is crucial to building you own system in cloud.
+However, this "saving-and-relaunching" method is crucial to building you own sustainable system in cloud.
 
 #### Use the "Spot Instance" to minimize the cost
 
@@ -207,8 +207,6 @@ Also, spot instance doesn't allow "stop", but only allows "terminate",
 which means you should have a clever use of saving AMIs and transfering data to other Amazon storage services.
 
 <br/>
-============================================================
-============================================================
 <br/>
 
 ## Future Plans and Possible Directions

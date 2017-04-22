@@ -115,7 +115,10 @@ Select your instance, click on the "Connect" button near the blue "Launch Instan
 
 <img src="img/9.png" width="480">
 
-Copy the "ssh -i ..." command under "Example" in the above page. 
+If you use the terminal to log in (e.g. on Mac or Linux)
+,copy the "ssh -i ..." command under "Example" in the above page. 
+
+If you use other tools on Windows, [see here](forWINDOWS.md). 
 
 Before using it to ssh to your server, you need to make some minor changes:
 

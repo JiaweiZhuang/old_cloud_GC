@@ -77,7 +77,7 @@ Use any name you like for that KeyPair, click on "Download Key Pair", and finall
 
 <img src="img/7.png" width="480">
 
-Within < 1min of initialization, "Instance State" should become "running"
+Within < 1min of initialization, "Instance State" should become "running":
 
 <img src="img/8.png" width="480">
 
@@ -85,7 +85,7 @@ Now your own server is running on the cloud!
 
 #### Step 3: log in to the virtual server and run GEOS-Chem
 
-Select your instance, click on the "Connect" button near the "Launch Instance Button", then you should see page:
+Select your instance, click on the "Connect" button near the "Launch Instance Button", then you should see this page:
 <img src="img/9.png" width="480">
 
 Log in the run GEOS-Chem
@@ -101,8 +101,7 @@ The lifetime of an "instance" is from launching to termination.
 
 ## Advanced Usages 
 
-#### Save your system's current status (e.g. all the files and software) 
-so the information is not lost after termination
+#### Save your system's current status (e.g. all the files and software) so the information is not lost after termination
 
 
 
@@ -112,6 +111,7 @@ https://aws.amazon.com/ec2/spot/spot-and-science/
 
 
 <br/>
+============================================================
 ============================================================
 <br/>
 
@@ -147,7 +147,7 @@ which is convenient for illustration but bad for actual practice.
 Should make use of standalone *Amazon Elastic Block Store(EBS) volumes* and *Simple Storage Service (S3)* to store and share
 data.
 
-May also refer to the CESM work for how to manage the workflow: 
+May also refer to this CESM work for how to manage the workflow: 
 http://www.sciencedirect.com/science/article/pii/S0098300416304721
 
 * How to handle unexpected shut-down for spot instances while still minimizing the cost?
@@ -197,3 +197,11 @@ Almost all earth science models need NetCDF, so it would be an one-for-all work.
 [1] *Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
 gives a nice overview of various cloud computing applications in our field.
 It doesn't tell you how to actually do cloud computing, though.
+
+[2] Consoles are excellent to start with. But as you become familiar with AWS, 
+you might feel using the command line (https://aws.amazon.com/cli) is more efficient 
+for managing your cloud servers.
+
+(Warning: Just like any other AWS documents, you are likely to see a lot of information 
+that is totally unnecessary for a scientist to know, even for a computational scientist.)
+

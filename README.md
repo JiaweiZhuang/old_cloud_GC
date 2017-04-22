@@ -37,10 +37,11 @@ After entering some basic information, you will be required to enter your credit
 
 Don't worry, this tutorial will only cost you $0.1 :) <br />
 
-View the pricing at: <br />
-https://aws.amazon.com/ec2/pricing/
+You can view the pricing at: <br />
+https://aws.amazon.com/ec2/pricing/ <br />
+We will cover some of the jargons in the above page throughout this tutorial.
 
-If you are in academia, checkout the $100 credit for AWS cloud computing: <br />
+(Optional) If you are in academia, checkout the $100 credit for AWS cloud computing: <br />
 https://aws.amazon.com/education/
 
 Simply choose the basic plan when you encounter this page:

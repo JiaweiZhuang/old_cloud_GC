@@ -73,7 +73,7 @@ I started with a brand new Linux operating system, and built GEOS-Chem
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a copy of my system, with everything installed correctly.
 
-**Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" as shown 
+**Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" region as shown 
 in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
 better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.**
 

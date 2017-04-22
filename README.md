@@ -185,7 +185,7 @@ which means less than $2.0 for a 1-month 4x5 run (need ~100 core\*hours).
 
 The "price" you pay for this "free lunch" is the server is not guaranteed to be 100% stable.
 It has very little chance of shutting down 
-(although I've launched an spot instance for weeks and never encountered this situation)
+(although I've launched a spot instance for weeks and never encountered this situation)
 For maintaining a web server, that's intolerable, but it suits scientific computing pretty well.
 
 Also, spot instance doesn't allow "stop", but only allows "terminate", 

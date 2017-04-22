@@ -165,8 +165,10 @@ and only be charged by the negligible storage fee. (~$0.1/GB/month, see https://
 - "terminate" will completely remove that virtual server so you won't be charged at all after that.
 Unless you save your system (see below), you will lose all your data and software.
 
+<br/>
+
 That's the end of the basic tutorial. 
-Check out some advanced usages below if you want to more about cloud computing workflow.
+Check out some advanced usages below if you want to know more about cloud computing workflow.
 
 ## Advanced Usages 
 

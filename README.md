@@ -165,11 +165,11 @@ Click on "Create Image" to convert a snapshot of your system to an "AMI":
 
 <img src="img/12.png" width="480">
 
-Then, you will be only charged by the storage. 
+This is the way to safely archive your system. You will only be charged by the storage for it.
 
 The lifetime of an "instance" is from launching to termination. 
 The lifetime of an "AMI" can be infinitely long if you don't delete it. 
-And it can be used to launch any number of instances. 
+AMI can be used to launch any number of instances. 
 That's how I share the system-with-GEOSChem with you. 
 
 #### Use the "Spot Instance" to minimize the cost

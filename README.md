@@ -162,7 +162,7 @@ Unless you save your system (see below), you will lose all your data and softwar
 
 ## Advanced Usages 
 
-#### Save your system's current status (e.g. all the files and software) so the information is not lost after termination
+#### Save your system's current status (i.e. all the files and software) so the information is not lost after termination
 
 Click on "Create Image" to convert a snapshot of your system to an "AMI":
 

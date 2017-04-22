@@ -1,0 +1,1703 @@
+*************   S T A R T I N G   4 x 5   G E O S - C H E M   *************
+Created w/ LINUX/GFORTRAN compiler
+Using GEOS-Chem v11-02
+Using GMAO GEOS-FP met fields
+#######################################################
+# This netCDF library build supports file compression #
+#######################################################
+
+===> SIMULATION START TIME: 2017/04/22 00:37 <===
+
+===============================================================================
+G E O S - C H E M   U S E R   I N P U T
+
+READ_INPUT_FILE: Reading input.geos
+
+SIMULATION MENU
+---------------
+Start time of run           : 20130701 000000
+End time of run             : 20130701 010000
+Run directory               : ./
+Data Directory              : /home/ubuntu/gcdata/ExtData/
+CHEM_INPUTS directory       : /home/ubuntu/gcdata/ExtData/CHEM_INPUTS/
+Resolution-specific dir     : GEOS_4x5/
+GCAP       sub-directory    : GCAP_4x5/AGRID/YYYY/MM/
+GEOS-4     sub-directory    : GEOS_4x5/GEOS_4_v4/YYYY/MM/
+GEOS-5     sub-directory    : GEOS_4x5/GEOS_5/YYYY/MM/
+GEOS-FP    sub-directory    : GEOS_4x5/GEOS_FP/YYYY/MM/
+MERRA      sub-directory    : GEOS_4x5/MERRA/YYYY/MM/
+1x1 Emissions etc Data Dir  : /home/ubuntu/gcdata/ExtData/GEOS_NATIVE/
+Temporary Directory         : ./
+Input restart file          : /home/ubuntu/gcdata/ExtData/SPC_RESTARTS/initial_GEOSChem_rst.4x5_standard.nc
+Unzip met fields?           :     F
+Wait for met fields?        :     F
+Use variable tropopause?    :     T
+Is this a nested-grid sim?  :     F
+Global offsets I0, J0       :     0    0
+Nested-Grid X-offset [boxes]:   0
+Nested-Grid Y-offset [boxes]:   0
+
+Grid box longitude centers [degrees]: 
+-180.000 -175.000 -170.000 -165.000 -160.000 -155.000 -150.000 -145.000
+-140.000 -135.000 -130.000 -125.000 -120.000 -115.000 -110.000 -105.000
+-100.000  -95.000  -90.000  -85.000  -80.000  -75.000  -70.000  -65.000
+ -60.000  -55.000  -50.000  -45.000  -40.000  -35.000  -30.000  -25.000
+ -20.000  -15.000  -10.000   -5.000    0.000    5.000   10.000   15.000
+  20.000   25.000   30.000   35.000   40.000   45.000   50.000   55.000
+  60.000   65.000   70.000   75.000   80.000   85.000   90.000   95.000
+ 100.000  105.000  110.000  115.000  120.000  125.000  130.000  135.000
+ 140.000  145.000  150.000  155.000  160.000  165.000  170.000  175.000
+
+Grid box longitude edges [degrees]: 
+-182.500 -177.500 -172.500 -167.500 -162.500 -157.500 -152.500 -147.500
+-142.500 -137.500 -132.500 -127.500 -122.500 -117.500 -112.500 -107.500
+-102.500  -97.500  -92.500  -87.500  -82.500  -77.500  -72.500  -67.500
+ -62.500  -57.500  -52.500  -47.500  -42.500  -37.500  -32.500  -27.500
+ -22.500  -17.500  -12.500   -7.500   -2.500    2.500    7.500   12.500
+  17.500   22.500   27.500   32.500   37.500   42.500   47.500   52.500
+  57.500   62.500   67.500   72.500   77.500   82.500   87.500   92.500
+  97.500  102.500  107.500  112.500  117.500  122.500  127.500  132.500
+ 137.500  142.500  147.500  152.500  157.500  162.500  167.500  172.500
+ 177.500
+
+Grid box latitude centers [degrees]: 
+ -89.000  -86.000  -82.000  -78.000  -74.000  -70.000  -66.000  -62.000
+ -58.000  -54.000  -50.000  -46.000  -42.000  -38.000  -34.000  -30.000
+ -26.000  -22.000  -18.000  -14.000  -10.000   -6.000   -2.000    2.000
+   6.000   10.000   14.000   18.000   22.000   26.000   30.000   34.000
+  38.000   42.000   46.000   50.000   54.000   58.000   62.000   66.000
+  70.000   74.000   78.000   82.000   86.000   89.000
+
+Grid box latitude edges [degrees]: 
+ -90.000  -88.000  -84.000  -80.000  -76.000  -72.000  -68.000  -64.000
+ -60.000  -56.000  -52.000  -48.000  -44.000  -40.000  -36.000  -32.000
+ -28.000  -24.000  -20.000  -16.000  -12.000   -8.000   -4.000    0.000
+   4.000    8.000   12.000   16.000   20.000   24.000   28.000   32.000
+  36.000   40.000   44.000   48.000   52.000   56.000   60.000   64.000
+  68.000   72.000   76.000   80.000   84.000   88.000   90.000
+
+SIN( grid box latitude edges )
+  -1.000   -0.999   -0.995   -0.985   -0.970   -0.951   -0.927   -0.899
+  -0.866   -0.829   -0.788   -0.743   -0.695   -0.643   -0.588   -0.530
+  -0.469   -0.407   -0.342   -0.276   -0.208   -0.139   -0.070    0.000
+   0.070    0.139    0.208    0.276    0.342    0.407    0.469    0.530
+   0.588    0.643    0.695    0.743    0.788    0.829    0.866    0.899
+   0.927    0.951    0.970    0.985    0.995    0.999    1.000
+
+TRANSPORT MENU
+--------------
+Turn on transport?          :     T
+Let TPCORE Fill negatives?  :     T
+IORD, JORD, KORD for TPCORE?:     3    3    7
+Transport timestep [min]    :    10
+
+CONVECTION MENU
+----------------
+Turn on cloud convection?   :     T
+Turn on PBL mixing?         :     T
+Turn on non-local PBL?      :     T
+Convection timestep [min]   :    10
+
+EMISSIONS MENU
+--------------
+Turn on emissions?          :     T
+Emissions timestep [min]    :    20
+HEMCO Configuration file    : HEMCO_Config.rc
+Set day PBL BrO conc to 1ppt:     F
+Use CH4 emissions inventory?:     F
+Turn on surface BC for      : 
+      --> methane?          :     T
+      --> OCS?              :     T
+      --> CFCs/HCFCs/halon? :     T
+      --> chlorine species? :     T
+      --> bromine species?  :     F
+      --> N2O?              :     T
+Set initial global MRs for  : 
+      --> strat. H2O?       :     T
+      --> methane?          :     T
+      --> OCS?              :     T
+      --> CFCs/HCFCs/halon? :     T
+      --> chlorine species? :     T
+      --> strat. Bry (GCCM)?:     T
+      --> bromine species?  :     F
+      --> strat. bromine?   :     F
+      --> strat. NOx/HNO3?  :     T
+      --> N2O?              :     T
+      --> strat. H2SO4?     :     T
+CFC emissions read for year :     0
+
+AEROSOL MENU
+------------
+Online SULFATE AEROSOLS?    :     T
+Online CRYST & AQ AEROSOLS? :     F
+Online CARBON AEROSOLS?     :     T
+Brown Carbon Aerosol?       :     F
+Online 2dy ORGANIC AEROSOLS?:     T
+Semivolatile POA?           :     F
+Online DUST AEROSOLS?       :     T
+Acid uptake on dust?        :     F
+Online SEA SALT AEROSOLS?   :     T
+Accum  SEA SALT radii [um]  :   0.01 -   0.50
+Coarse SEA SALT radii [um]  :   0.50 -   8.00
+MARINE ORGANIC AEROSOLS?    :     F
+Settle strat. aerosols?     :     T
+Online SOLID PSC aerosols?  :     T
+Allow hom. NAT nucleation?  :     F
+NAT supercooling requirement:   3.00K
+Ice supersaturation req.    :  20.00K
+Perform PSC het. chemistry? :     T
+Use strat. aerosol OD?      :     T
+
+DEPOSITION MENU
+---------------
+Turn on dry deposition?     :     T
+Dry dep over full PBL?      :     F
+Turn on wet deposition?     :     T
+Use Olson 2001 land map?    :     T
+
+CHEMISTRY MENU
+--------------
+Turn on chemistry?          :     T
+Use linear. strat. chem?    :     T
+ => Use Linoz for O3?       :     T
+Enable UCX?                 :     T
+Online CH4 chemistry?       :     T
+Online strat. H2O?          :     T
+Chemistry timestep [min]    :    20
+Online ozone for FAST-JX?   :     T
+GAMMA HO2                   : 0.20
+
+RADIATION MENU
+--------------
+AOD output wavelength (nm)  :   550.0
+Turn on radiation?          :     F
+Consider LW                 :     F
+Consider SW                 :     F
+Clear-sky/All-sky           :     F/    F
+Radiation timestep [min]    :   180
+Flux output selection       : 00000000010
+
+OUTPUT MENU
+-----------
+              1111111111222222222233
+     1234567890123456789012345678901
+     -------------------------------
+JAN--3000000000000000000000000000000
+FEB--30000000000000000000000000000
+MAR--3000000000000000000000000000000
+APR--300000000000000000000000000000
+MAY--3000000000000000000000000000000
+JUN--300000000000000000000000000000
+JUL--3000000000000000000000000000000
+AUG--3000000000000000000000000000000
+SEP--300000000000000000000000000000
+OCT--3000000000000000000000000000000
+NOV--300000000000000000000000000000
+DEC--3000000000000000000000000000000
+
+GAMAP MENU
+---------------
+GAMAP "diaginfo.dat"   file : diaginfo.dat
+GAMAP "tracerinfo.dat" file : tracerinfo.dat
+
+DIAGNOSTIC MENU
+---------------
+Diag    L   Tracers being saved to disk
+ND05   72   1 - 14
+ND06    1   1 -  4
+ND07   72   1 - 15
+ND08    1   1 -  4
+ND11    1   1 -  5
+ND13   72   1 -  1
+ND21   72   1 - 57
+ND22   72   1  2  7  8  9 11 13 14 20 44 46 47 49 50 51 59 60 66 67 69 74 75 83 84 -1
+ND29   72   1 -  5
+ND31   73   1 -  1
+ND32   72   1 -  1
+ND36   72   1 -127
+ND38   72   1 -127
+ND39   72   1 -127
+ND42   72   1 - 20
+ND43   72   1 -  7
+ND44    1   2  3  7  8  9 11 13 14 15 16 17 20 22 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 47 48 50 55 56 58 59 60 61 62 63 64 65 66 99100101102103104105106107108109110111112113114115119120121122123124125
+ND45   72   1 -127
+ND46    1   1 - 26
+ND54   72   1 -  1
+ND55   72   1 -  3
+ND66   72   1 -  7
+ND67   72   1 - 23
+ND68   72   1 -  8
+ND69    1   1 -  1
+
+PLANEFLIGHT MENU
+----------------
+Turn on planeflight diag?   :     F
+Flight track input file     : Planeflight.dat.YYYYMMDD
+Output file name            : plane.log.YYYYMMDD
+
+ND48 STATION TIMESERIES MENU
+----------------------------
+Turn on ND48 timeseries?    :     F
+ND48 timeseries file name   : stations.YYYYMMDD
+ND48 save frequency [min]   :    60
+ND48 timeseries station   1 :   133   29   15    2
+
+ND49 3-D INSTANTANEOUS TIMESERIES MENU
+--------------------------------------
+Turn on ND49 timeseries?    :     F
+ND49 timeseries file name   : tsYYYYMMDD.bpch
+ND49 timeseries tracers     :  94
+ND49 save frequency [min]   :   120
+ND49 longitude limits       :    70   30
+ND49 latitude  limits       :    23   46
+ND49 level     limits       :     1    1
+
+ND50 3-D 24hr AVG TIMESERIES MENU
+---------------------------------
+Turn on ND50 timeseries?    :     F
+ND50 timeseries file name   : ts_24h_avg.YYYYMMDD.bpch
+Output as HDF?              :     F
+ND50 timeseries tracers     :  82 83 84 85 86 87
+ND50 longitude limits       :     1   72
+ND50 latitude  limits       :     1   46
+ND50 level     limits       :     1    1
+
+ND51 MORNING OR AFTERNOON TIMESERIES MENU
+-----------------------------------------
+Turn on ND51 timeseries?    :     F
+ND51 timeseries file name   : ts_satellite.YYYYMMDD.bpch
+Output as HDF?              :     F
+ND41 timeseries tracers     :  82 83 84 85 86 87
+ND51 hour to write to disk  :   0.0
+ND51 averaging period [GMT] :  10.0 12.0
+ND51 longitude limits       :     1  151
+ND51 latitude  limits       :     1  121
+ND51 altitude  limits       :     1   40
+
+ND51b MORNING OR AFTERNOON TIMESERIES MENU
+-----------------------------------------
+Turn on ND51b timeseries?    :     F
+ND51b timeseries file name   : ts_13_15.NA.YYYYMMDD.h5
+Output as HDF?               :     F
+ND41 timeseries tracers      :   1  4 20 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 60 61 62 63 64 65 66 72 73 75 82 83 84 85 86 87 93 94 98 99
+ND51b hour to write to disk  :   1.0
+ND51b averaging period [GMT] :  13.0 15.0
+ND51b longitude limits       :     1   72
+ND51b latitude  limits       :     1   46
+ND51b altitude  limits       :     1    1
+
+ND63 SHIP TIMESERIES MENU
+--------------------------------------
+Turn on ND63 timeseries?    :     F
+ND63 timeseries file name   : paranox_ts.YYYYMMDD.bpch
+ND63 timeseries tracers     :   1
+ND63 save frequency [min]   :   120
+ND63 longitude limits       :    70   30
+ND63 latitude  limits       :    23   46
+
+PROD & LOSS DIAGNOSTIC MENU
+---------------------------
+Turn on prod & loss diag?   :     T
+# of levels for P/L diag    :    72
+Save P(O3), L(O3) for TagO3?:     F
+
+Family=       POx  Type=prod
+
+Family=       LOx  Type=loss
+
+Family=       PCO  Type=prod
+
+Family=       LCO  Type=loss
+
+Family=      PSO4  Type=prod
+
+BENCHMARK MENU
+--------------
+Save benchmark diag output?  :     T
+File for initial species mass: Ox.mass.initial
+File for final species mass  : Ox.mass.final
+
+NESTED GRID MENU
+----------------
+Save TPCORE BC's at 4x5     :     F
+Save TPCORE BC's at 2x25    :     F
+Save BC's over North America:     F
+Directory with NA BC's      : BC_4x5_NA/
+Save BC's over Europe       :     F
+Directory with EU BC's      : BC_4x5_EU/
+Save BC's over China/SE Asia:     F
+Directory with CH BC's      : BC_4x5_CH/
+Save BC's over Asia         :     F
+Directory with AS BC's      : BC_4x5_AS/
+Save BC's over custom region:     F
+Directory with custom BC's  : BC_4x5/
+Timestep for BC's [min]     :   180
+LL box of BC region         :     9   26
+UR box of BC region         :    29   41
+Nested grid window offsets  :     3    3    3    3
+
+UNIX CMDS MENU
+---------------
+Unix BACKGROUND  command    : &
+Unix REDIRECT    command    : >
+Unix REMOVE      command    : rm -f
+Unix SEPARATOR   command    : /
+Unix WHITE SPACE command    : 
+Unix WILD CARD   command    : *
+Unix UNZIP       command    : gzip -dc
+
+SET_TIMESTEPS: setting GEOS-Chem timesteps!
+-------------------------------------------
+Chemistry  Timestep [min] :   20
+Convection Timestep [min] :   10
+Dynamics   Timestep [min] :   10
+Emission   Timestep [min] :   20
+Unit Conv  Timestep [min] :   10
+Diagnostic Timestep [min] :   20
+Radiation  Timestep [min] :  180
+
+ADVECTED SPECIES MENU
+------------------------------------------------
+  # Species Name  g/mole
+  1 NO             30.00
+  2 O3             48.00
+  3 PAN           121.00
+  4 CO             28.00
+  5 ALK4           58.12
+  6 ISOP           68.12
+  7 HNO3           63.00
+  8 H2O2           34.00
+  9 ACET           58.08
+ 10 MEK            72.11
+ 11 ALD2           44.05
+ 12 RCHO           58.00
+ 13 MVK            70.00
+ 14 MACR           70.00
+ 15 PMN           147.00
+ 16 PPN           135.00
+ 17 R4N2          119.00
+ 18 PRPE           42.08
+ 19 C3H8           44.10
+ 20 CH2O           30.00
+ 21 C2H6           30.07
+ 22 N2O5          108.00
+ 23 HNO4           79.00
+ 24 MP             48.00
+ 25 DMS            62.00
+ 26 SO2            64.00
+ 27 SO4            96.00
+ 28 SO4s           31.40
+ 29 MSA            96.00
+ 30 NH3            17.00
+ 31 NH4            18.00
+ 32 NIT            62.00
+ 33 NITs           31.40
+ 34 BCPI           12.01
+ 35 OCPI           12.01
+ 36 BCPO           12.01
+ 37 OCPO           12.01
+ 38 DST1           29.00
+ 39 DST2           29.00
+ 40 DST3           29.00
+ 41 DST4           29.00
+ 42 SALA           31.40
+ 43 SALC           31.40
+ 44 Br2           160.00
+ 45 Br             80.00
+ 46 BrO            96.00
+ 47 HOBr           97.00
+ 48 HBr            81.00
+ 49 BrNO2         126.00
+ 50 BrNO3         142.00
+ 51 CHBr3         253.00
+ 52 CH2Br2        174.00
+ 53 CH3Br          95.00
+ 54 MPN            93.00
+ 55 ISOPND        147.00
+ 56 ISOPNB        147.00
+ 57 MOBA          114.00
+ 58 PROPNN        119.00
+ 59 HAC            74.00
+ 60 GLYC           60.00
+ 61 MVKN          149.00
+ 62 MACRN         149.00
+ 63 RIP           118.00
+ 64 IEPOX         118.00
+ 65 MAP            76.00
+ 66 NO2            46.00
+ 67 NO3            62.00
+ 68 HNO2           47.00
+ 69 N2O            44.00
+ 70 OCS            60.00
+ 71 CH4            16.00
+ 72 BrCl          115.00
+ 73 HCl            36.00
+ 74 CCl4          152.00
+ 75 CH3Cl          50.00
+ 76 CH3CCl3       133.00
+ 77 CFC113        187.00
+ 78 CFC114        187.00
+ 79 CFC115        187.00
+ 80 HCFC123       117.00
+ 81 HCFC141b      117.00
+ 82 HCFC142b      117.00
+ 83 CFC11         137.00
+ 84 CFC12         121.00
+ 85 HCFC22         86.00
+ 86 H1211         165.00
+ 87 H1301         149.00
+ 88 H2402         260.00
+ 89 Cl             35.00
+ 90 ClO            51.00
+ 91 HOCl           52.00
+ 92 ClNO3          97.00
+ 93 ClNO2          81.00
+ 94 ClOO           67.00
+ 95 OClO           67.00
+ 96 Cl2            71.00
+ 97 Cl2O2         103.00
+ 98 H2O            18.00
+ 99 MTPA          136.23
+100 LIMO          136.23
+101 MTPO          136.23
+102 TSOG1         150.00
+103 TSOG2         150.00
+104 TSOG3         150.00
+105 TSOG0         150.00
+106 TSOA1         150.00
+107 TSOA2         150.00
+108 TSOA3         150.00
+109 TSOA0         150.00
+110 ISOG1         150.00
+111 ISOG2         150.00
+112 ISOG3         150.00
+113 ISOA1         150.00
+114 ISOA2         150.00
+115 ISOA3         150.00
+116 BENZ           78.11
+117 TOLU           92.14
+118 XYLE          106.16
+119 ASOG1         150.00
+120 ASOG2         150.00
+121 ASOG3         150.00
+122 ASOAN         150.00
+123 ASOA1         150.00
+124 ASOA2         150.00
+125 ASOA3         150.00
+126 EOH            46.07
+127 MGLY           72.00
+ ###############################################################################
+
+INIT_DRYDEP: List of dry deposition species:
+
+  #   Name      Species DEPVEL Henry's    React.   Molec.   Aerosol?
+                Number Index  Law Const  Factor   Weight   (T or F)
+----------------------------------------------------------------------
+  1   O3           2     1     1.0E-02    1.000    0.048     F
+  2   PAN          3     2     3.6E+00    1.000    0.121     F
+  3   HNO3         7     3     1.0E+14    0.000    0.063     F
+  4   H2O2         8     4     1.0E+05    1.000    0.034     F
+  5   ACET         9     5     1.0E+05    1.000    0.058     F
+  6   ALD2        11     6     1.1E+01    1.000    0.044     F
+  7   MVK         13     7     4.4E+01    1.000    0.070     F
+  8   MACR        14     8     6.5E+00    1.000    0.070     F
+  9   PMN         15     9     3.6E+00    1.000    0.121     F
+ 10   PPN         16    10     3.6E+00    1.000    0.121     F
+ 11   R4N2        17    11     3.6E+00    1.000    0.121     F
+ 12   CH2O        20    12     6.0E+03    1.000    0.030     F
+ 13   N2O5        22    13     1.0E+14    0.000    0.063     F
+ 14   SO2         26    14     1.0E+05    0.000    0.064     F
+ 15   SO4         27    15     0.0E+00    0.000    0.096     T
+ 16   SO4S        28    16     0.0E+00    0.000    0.031     T
+ 17   MSA         29    17     0.0E+00    0.000    0.096     T
+ 18   NH3         30    18     2.0E+04    0.000    0.017     F
+ 19   NH4         31    19     0.0E+00    0.000    0.018     T
+ 20   NIT         32    20     0.0E+00    0.000    0.062     T
+ 21   NITS        33    21     0.0E+00    0.000    0.031     T
+ 22   BCPI        34    22     0.0E+00    0.000    0.012     T
+ 23   OCPI        35    23     0.0E+00    0.000    0.012     T
+ 24   BCPO        36    24     0.0E+00    0.000    0.012     T
+ 25   OCPO        37    25     0.0E+00    0.000    0.012     T
+ 26   DST1        38    26     0.0E+00    0.000    0.029     T
+ 27   DST2        39    27     0.0E+00    0.000    0.029     T
+ 28   DST3        40    28     0.0E+00    0.000    0.029     T
+ 29   DST4        41    29     0.0E+00    0.000    0.029     T
+ 30   SALA        42    30     0.0E+00    0.000    0.031     T
+ 31   SALC        43    31     0.0E+00    0.000    0.031     T
+ 32   Br2         44    32     7.6E-01    0.000    0.160     F
+ 33   HOBr        47    33     6.1E+03    0.000    0.097     F
+ 34   HBr         48    34     7.1E+15    0.000    0.081     F
+ 35   BrNO3       50    35     1.0E+20    0.000    0.142     F
+ 36   ISOPND      55    36     1.7E+04    1.000    0.147     F
+ 37   ISOPNB      56    37     1.7E+04    1.000    0.147     F
+ 38   PROPNN      58    38     1.0E+03    1.000    0.119     F
+ 39   HAC         59    39     2.9E+03    1.000    0.074     F
+ 40   GLYC        60    40     4.1E+04    1.000    0.060     F
+ 41   MVKN        61    41     1.7E+04    1.000    0.149     F
+ 42   MACRN       62    42     1.7E+04    1.000    0.149     F
+ 43   RIP         63    43     1.7E+06    1.000    0.118     F
+ 44   IEPOX       64    44     1.3E+08    1.000    0.118     F
+ 45   MAP         65    45     8.4E+02    1.000    0.076     F
+ 46   NO2         66    46     1.0E-02    0.100    0.046     F
+ 47   HCl         73    47     2.0E+06    0.000    0.036     F
+ 48   MTPA        99    48     4.9E-02    0.000    0.136     F
+ 49   LIMO       100    49     7.0E-02    0.000    0.136     F
+ 50   MTPO       101    50     4.9E-02    0.000    0.136     F
+ 51   TSOG1      102    51     1.0E+05    0.000    0.150     F
+ 52   TSOG2      103    52     1.0E+05    0.000    0.150     F
+ 53   TSOG3      104    53     1.0E+05    0.000    0.150     F
+ 54   TSOG0      105    54     1.0E+05    0.000    0.150     F
+ 55   TSOA1      106    55     0.0E+00    0.000    0.150     T
+ 56   TSOA2      107    56     0.0E+00    0.000    0.150     T
+ 57   TSOA3      108    57     0.0E+00    0.000    0.150     T
+ 58   TSOA0      109    58     0.0E+00    0.000    0.150     T
+ 59   ISOG1      110    59     1.0E+05    0.000    0.150     F
+ 60   ISOG2      111    60     1.0E+05    0.000    0.150     F
+ 61   ISOG3      112    61     1.0E+05    0.000    0.150     F
+ 62   ISOA1      113    62     0.0E+00    0.000    0.150     T
+ 63   ISOA2      114    63     0.0E+00    0.000    0.150     T
+ 64   ISOA3      115    64     0.0E+00    0.000    0.150     T
+ 65   ASOG1      119    65     1.0E+05    0.000    0.150     F
+ 66   ASOG2      120    66     1.0E+05    0.000    0.150     F
+ 67   ASOG3      121    67     1.0E+05    0.000    0.150     F
+ 68   ASOAN      122    68     0.0E+00    0.000    0.150     T
+ 69   ASOA1      123    69     0.0E+00    0.000    0.150     T
+ 70   ASOA2      124    70     0.0E+00    0.000    0.150     T
+ 71   ASOA3      125    71     0.0E+00    0.000    0.150     T
+ 72   EOH        126    72     1.9E+02    0.000    0.046     F
+ 73   MGLY       127    73     3.7E+03    1.000    0.072     F
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Opening file  : Olson_2001_Drydep_Inputs.nc
+%%  in directory : /home/ubuntu/gcdata/ExtData/CHEM_INPUTS/Olson_Land_Map_201203/
+%%
+%% Successfully read DRYCOEFF [1]
+%% Successfully read IOLSON [1]
+%% Successfully read IDEP [1]
+%% Successfully read IWATER [1]
+%% Successfully read IZO [Default roughness heights for each Olson land type]
+%% Successfully read IDRYDEP [1]
+%% Successfully read IRI [s m-1]
+%% Successfully read IRLU [s m-1]
+%% Successfully read IRAC [s m-1]
+%% Successfully read IRGSS [s m-1]
+%% Successfully read IRGSO [s m-1]
+%% Successfully read IRCLS [s m-1]
+%% Successfully read IRCLO [s m-1]
+%% Successfully read IVSMAX [1e-2 cm s-1]
+%% Successfully closed file!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+INIT_WETSCAV: List of soluble species:
+
+  #             Name  Species Mol Wt  Henry K0  Henry CR  Henry pKa
+                        ID    g/mol    M/atm      K         1
+----------------------------------------------------------------------
+  1             HNO3     7     63.0  8.30E+04  7.40E+03     -    
+  2             H2O2     8     34.0  8.30E+04  7.40E+03     -    
+  3             ALD2    11     12.0  1.10E+01  6.30E+03     -    
+  4             CH2O    20     30.0  3.00E+03  7.20E+03     -    
+  5               MP    24     48.0  3.10E+02  5.20E+03     -    
+  6              SO2    26     64.0     -         -         -    
+  7              SO4    27     96.0     -         -         -    
+  8             SO4s    28     31.4     -         -         -    
+  9              MSA    29     96.0     -         -         -    
+ 10              NH3    30     17.0  3.30E+06  4.10E+03     -    
+ 11              NH4    31     18.0     -         -         -    
+ 12              NIT    32     62.0     -         -         -    
+ 13             NITs    33     31.4     -         -         -    
+ 14             BCPI    34     12.0     -         -         -    
+ 15             OCPI    35     12.0     -         -         -    
+ 16             BCPO    36     12.0     -         -         -    
+ 17             OCPO    37     12.0     -         -         -    
+ 18             DST1    38     29.0     -         -         -    
+ 19             DST2    39     29.0     -         -         -    
+ 20             DST3    40     29.0     -         -         -    
+ 21             DST4    41     29.0     -         -         -    
+ 22             SALA    42     31.4     -         -         -    
+ 23             SALC    43     31.4     -         -         -    
+ 24              Br2    44    160.0  7.60E-01  3.72E+03     -    
+ 25             HOBr    47     97.0  6.10E+03  6.01E+03     -    
+ 26              HBr    48     81.0  7.10E+13  1.02E+04     -    
+ 27           ISOPND    55    147.0  1.70E+04  9.20E+03     -    
+ 28           ISOPNB    56    147.0  1.70E+04  9.20E+03     -    
+ 29             MOBA    57    114.0  2.30E+04  6.30E+03     -    
+ 30           PROPNN    58    119.0  1.00E+03  0.00E+00     -    
+ 31              HAC    59     74.0  2.93E+03  0.00E+00     -    
+ 32             GLYC    60     60.0  4.10E+04  4.60E+03     -    
+ 33             MVKN    61    149.0  1.70E+04  9.20E+03     -    
+ 34            MACRN    62    149.0  1.70E+04  9.20E+03     -    
+ 35              RIP    63    118.0  1.70E+06  0.00E+00     -    
+ 36            IEPOX    64    118.0  1.30E+08  0.00E+00     -    
+ 37              MAP    65     76.0  8.40E+02  5.30E+03     -    
+ 38              HCl    73     36.0  7.10E+15  1.10E+04     -    
+ 39             MTPA    99    136.2  4.90E-02  0.00E+00     -    
+ 40             LIMO   100    136.2  7.00E-02  0.00E+00     -    
+ 41             MTPO   101    136.2  4.90E-02  0.00E+00     -    
+ 42            TSOG1   102    150.0  1.00E+05  6.04E+03     -    
+ 43            TSOG2   103    150.0  1.00E+05  6.04E+03     -    
+ 44            TSOG3   104    150.0  1.00E+05  6.04E+03     -    
+ 45            TSOG0   105    150.0  1.00E+05  6.04E+03     -    
+ 46            TSOA1   106    150.0     -         -         -    
+ 47            TSOA2   107    150.0     -         -         -    
+ 48            TSOA3   108    150.0     -         -         -    
+ 49            TSOA0   109    150.0     -         -         -    
+ 50            ISOG1   110    150.0  1.00E+05  6.04E+03     -    
+ 51            ISOG2   111    150.0  1.00E+05  6.04E+03     -    
+ 52            ISOG3   112    150.0  1.00E+05  6.04E+03     -    
+ 53            ISOA1   113    150.0     -         -         -    
+ 54            ISOA2   114    150.0     -         -         -    
+ 55            ISOA3   115    150.0     -         -         -    
+ 56            ASOG1   119    150.0  1.00E+05  6.04E+03     -    
+ 57            ASOG2   120    150.0  1.00E+05  6.04E+03     -    
+ 58            ASOG3   121    150.0  1.00E+05  6.04E+03     -    
+ 59            ASOAN   122    150.0     -         -         -    
+ 60            ASOA1   123    150.0     -         -         -    
+ 61            ASOA2   124    150.0     -         -         -    
+ 62            ASOA3   125    150.0     -         -         -    
+ 63              EOH   126     12.0  1.90E+02  6.60E+03     -    
+ 64             MGLY   127     72.0  3.70E+03  7.50E+03     -    
+
+Turn on Mean OH diagnostic (ND23)? :    T
+     - INITIALIZE: Diag arrays zeroed!
+     - INITIALIZE: Diag counters zeroed!
+===============================================================================
+V E R T I C A L   G R I D   S E T U P
+
+INIT_PRESSURE: Vertical coordinates!
+
+Ap 
+   0.000000    0.048048    6.593752   13.134800   19.613110   26.092010
+  32.570810   38.982010   45.339010   51.696110   58.053210   64.362640
+  70.621980   78.834220   89.099920   99.365210  109.181700  118.958600
+ 128.695900  142.910000  156.260000  169.609000  181.619000  193.097000
+ 203.259000  212.150000  218.776000  223.898000  224.363000  216.865000
+ 201.192000  176.930000  150.393000  127.837000  108.663000   92.365720
+  78.512310   66.603410   56.387910   47.643910   40.175410   33.810010
+  28.367810   23.730410   19.791600   16.457100   13.643400   11.276900
+   9.292942    7.619842    6.216801    5.046801    4.076571    3.276431
+   2.620211    2.084970    1.650790    1.300510    1.019440    0.795134
+   0.616779    0.475806    0.365041    0.278526    0.211349    0.159495
+   0.119703    0.089345    0.066000    0.047585    0.032700    0.020000
+   0.010000
+
+Bp 
+   1.000000    0.984952    0.963406    0.941865    0.920387    0.898908
+   0.877429    0.856018    0.834661    0.813304    0.791947    0.770637
+   0.749378    0.721166    0.685900    0.650635    0.615818    0.581041
+   0.546304    0.494590    0.443740    0.392891    0.343381    0.294403
+   0.246741    0.200350    0.156224    0.113602    0.063720    0.028010
+   0.006960    0.000000    0.000000    0.000000    0.000000    0.000000
+   0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+   0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+   0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+   0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+   0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+   0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+   0.000000
+===============================================================================
+     - LINOZ_READ: Reading /home/ubuntu/gcdata/ExtData/CHEM_INPUTS/Linoz_200910/Linoz_March2007.dat
+   11  linoz chem tables - 40d int., w/ rxn175, +CH4,N2O,CFC11,CFC12 LLM climatol
+  Linoz Data:  O3 climatology :                  z*=10, 12, ..., 58                             2.700E-08 1.083E-05
+  Linoz Data:  Temperature climatology :         z*=10, 12, ..., 58                             1.859E+02 2.904E+02
+  Linoz Data:  Column O3 above box climalology : z*=10, 12, ..., 58                             7.538E-02 3.770E+02
+  Linoz Data:  P-L O3 climatology (mr/s):        z*=10, 12, ..., 58                            -1.590E-10 2.835E-11
+  Linoz Data:  d(P-L)/dO3 (1/s) :                z*=10, 12, ..., 58                            -8.386E-04 7.556E-09
+  Linoz Data:  d(P-L)/dT (mr/K) :                z*=10, 12, ..., 58                            -5.742E-12 4.615E-14
+  Linoz Data:  d(P-L)/d(column O3) (mr/DU) :     z*=10, 12, ..., 58                            -1.921E-12 5.038E-10
+$$ Finished Reading Linoz Data $$
+
+     - Found all 5  GEOS-FP CN     met fields for 2011/01/01 00:00
+     - Found all 44 GEOS-FP A1     met fields for 2013/07/01 00:30
+     - Found all 6  GEOS-FP A3cld  met fields for 2013/07/01 01:30
+     - Found all 6  GEOS-FP A3dyn  met fields for 2013/07/01 01:30
+     - Found all 4  GEOS-FP A3mstC met fields for 2013/07/01 01:30
+     - Found all 4  GEOS-FP A3mstE met fields for 2013/07/01 01:30
+     - Found all 4  GEOS-FP I3     met fields for 2013/07/01 00:00
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Opening file  : Olson_2001_Land_Map.025x025.generic.nc
+%%  in directory : /home/ubuntu/gcdata/ExtData/CHEM_INPUTS/Olson_Land_Map_201203/
+%%
+%% Successfully read lon [degrees_east]
+%% Successfully read lat [degrees_north]
+%% Successfully read OLSON [unitless]
+%% Successfully read DXYP [m2]
+%% Successfully closed file!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ vdinti: pbl height will be limited to bottom           25  model levels. top is    431.25009999999997       hpa
+  Initializing Fast-JX v7.0 standalone CTM code.
+GEOSCHEM::INIT_FJX: Reading FJX_spec.da  13
+ UCI FJX v6.8c JPL10+2013 fixes: Q1d, Acetone! others, derived fort10-2013b.x  
+      18
+  x-sect:  1    O2            3   180.00   260.00   300.00
+  x-sect:  2    O3            3   218.00   258.00   298.00
+  x-sect:  3    O3(1D)        3   200.00   260.00   320.00
+  x-sect:  4    NO       x    1   298.00
+  x-sect:  5    H2SO4    x    1   298.00
+  x-sect:  6    H2COa         2   223.00   298.00
+  x-sect:  7    H2COb         2   223.00   298.00
+  x-sect:  8    H2O2          2   200.00   300.00
+  x-sect:  9    CH3OOH        1   298.00
+  x-sect: 10    NO2           2   200.00   294.00
+  x-sect: 11    NO3           2   190.00   298.00
+  x-sect: 12    N2O5          2   233.00   300.00
+  x-sect: 13    HNO2          1   300.00
+  x-sect: 14    HNO3          2   200.00   300.00
+  x-sect: 15    HNO4          1   300.00
+  x-sect: 16    ClNO3a   x    2   200.00   300.00
+  x-sect: 17    ClNO3b   x    2   200.00   300.00
+  x-sect: 18    ClNO2    x    1   298.00
+  x-sect: 19    Br2           1   298.00
+  x-sect: 20    BrNO2         1   298.00
+  x-sect: 21    Cl2      x    2   200.00   300.00
+  x-sect: 22    HOCl     x    1   300.00
+  x-sect: 23    OClO     x    1   204.00
+  x-sect: 24    ClOO     x    1   298.00
+  x-sect: 25    Cl2O2    x    1   220.00
+  x-sect: 26    ClO      x    1   300.00
+  x-sect: 27    BrO           1   300.00
+  x-sect: 28    BrNO3         2   200.00   300.00
+  x-sect: 29    HOBr          1   300.00
+  x-sect: 30    BrCl     x    2   200.00   300.00
+  x-sect: 31    N2O      x    2   200.00   300.00
+  x-sect: 32    CFCl3    x    2   220.00   298.00
+  x-sect: 33    CF2Cl2   x    2   220.00   300.00
+  x-sect: 34    F113     x    2   210.00   300.00
+  x-sect: 35    F114     x    2   210.00   300.00
+  x-sect: 36    F115     x    1   300.00
+  x-sect: 37    CCl4     x    2   200.00   300.00
+  x-sect: 38    CH3Cl    x    2   200.00   300.00
+  x-sect: 39    MeCCl3   x    2   200.00   300.00
+  x-sect: 40    CH2Cl2   x    2   200.00   300.00
+  x-sect: 41    CHF2Cl   x    2   200.00   300.00
+  x-sect: 42    F123     x    2   210.00   295.00
+  x-sect: 43    F141b    x    2   200.00   300.00
+  x-sect: 44    F142b    x    2   210.00   298.00
+  x-sect: 45    CH3Br    x    2   200.00   300.00
+  x-sect: 46    H1211    x    2   200.00   300.00
+  x-sect: 47    H1301    x    2   200.00   300.00
+  x-sect: 48    H2402    x    2   200.00   300.00
+  x-sect: 49    CH2Br2        2   200.00   300.00
+  x-sect: 50    CHBr3         2   210.00   300.00
+  x-sect: 51    CH3I          2   243.00   300.00
+  x-sect: 52    CF3I          2   243.00   300.00
+  x-sect: 53    OCS           2   200.00   300.00
+  x-sect: 54    HAC           1   298.00
+  x-sect: 55    PAN           2   250.00   298.00
+  x-sect: 56    CH3NO3        2   200.00   300.00
+  x-sect: 57    ActAld   p    3   177.00   566.00   999.00
+  x-sect: 58    MeVK     p    3   177.00   566.00   999.00
+  x-sect: 59    MeAcr         1   298.00
+  x-sect: 60    GlyAld        1   298.00
+  x-sect: 61    MEKeto   p    2   177.00   999.00
+  x-sect: 62    PrAld         1   298.00
+  x-sect: 63    MGlyxl   p    3   177.00   566.00   999.00
+  x-sect: 64    Glyxla   p    2   177.00   999.00
+  x-sect: 65    Glyxlb   p    2   177.00   999.00
+  x-sect: 66    Glyxlc   p    2   177.00   999.00
+  x-sect: 67    Acet-a   p    3   177.00   566.00   999.00
+  x-sect: 68    Acet-b        3   235.00   260.00   298.00
+  x-sect: 69    ONIT1         1   298.00
+  x-sect: 70    MPN           1   298.00
+GEOSCHEM::INIT_FJX: Reading jv_spec_mie.da  13
+ jv_spec_mie.dat: Aerosol optical properties at 5 wavelengths (clh, 01/30/10), 
+ Aerosol optical: r-eff/rho/Q(@wavel):   200.0   300.0   400.0   600.0   999.0
+ RAYLE  = Rayleigh phase
+    1  wavel=   200.0   300.0   400.0   600.0   999.0
+    1  Qext =123.5000123.5000 39.1000  7.7000  1.0000
+ ISOTR  = isotropic
+    2  wavel=   200.0   300.0   400.0   600.0   999.0
+    2  Qext =  1.0000  1.0000  1.0000  1.0000  1.0000
+ ABSRB  = fully absorbing 'soot', wavelength indep.
+    3  wavel=   200.0   300.0   400.0   600.0   999.0
+    3  Qext =  1.0000  1.0000  1.0000  1.0000  1.0000
+ S_Bkg = backgrnd stratospheric sulfate (n=1.46, log-norm: r=.09um/sigma=.6)
+    4  wavel=   200.0   300.0   400.0   600.0   999.0
+    4  Qext =  2.7541  2.7541  2.4017  1.6454  0.7449
+ S_Vol = volcanic stratospheric sulfate (n=1.46, log-norm: r=.08um/sigma=.8)
+    5  wavel=   200.0   300.0   400.0   600.0   999.0
+    5  Qext =  2.6437  2.6437  2.5603  2.2221  1.5319
+ W_H01 = water haze (H1/Deirm.) (n=1.335, gamma:  r-mode=0.1um / alpha=2)
+    6  wavel=   200.0   300.0   400.0   600.0   999.0
+    6  Qext =  2.8438  2.8438  2.3497  1.4037  0.5034
+ W_H04 = water haze (H1/Deirm.) (n=1.335, gamma:  r-mode=0.4um / alpha=2)
+    7  wavel=   200.0   300.0   400.0   600.0   999.0
+    7  Qext =  2.2995  2.2995  2.4743  2.6719  2.9565
+ W_C02 = water cloud (C1/Deirm.) (n=1.335, gamma:  r-mode=2.0um / alpha=6)
+    8  wavel=   200.0   300.0   400.0   600.0   999.0
+    8  Qext =  2.1410  2.1410  2.1778  2.2287  2.3071
+ W_C04 = water cloud (C1/Deirm.) (n=1.335, gamma:  r-mode=4.0um / alpha=6)
+    9  wavel=   200.0   300.0   400.0   600.0   999.0
+    9  Qext =  2.0835  2.0835  2.1064  2.1345  2.1922
+ W_C08 = water cloud (C1/Deirm.) (n=1.335, gamma:  r-mode=8.0um / alpha=6)
+   10  wavel=   200.0   300.0   400.0   600.0   999.0
+   10  Qext =  2.0539  2.0539  2.0643  2.0883  2.1236
+ W_C13 = water cloud (C1/Deirm.) (n=1.335, gamma:  r-mode=13.3um / alpha=6)
+   11  wavel=   200.0   300.0   400.0   600.0   999.0
+   11  Qext =  2.0440  2.0440  2.0529  2.0716  2.0978
+ W_L06 = water cloud (Lacis) (n=1.335, r-mode=5.5um / alpha=11/3)
+   12  wavel=   200.0   300.0   400.0   600.0   999.0
+   12  Qext =  2.0616  2.0616  2.0747  2.1005  2.1423
+ Ice-H = hexagonal ice cloud (Mishchenko)
+   13  wavel=   200.0   300.0   400.0   600.0   999.0
+   13  Qext =  2.0000  2.0000  2.0000  2.0000  2.0000
+ Ice-I = irregular ice cloud (Mishchenko)
+   14  wavel=   200.0   300.0   400.0   600.0   999.0
+   14  Qext =  2.0000  2.0000  2.0000  2.0000  2.0000
+ Mdust 0.15 = mineral dust (R.V.Martin)
+   15  wavel=   200.0   300.0   400.0   600.0   999.0
+   15  Qext =  4.0154  4.0154  3.0582  1.2133  0.2195
+ Mdust 0.25 = mineral dust (R.V.Martin)
+   16  wavel=   200.0   300.0   400.0   600.0   999.0
+   16  Qext =  2.6560  2.6560  3.9669  3.2556  1.1019
+ Mdust 0.4 = mineral dust (R.V.Martin)
+   17  wavel=   200.0   300.0   400.0   600.0   999.0
+   17  Qext =  2.6071  2.6071  2.1923  3.9815  2.9227
+ Mdust 0.8 = mineral dust (R.V.Martin)
+   18  wavel=   200.0   300.0   400.0   600.0   999.0
+   18  Qext =  2.3459  2.3459  2.3417  2.4688  3.3741
+ Mdust 1.5 = mineral dust (R.V.Martin)
+   19  wavel=   200.0   300.0   400.0   600.0   999.0
+   19  Qext =  2.1925  2.1925  2.2457  2.3919  2.6314
+ Mdust 2.5 = mineral dust (R.V.Martin)
+   20  wavel=   200.0   300.0   400.0   600.0   999.0
+   20  Qext =  2.1427  2.1427  2.1881  2.1559  2.3282
+ Mdust 4.0 = mineral dust (R.V.Martin)
+   21  wavel=   200.0   300.0   400.0   600.0   999.0
+   21  Qext =  2.1045  2.1045  2.1191  2.2094  2.3429
+ S00(dar) Trop sulphate, RH=00 (n@550=1.53-0.01i log-norm: r=.07um/sigma=1.6)
+   22  wavel=   200.0   300.0   400.0   600.0  1000.0
+   22  Qext =  2.3328  2.3328  1.6118  0.7484  0.2108
+ S50(dar) Trop sulphate, RH=50 (n@550=1.44 0.00i log-norm: r=.09um/sigma=1.6)
+   23  wavel=   200.0   300.0   400.0   600.0  1000.0
+   23  Qext =  2.4175  2.4175  1.7099  0.8352  0.2488
+ S70(dar) Trop sulphate, RH=70 (n@550=1.41 0.00i log-norm: r=.09um/sigma=1.6)
+   24  wavel=   200.0   300.0   400.0   600.0  1000.0
+   24  Qext =  2.4852  2.4852  1.7947  0.8963  0.2751
+ S80(dar) Trop sulphate, RH=80 (n@550=1.40 0.00i log-norm: r=.10um/sigma=1.6)
+   25  wavel=   200.0   300.0   400.0   600.0  1000.0
+   25  Qext =  2.5571  2.5571  1.8800  0.9653  0.3040
+ S90(dar) Trop sulphate, RH=90 (n@550=1.38 0.00i log-norm: r=.11um/sigma=1.6)
+   26  wavel=   200.0   300.0   400.0   600.0  1000.0
+   26  Qext =  2.6967  2.6967  2.0587  1.1172  0.3730
+ S95(dar) Trop sulphate, RH=95 (n@550=1.36 0.00i log-norm: r=.13um/sigma=1.6)
+   27  wavel=   200.0   300.0   400.0   600.0  1000.0
+   27  Qext =  2.8355  2.8355  2.2825  1.3212  0.4720
+ S99(dar) Trop sulphate, RH=99 (n@550=1.34 0.00i log-norm: r=.18um/sigma=1.6)
+   28  wavel=   200.0   300.0   400.0   600.0  1000.0
+   28  Qext =  2.9980  2.9980  2.7329  1.8669  0.7986
+ BC00(rvm) Black C, RH=00 (n@550=1.75-.44i log-norm: r_g=.02um/sigma=1.6)
+   29  wavel=   200.0   300.0   400.0   600.0  1000.0
+   29  Qext =  0.9543  0.9543  0.6229  0.3282  0.1694
+ BC50(rvm) Black C, RH=50 (n@550=1.75-.44i log-norm: r_g=.02um/sigma=1.6)
+   30  wavel=   200.0   300.0   400.0   600.0  1000.0
+   30  Qext =  0.9543  0.9543  0.6229  0.3282  0.1694
+ BC70(rvm) Black C, RH=70 (n@550=1.75-.44i log-norm: r_g=.02um/sigma=1.6)
+   31  wavel=   200.0   300.0   400.0   600.0  1000.0
+   31  Qext =  0.9543  0.9543  0.6229  0.3282  0.1694
+ BC80(rvm) Black C, RH=80 (n@550=1.57-.25i log-norm: r_g=.02um/sigma=1.6)
+   32  wavel=   200.0   300.0   400.0   600.0  1000.0
+   32  Qext =  0.8137  0.8137  0.5268  0.2744  0.1397
+ BC90(rvm) Black C, RH=90 (n@550=1.48-.16i log-norm: r_g=.02um/sigma=1.6)
+   33  wavel=   200.0   300.0   400.0   600.0  1000.0
+   33  Qext =  0.7281  0.7281  0.4607  0.2321  0.1137
+ BC95(rvm) Black C, RH=95 (n@550=1.45-.13i log-norm: r_g=.02um/sigma=1.6)
+   34  wavel=   200.0   300.0   400.0   600.0  1000.0
+   34  Qext =  0.7045  0.7045  0.4397  0.2169  0.1034
+ BC99(rvm) Black C, RH=99 (n@550=1.39-.06i log-norm: r_g=.02um/sigma=1.6)
+   35  wavel=   200.0   300.0   400.0   600.0  1000.0
+   35  Qext =  0.7031  0.7031  0.4181  0.1882  0.0776
+ OC00(rvm) Organic C, RH=00 (n@550=1.53-.006i log-norm: r_g=.07um/sigma=1.6)
+   36  wavel=   200.0   300.0   400.0   600.0  1000.0
+   36  Qext =  2.4567  2.4567  1.7461  0.8395  0.2405
+ OC50(rvm) Organic C, RH=50 (n@550=1.46-.004i log-norm: r_g=.08um/sigma=1.6)
+   37  wavel=   200.0   300.0   400.0   600.0  1000.0
+   37  Qext =  2.3664  2.3664  1.6538  0.7904  0.2297
+ OC70(rvm) Organic C, RH=70 (n@550=1.44-.003i log-norm: r_g=.08um/sigma=1.6)
+   38  wavel=   200.0   300.0   400.0   600.0  1000.0
+   38  Qext =  2.3617  2.3617  1.6499  0.7916  0.2319
+ OC80(rvm) Organic C, RH=80 (n@550=1.43-.003i log-norm: r_g=.09um/sigma=1.6)
+   39  wavel=   200.0   300.0   400.0   600.0  1000.0
+   39  Qext =  2.3693  2.3693  1.6588  0.8003  0.2364
+ OC90(rvm) Organic C, RH=90 (n@550=1.41-.002i log-norm: r_g=.09um/sigma=1.6)
+   40  wavel=   200.0   300.0   400.0   600.0  1000.0
+   40  Qext =  2.4065  2.4065  1.7001  0.8328  0.2506
+ OC95(rvm) Organic C, RH=95 (n@550=1.39-.002i log-norm: r_g=.10um/sigma=1.6)
+   41  wavel=   200.0   300.0   400.0   600.0  1000.0
+   41  Qext =  2.4733  2.4733  1.7758  0.8901  0.2747
+ OC99(rvm) Organic C, RH=99 (n@550=1.36-.001i log-norm: r_g=.12um/sigma=1.6)
+   42  wavel=   200.0   300.0   400.0   600.0  1000.0
+   42  Qext =  2.6732  2.6732  2.0282  1.0918  0.3631
+ SSa00(rvm) Sea Salt (accum), RH=00 (n@550=1.50 log-norm: r=.09um/sigma=1.5)
+   43  wavel=   200.0   300.0   400.0   600.0  1000.0
+   43  Qext =  2.5412  2.5412  1.6772  0.7067  0.1570
+ SSa50(rvm) Sea Salt (accum), RH=50 (n@550=1.37 log-norm: r=.14um/sigma=1.5)
+   44  wavel=   200.0   300.0   400.0   600.0  1000.0
+   44  Qext =  2.9302  2.9302  2.2339  1.1660  0.3550
+ SSa70(rvm) Sea Salt (accum), RH=70 (n@550=1.36 log-norm: r=.15um/sigma=1.5)
+   45  wavel=   200.0   300.0   400.0   600.0  1000.0
+   45  Qext =  3.0398  3.0398  2.4455  1.3697  0.4508
+ SSa80(rvm) Sea Salt (accum), RH=80 (n@550=1.35 log-norm: r=.17um/sigma=1.5)
+   46  wavel=   200.0   300.0   400.0   600.0  1000.0
+   46  Qext =  3.1035  3.1035  2.6193  1.5557  0.5476
+ SSa90(rvm) Sea Salt (accum), RH=90 (n@550=1.34 log-norm: r=.20um/sigma=1.5)
+   47  wavel=   200.0   300.0   400.0   600.0  1000.0
+   47  Qext =  3.1322  3.1322  2.9072  1.9502  0.7818
+ SSa95(rvm) Sea Salt (accum), RH=95 (n@550=1.34 log-norm: r=.25um/sigma=1.5)
+   48  wavel=   200.0   300.0   400.0   600.0  1000.0
+   48  Qext =  3.0158  3.0158  3.0937  2.4069  1.1240
+ SSa99(rvm) Sea Salt (accum), RH=99 (n@550=1.33 log-norm: r=.41um/sigma=1.5)
+   49  wavel=   200.0   300.0   400.0   600.0  1000.0
+   49  Qext =  2.4962  2.4962  2.8177  3.0999  2.2905
+ SSc00(rvm) Sea Salt (coarse), RH=00 (n@550=1.50 log-norm: r=0.4um/sigma=1.8)
+   50  wavel=   200.0   300.0   400.0   600.0  1000.0
+   50  Qext =  2.3435  2.3435  2.4489  2.6771  2.8998
+ SSc50(rvm) Sea Salt (coarse), RH=50 (n@550=1.37 log-norm: r=0.6um/sigma=1.8)
+   51  wavel=   200.0   300.0   400.0   600.0  1000.0
+   51  Qext =  2.2492  2.2492  2.3182  2.4842  2.7678
+ SSc70(rvm) Sea Salt (coarse), RH=70 (n@550=1.36 log-norm: r=0.7um/sigma=1.8)
+   52  wavel=   200.0   300.0   400.0   600.0  1000.0
+   52  Qext =  2.2293  2.2293  2.2898  2.4343  2.7189
+ SSc80(rvm) Sea Salt (coarse), RH=80 (n@550=1.35 log-norm: r=0.8um/sigma=1.8)
+   53  wavel=   200.0   300.0   400.0   600.0  1000.0
+   53  Qext =  2.2140  2.2140  2.2684  2.3962  2.6723
+ SSc90(rvm) Sea Salt (coarse), RH=90 (n@550=1.34 log-norm: r=1.0um/sigma=1.8)
+   54  wavel=   200.0   300.0   400.0   600.0  1000.0
+   54  Qext =  2.1887  2.1887  2.2336  2.3331  2.5766
+ SSc95(rvm) Sea Salt (coarse), RH=95 (n@550=1.34 log-norm: r=1.2um/sigma=1.8)
+   55  wavel=   200.0   300.0   400.0   600.0  1000.0
+   55  Qext =  2.1641  2.1641  2.2020  2.2780  2.4698
+ SSc99(rvm) Sea Salt (coarse), RH=99 (n@550=1.33 log-norm: r=2.0um/sigma=1.8)
+   56  wavel=   200.0   300.0   400.0   600.0  1000.0
+   56  Qext =  2.1146  2.1146  2.1402  2.1865  2.2787
+ so4 RRTMG LUT interpolated from GADS (DAR 09/2013)                            
+ V0.1 - contains Fast-J wavelengths but is the same as the original jv_spec.dat
+ soot RRTMG LUT interpolated from GADS (DAR 09/2013)                           
+ V0.1 - contains Fast-J wavelengths but is the same as the original jv_spec.dat
+ org RRTMG LUT interpolated from GADS (DAR 09/2013)                            
+ V0.1 - contains Fast-J wavelengths but is the same as the original jv_spec.dat
+ ssa RRTMG LUT interpolated from GADS (DAR 09/2013)                            
+ V0.1 - contains Fast-J wavelengths but is the same as the original jv_spec.dat
+ ssc RRTMG LUT interpolated from GADS (DAR 09/2013)                            
+ V0.1 - contains Fast-J wavelengths but is the same as the original jv_spec.dat
+ h2so4 RRTMG LUT interpolated from GADS (DAR 09/2013)                          
+ V0.1 - contains Fast-J wavelengths but is the same as the original jv_spec.dat
+ h2so4 RRTMG LUT interpolated from GADS (DAR 09/2013)                          
+ V0.1 - contains Fast-J wavelengths but is the same as the original jv_spec.dat
+ dust RRTMG LUT interpolated from GADS (DAR 09/2013)                           
+ V0.1 - contains Fast-J wavelengths but is the same as the original jv_spec.dat
+ Optics read for all wavelengths successfully
+ N WAVELENGTHS:            1
+ WAVELENGTH REQUESTED:   550.00000000000000     
+ WAVELENGTH REQUIRED:           1
+ *********************************
+Using Aerosol type:   3 ABSRB  = fully absorbing 'soot', wavelength indep.                              
+Using Aerosol type:  10 W_C08 = water cloud (C1/Deirm.) (n=1.335, gamma:  r-mode=8.0um / alpha=6)       
+Using Aerosol type:  14 Ice-I = irregular ice cloud (Mishchenko)                                        
+Using Aerosol type:  15 Mdust 0.15 = mineral dust (R.V.Martin)                                          
+Using Aerosol type:  16 Mdust 0.25 = mineral dust (R.V.Martin)                                          
+Using Aerosol type:  17 Mdust 0.4 = mineral dust (R.V.Martin)                                           
+Using Aerosol type:  18 Mdust 0.8 = mineral dust (R.V.Martin)                                           
+Using Aerosol type:  19 Mdust 1.5 = mineral dust (R.V.Martin)                                           
+Using Aerosol type:  20 Mdust 2.5 = mineral dust (R.V.Martin)                                           
+Using Aerosol type:  21 Mdust 4.0 = mineral dust (R.V.Martin)                                           
+Using Aerosol type:  22 S00(dar) Trop sulphate, RH=00 (n@550=1.53-0.01i log-norm: r=.07um/sigma=1.6)    
+Using Aerosol type:  23 S50(dar) Trop sulphate, RH=50 (n@550=1.44 0.00i log-norm: r=.09um/sigma=1.6)    
+Using Aerosol type:  24 S70(dar) Trop sulphate, RH=70 (n@550=1.41 0.00i log-norm: r=.09um/sigma=1.6)    
+Using Aerosol type:  25 S80(dar) Trop sulphate, RH=80 (n@550=1.40 0.00i log-norm: r=.10um/sigma=1.6)    
+Using Aerosol type:  26 S90(dar) Trop sulphate, RH=90 (n@550=1.38 0.00i log-norm: r=.11um/sigma=1.6)    
+Using Aerosol type:  29 BC00(rvm) Black C, RH=00 (n@550=1.75-.44i log-norm: r_g=.02um/sigma=1.6)        
+Using Aerosol type:  30 BC50(rvm) Black C, RH=50 (n@550=1.75-.44i log-norm: r_g=.02um/sigma=1.6)        
+Using Aerosol type:  31 BC70(rvm) Black C, RH=70 (n@550=1.75-.44i log-norm: r_g=.02um/sigma=1.6)        
+Using Aerosol type:  32 BC80(rvm) Black C, RH=80 (n@550=1.57-.25i log-norm: r_g=.02um/sigma=1.6)        
+Using Aerosol type:  33 BC90(rvm) Black C, RH=90 (n@550=1.48-.16i log-norm: r_g=.02um/sigma=1.6)        
+Using Aerosol type:  36 OC00(rvm) Organic C, RH=00 (n@550=1.53-.006i log-norm: r_g=.07um/sigma=1.6)     
+Using Aerosol type:  37 OC50(rvm) Organic C, RH=50 (n@550=1.46-.004i log-norm: r_g=.08um/sigma=1.6)     
+Using Aerosol type:  38 OC70(rvm) Organic C, RH=70 (n@550=1.44-.003i log-norm: r_g=.08um/sigma=1.6)     
+Using Aerosol type:  39 OC80(rvm) Organic C, RH=80 (n@550=1.43-.003i log-norm: r_g=.09um/sigma=1.6)     
+Using Aerosol type:  40 OC90(rvm) Organic C, RH=90 (n@550=1.41-.002i log-norm: r_g=.09um/sigma=1.6)     
+Using Aerosol type:  43 SSa00(rvm) Sea Salt (accum), RH=00 (n@550=1.50 log-norm: r=.09um/sigma=1.5)     
+Using Aerosol type:  44 SSa50(rvm) Sea Salt (accum), RH=50 (n@550=1.37 log-norm: r=.14um/sigma=1.5)     
+Using Aerosol type:  45 SSa70(rvm) Sea Salt (accum), RH=70 (n@550=1.36 log-norm: r=.15um/sigma=1.5)     
+Using Aerosol type:  46 SSa80(rvm) Sea Salt (accum), RH=80 (n@550=1.35 log-norm: r=.17um/sigma=1.5)     
+Using Aerosol type:  47 SSa90(rvm) Sea Salt (accum), RH=90 (n@550=1.34 log-norm: r=.20um/sigma=1.5)     
+Using Aerosol type:  50 SSc00(rvm) Sea Salt (coarse), RH=00 (n@550=1.50 log-norm: r=0.4um/sigma=1.8)    
+Using Aerosol type:  51 SSc50(rvm) Sea Salt (coarse), RH=50 (n@550=1.37 log-norm: r=0.6um/sigma=1.8)    
+Using Aerosol type:  52 SSc70(rvm) Sea Salt (coarse), RH=70 (n@550=1.36 log-norm: r=0.7um/sigma=1.8)    
+Using Aerosol type:  53 SSc80(rvm) Sea Salt (coarse), RH=80 (n@550=1.35 log-norm: r=0.8um/sigma=1.8)    
+Using Aerosol type:  54 SSc90(rvm) Sea Salt (coarse), RH=90 (n@550=1.34 log-norm: r=1.0um/sigma=1.8)    
+Using Aerosol type:   4 S_Bkg = backgrnd stratospheric sulfate (n=1.46, log-norm: r=.09um/sigma=.6)     
+Using Aerosol type:  14 Ice-I = irregular ice cloud (Mishchenko)                                        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Opening file  : fastj.jv_atms_dat.nc
+%%  in directory : /home/ubuntu/gcdata/ExtData/CHEM_INPUTS/FastJ_201204/
+%%
+%% Successfully read T [K]
+%% Successfully read O3 [ppm]
+%% Successfully closed file!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+GEOSCHEM::INIT_FJX: Reading FJX_j2j.da  13
+<--J-value data from chemistry code: id#, reaction,       factor/fastJX/code(a6)                                        
+Photochemistry Scheme with 105 J-values
+    1 O2        PHOTON    O         O                    1.000 mapped to FJX:   1 O2    
+    2 O3        PHOTON    O2        O                    1.000 mapped to FJX:   2 O3    
+    3 O3        PHOTON    O2        O(1D)                1.000 mapped to FJX:   3 O3(1D)
+    4 H2O       PHOTON    OH        H                    0.000 no mapping onto fast-JX H2O   
+    5 HO2       PHOTON    OH        O                    0.000 no mapping onto fast-JX HO2   
+    6 NO        PHOTON    N         O                    1.000 mapped to FJX:   4 NO    
+    7 CH2O      PHOTON    H         HO2      CO          1.000 mapped to FJX:   6 H2COa 
+    8 CH2O      PHOTON    CO        H2                   1.000 mapped to FJX:   7 H2COb 
+    9 H2O2      PHOTON    OH        OH                   1.000 mapped to FJX:   8 H2O2  
+   10 MP        PHOTON    CH2O      HO2      OH          1.000 mapped to FJX:   9 CH3OOH
+   11 NO2       PHOTON    NO        O                    1.000 mapped to FJX:  10 NO2   
+   12 NO3       PHOTON    NO2       O                    0.886 mapped to FJX:  11 NO3   
+   13 NO3       PHOTON    NO        O2                   0.114 mapped to FJX:  11 NO3   
+   14 N2O5      PHOTON    NO2       NO3                  1.000 mapped to FJX:  12 N2O5  
+   15 HNO2      PHOTON    NO        OH                   1.000 mapped to FJX:  13 HNO2  
+   16 HNO3      PHOTON    NO2       OH                   1.000 mapped to FJX:  14 HNO3  
+   17 HNO4      PHOTON    OH        NO3                  0.050 mapped to FJX:  15 HNO4  
+   18 HNO4      PHOTON    NO2       HO2                  0.950 mapped to FJX:  15 HNO4  
+   19 ClNO3     PHOTON    Cl        NO3                  1.000 mapped to FJX:  16 ClNO3a
+   20 ClNO3     PHOTON    ClO       NO2                  1.000 mapped to FJX:  17 ClNO3b
+   21 ClNO2     PHOTON    Cl        NO2                  1.000 mapped to FJX:  18 ClNO2 
+   22 Cl2       PHOTON    Cl        Cl                   1.000 mapped to FJX:  21 Cl2   
+   23 Br2       PHOTON    Br        Br                   1.000 mapped to FJX:  19 Br2   
+   24 HOCl      PHOTON    Cl        OH                   1.000 mapped to FJX:  22 HOCl  
+   25 OClO      PHOTON    ClO       O                    1.000 mapped to FJX:  23 OClO  
+   26 Cl2O2     PHOTON    Cl        Cl        O2         1.000 mapped to FJX:  25 Cl2O2 
+   27 ClO       PHOTON    Cl        O                    1.000 mapped to FJX:  26 ClO   
+   28 BrO       PHOTON    Br        O                    1.000 mapped to FJX:  27 BrO   
+   29 BrNO3     PHOTON    Br        NO3                  0.850 mapped to FJX:  28 BrNO3 
+   30 BrNO3     PHOTON    BrO       NO2                  0.150 mapped to FJX:  28 BrNO3 
+   31 BrNO2     PHOTON    Br        NO2                  1.000 mapped to FJX:  20 BrNO2 
+   32 HOBr      PHOTON    Br        OH                   1.000 mapped to FJX:  29 HOBr  
+   33 BrCl      PHOTON    Br        Cl                   1.000 mapped to FJX:  30 BrCl  
+   34 OCS       PHOTON    SO2       CO                   1.000 mapped to FJX:  53 OCS   
+   35 SO2       PHOTON    SO        O                    1.000 no mapping onto fast-JX SO2   
+   36 N2O       PHOTON    N2        O                    1.000 mapped to FJX:  31 N2O   
+   37 CFC11     PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  32 CFCl3 
+   38 CFC12     PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  33 CF2Cl2
+   39 CFC113    PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  34 F113  
+   40 CFC114    PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  35 F114  
+   41 CFC115    PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  36 F115  
+   42 CCl4      PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  37 CCl4  
+   43 CH3Cl     PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  38 CH3Cl 
+   44 CH3CCl3   PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  39 MeCCl3
+   45 CH2Cl2    PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  40 CH2Cl2
+   46 HCFC22    PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  41 CHF2Cl
+   47 HCFC123   PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  42 F123  
+   48 HCFC141b  PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  43 F141b 
+   49 HCFC142b  PHOTON    Cl        PRODUCTS             1.000 mapped to FJX:  44 F142b 
+   50 CH3Br     PHOTON    Br        PRODUCTS             1.000 mapped to FJX:  45 CH3Br 
+   51 H1211     PHOTON    Br        PRODUCTS             1.000 mapped to FJX:  46 H1211 
+   52 H12O2     PHOTON    Br        PRODUCTS             1.000 mapped to FJX:  46 H1211 
+   53 H1301     PHOTON    Br        PRODUCTS             1.000 mapped to FJX:  47 H1301 
+   54 H2402     PHOTON    Br        PRODUCTS             1.000 mapped to FJX:  48 H2402 
+   55 CH2Br2    PHOTON    Br        PRODUCTS             1.000 mapped to FJX:  49 CH2Br2
+   56 CHBr3     PHOTON    Br        PRODUCTS             1.000 mapped to FJX:  50 CHBr3 
+   57 CH3I      PHOTON    I         PRODUCTS             1.000 mapped to FJX:  51 CH3I  
+   58 CF3I      PHOTON    I         PRODUCTS             1.000 mapped to FJX:  52 CF3I  
+   59 PAN       PHOTON    CH3C(O)O2 NO2                  1.000 mapped to FJX:  55 PAN   
+   60 R4N2      PHOTON    CH3O      NO2                  1.000 mapped to FJX:  56 CH3NO3
+   61 ALD2      PHOTON    CH3       HCO                  1.000 mapped to FJX:  57 ActAld
+   62 ALD2      PHOTON    CH4       CO                   1.000 no mapping onto fast-JX ActAlx
+   63 MVK       PHOTON    PRPE      CO                   0.600 mapped to FJX:  58 MeVK  
+   64 MVK       PHOTON    MCO3      CH2O      CO     HO2 0.200 mapped to FJX:  58 MeVK  
+   65 MVK       PHOTON    MO2       RCO3                 0.200 mapped to FJX:  58 MeVK  
+   66 MACR      PHOTON    CO        HO2       CH2O   MCO 1.000 mapped to FJX:  59 MeAcr 
+   67 MACR      PHOTON    MAO3      HO2                  0.000 mapped to FJX:  59 MeAcr 
+   68 GLYC      PHOTON    CH2O   HO2   OH  CO  MOH       1.000 mapped to FJX:  60 GlyAld
+   69 MEK       PHOTON    MCO3      EtO2      MO2    RCO 1.000 mapped to FJX:  61 MEKeto
+   70 RCHO      PHOTON    EtO2      HO2       CO         1.000 mapped to FJX:  62 PrAld 
+   71 MGLY      PHOTON    MCO3      CO        HO2        1.000 mapped to FJX:  63 MGlyxl
+   72 GLYX      PHOTON    HO2 HO2 CO CO                  1.000 mapped to FJX:  64 Glyxla
+   73 GLYX      PHOTON    H2        CO        CO         1.000 mapped to FJX:  65 Glyxlb
+   74 GLYX      PHOTON    CH2O      CO                   1.000 mapped to FJX:  66 Glyxlc
+   75 HAC       PHOTON    MeCO3     HCHO      HO2        0.600 mapped to FJX:  54 HAC   
+   76 ACET      PHOTON    MCO3      MO2                  1.000 mapped to FJX:  67 Acet-a
+   77 ACET      PHOTON    MO2       MO2       CO         1.000 mapped to FJX:  68 Acet-b
+   78 INPN      PHOTON    OH        HO2       RCHO   NO2 1.000 mapped to FJX:   9 CH3OOH
+   79 PRPN      PHOTON    OH        HO2       RCHO   NO2 1.000 mapped to FJX:   9 CH3OOH
+   80 ETP       PHOTON    OH        HO2       ALD2       0.500 mapped to FJX:   9 CH3OOH
+   81 RA3P      PHOTON    OH        HO2       RCHO       1.000 mapped to FJX:   9 CH3OOH
+   82 RB3P      PHOTON    OH        HO2       ACET       1.000 mapped to FJX:   9 CH3OOH
+   83 R4P       PHOTON    OH        HO2       RCHO       1.000 mapped to FJX:   9 CH3OOH
+   84 PP        PHOTON    OH        HO2       ALD2   CH2 1.000 mapped to FJX:   9 CH3OOH
+   85 RP        PHOTON    OH        HO2       ALD2       1.000 mapped to FJX:   9 CH3OOH
+   86 RIP       PHOTON    OH HO2 CH2O MVK MACR IALD      1.000 mapped to FJX:   9 CH3OOH
+   87 IAP       PHOTON    OH HO2 CO H2 HAC GLYC MGLY     1.000 mapped to FJX:   9 CH3OOH
+   88 ISNP      PHOTON    OH HO2 RCHO NO2                1.000 mapped to FJX:   9 CH3OOH
+   89 VRP       PHOTON    OH HO2 CH2O MCO3 GLYC MGLY     1.000 mapped to FJX:   9 CH3OOH
+   90 MRP       PHOTON    OH HO2 HAC CO CH2O             1.000 mapped to FJX:   9 CH3OOH
+   91 MAOP      PHOTON    OH CH2O MCO3                   1.000 mapped to FJX:   9 CH3OOH
+   92 MACRN     PHOTON    OH HO2 RCHO                    1.000 mapped to FJX:  69 ONIT1 
+   93 MVKN      PHOTON    OH HO2 RCHO                    1.000 mapped to FJX:  69 ONIT1 
+   94 ISOPNB    PHOTON    OH HO2 RCHO                    1.000 mapped to FJX:  69 ONIT1 
+   95 ISOPND    PHOTON    OH HO2 RCHO                    1.000 mapped to FJX:  69 ONIT1 
+   96 PROPNN    PHOTON    OH HO2 RCHO                    1.000 mapped to FJX:  69 ONIT1 
+   97 ATOOH     PHOTON    OH HO2 RCHO                    1.000 mapped to FJX:   9 CH3OOH
+   98 R4N2      PHOTON    NO2 ACET MEK MO2 HO2 ALD2...   1.000 mapped to FJX:  56 CH3NO3
+   99 MAP       PHOTON    OH        MO2                  1.000 mapped to FJX:   9 CH3OOH
+  100 SO4       PHOTON    SO2       OH        OH         1.000 mapped to FJX:   5 H2SO4 
+  101 ClNO2     PHOTON    Cl        NO2                  1.000 mapped to FJX:  18 ClNO2 
+  102 ClOO      PHOTON    Cl        O2                   1.000 mapped to FJX:  24 ClOO  
+  103 O3        PHOTON    O2        O(1D)                1.000 mapped to FJX:   3 O3(1D)
+  104 MPN       PHOTON    HO2       NO3       HCHO       0.050 mapped to FJX:  70 MPN   
+  105 MPN       PHOTON    MO2       NO2                  0.950 mapped to FJX:  70 MPN   
+===============================================================================
+Photo rxn flags saved for use in PHOTRATE_ADJ:
+
+RXN_O2    [ O2  + hv -> O + O         ]  =      1
+RXN_O3_1  [ O3  + hv -> O2 + O        ]  =      2
+RXN_O3_2a [ O3  + hv -> O2 + O(1D) #1 ]  =      3
+RXN_O3_2b [ O3  + hv -> O2 + O(1D) #2 ]  =    103
+RXN_H2SO4 [ SO4 + hv -> SO2 + OH + OH ]  =    100
+RXN_NO2   [ NO2 + hv -> NO + O        ]  =     11
+===============================================================================
+  
+ Reading part 1 of HEMCO configuration file: HEMCO_Config.rc
+  
+ Reading part 2 of HEMCO configuration file: HEMCO_Config.rc
+ Wetland emissions not turned on - no CH4 emissions from rice!
+ HEMCO WARNING: Wetland emissions not turned on - no CH4 emissions from rice!
+ --> LOCATION: DIAGN_CH4 (hcoi_gc_diagn_mod.F90)
+===============================================================================
+R E S T A R T   F I L E   I N P U T ( NetCDF )
+
+READ_RESTART_FILE: Reading /home/ubuntu/gcdata/ExtData/SPC_RESTARTS/initial_GEOSChem_rst.4x5_standard.nc
+
+Min and Max of each species in file [mol/mol]:
+===============================================================================
+===============================================================================
+U N I F I E D   C H E M I S T R Y
+Routines written by SEBASTIAN D. EASTHAM
+===============================================================================
+===============================================================================
+T R A C E R   I N I T I A L I Z A T I O N
+Routine written by SEBASTIAN D. EASTHAM
+Last modified: 03/26/13
+===============================================================================
+ Setting initial values for:
+ |---------|---------|---------|
+ |NO       |NO2      |NO3      |
+ |---------|---------|---------|
+ |HNO2     |HNO3     |HNO4     |
+ |---------|---------|---------|
+ |N2O5     |PAN      |         |
+ |---------|---------|---------|
+ |BrCl     |         |         |
+ |---------|---------|---------|
+ |Cl2      |ClO      |Cl2O2    |
+ |Cl       |ClONO2   |HCl      |
+ |HOCl     |OClO     |CH3Cl    |
+ |CH3CCl3  |CCl4     |ClOO     |
+ |         |         |         |
+ |---------|---------|---------|
+ |H-1211   |H-1301   |H-2402   |
+ |HCFC-123 |HCFC-141b|HCFC-142b|
+ |HCFC-22  |R-11     |R-12     |
+ |R-113    |R-114    |R-115    |
+ |---------|---------|---------|
+ |OCS      |         |         |
+ |---------|---------|---------|
+ |H2SO4    |         |         |
+ |---------|---------|---------|
+ |N2O      |         |         |
+ |---------|---------|---------|
+ |CH4      |         |         |
+ |---------|---------|---------|
+===============================================================================
+GET_GLOBAL_CH4: YEAR = 2007
+CH4 (90N - 30N) :  1855.5 [ppbv]
+CH4 (30N - 00 ) :  1801.4 [ppbv]
+CH4 (00  - 30S) :  1741.7 [ppbv]
+CH4 (30S - 90S) :  1732.5 [ppbv]
+===============================================================================
+ Setting stratospheric CH4 from 2D data.
+ACET (via GMI rates)
+ALD2 (via GMI rates)
+ALK4 (via GMI rates)
+C2H6 (via GMI rates)
+C3H8 (via GMI rates)
+CCl4 (via GMI rates)
+CFC12 (via GMI rates)
+H1211 (via GMI rates)
+CFC113 (via GMI rates)
+CFC114 (via GMI rates)
+CFC115 (via GMI rates)
+CFC11 (via GMI rates)
+CH2O (via GMI rates)
+CH3CCl3 (via GMI rates)
+CH3Cl (via GMI rates)
+CH4 (via GMI rates)
+CO (via GMI rates)
+Cl (via GMI rates)
+Cl2 (via GMI rates)
+Cl2O2 (via GMI rates)
+ClO (via GMI rates)
+EOH (via GMI rates)
+GLYC (via GMI rates)
+H2402 (via GMI rates)
+H2O (via GMI rates)
+H2O2 (via GMI rates)
+HAC (via GMI rates)
+HCFC141b (via GMI rates)
+HCFC142b (via GMI rates)
+HCFC22 (via GMI rates)
+HCl (via GMI rates)
+HNO2 (via GMI rates)
+HNO3 (via GMI rates)
+HNO4 (via GMI rates)
+HOCl (via GMI rates)
+ISOP (via GMI rates)
+MACR (via GMI rates)
+MAP (via GMI rates)
+MEK (via GMI rates)
+MGLY (via GMI rates)
+MP (via GMI rates)
+MVK (via GMI rates)
+N2O5 (via GMI rates)
+O3 (via Linoz)
+OClO (via GMI rates)
+PAN (via GMI rates)
+PMN (via GMI rates)
+PPN (via GMI rates)
+PRPE (via GMI rates)
+R4N2 (via GMI rates)
+RCHO (via GMI rates)
+RIP (via GMI rates)
+ CHBr3 (from GMI OH)
+ CH2Br2 (from GMI OH)
+ CH3Br (from GMI OH)
+ GEOS-Chem ERROR: Negative species concentrations!
+ Routine SET_MINIT in strat_chem_mod.F90
+
+********************************************
+* B e g i n   T i m e   S t e p p i n g !! *
+********************************************
+
+---> DATE: 2013/07/01  GMT: 00:00  X-HRS:       0.000
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%               HEMCO: Harvard-NASA Emissions Component               %%%%%
+%%%%%               You are using HEMCO version v2.0.003                  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/BIOFUEL/v2014-07/biofuel.geos.4x5.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/XIAO/v2014-09/C3H8_C2H6_ngas.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/BIOFUEL/v2014-07/biofuel.geos.4x5.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/BRAVO/v2014-07/BRAVO.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/BROMINE/v2015-02/Bromocarb_Liang2010.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/ARCTAS_SHIP/v2014-07/ARCTAS_ship.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/ACET/v2014-07/ACET_seawater.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/SOILNOX/v2014-07/DepReservoirDefault.nc
+HEMCO: Opening ./HEMCO_restart.201307010000.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/SOILNOX/v2014-07/soilNOx.landtype.generic.025x025.1L.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/SOILNOX/v2014-07/soilNOx.climate.generic.05x05.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/DUST_DEAD/v2014-07/dst_tibds.geos.4x5.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/DUST_DEAD/v2014-07/GOCART_src_fn.geos.4x5.nc
+HEMCO: Opening ./HEMCO_restart.201307010000.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MEGAN/v2015-02/MEGAN2.1_EF.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MEGAN/v2015-02/CLM4_PFT.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/TIMEZONES/v2015-02/timezones_voronoi_1x1.nc
+HEMCO: Opening ./HEMCO_restart.201307010000.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/STRAT/v2015-01/Bry/GEOSCCM_Bry.200707.day.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/STRAT/v2015-01/Bry/GEOSCCM_Bry.200707.night.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/AnnualScalar/v2014-07/AnnualScalar.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_hourly_NOxScal.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MASKS/v2014-07/EMEP_mask.geos.1x1.20151222.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MASKS/v2014-07/BRAVO.MexicoMask.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MASKS/v2014-07/Canada_mask.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MASKS/v2014-07/SE_Asia_mask.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MASKS/v2014-07/MIX_Asia_mask.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_1A1a.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_1A2.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_1A3b.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_1A4.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_1B2a_c_1A1b_c.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_2.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_4B.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_6A_6C.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NO/EDGAR_v42_NO_IPCC_7A.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/CO/EDGAR_v42_CO_IPCC_1A1a_6.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/CO/EDGAR_v42_CO_IPCC_1A2.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/CO/EDGAR_v42_CO_IPCC_1A3b.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/CO/EDGAR_v42_CO_IPCC_1A4.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/CO/EDGAR_v42_CO_IPCC_1B2a_c_1A1b_c.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/CO/EDGAR_v42_CO_IPCC_2A_2B_2D.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/CO/EDGAR_v42_CO_IPCC_2C.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/CO/EDGAR_v42_CO_IPCC_7A.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/SO2/EDGAR_v42_SO2_IPCC_1A1a_6C.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/SO2/EDGAR_v42_SO2_IPCC_1A2.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/SO2/EDGAR_v42_SO2_IPCC_1A3b.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/SO2/EDGAR_v42_SO2_IPCC_1A4.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/SO2/EDGAR_v42_SO2_IPCC_1B1_1B2_1A1b_c.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/SO2/EDGAR_v42_SO2_IPCC_2B_2D.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/SO2/EDGAR_v42_SO2_IPCC_2C.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/SO2/EDGAR_v42_SO2_IPCC_7A.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_1A1a_6.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_1A1b_c.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_1A2.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_1A3.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_1A4.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_2A.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_2B.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_4B.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EDGARv42/v2015-02/NH3/EDGAR_v42_NH3_IPCC_4C_4D.generic.01x01.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EMEP/v2015-03/EMEP.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EMEP/v2015-03/EMEP.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EMEP/v2015-03/EMEP.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/CAC/v2016-09/CAC.geos.0.1x0.1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EMEP/v2015-03/EMEP.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/AnnualScalar/v2014-07/AnnualScalar.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/NH3/v2014-07/NH3_geos.4x5.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/butanes_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/pentanes_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/hexanes_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/ketones_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/alkanals_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/propene_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/methanal.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/benzene_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/toluene_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/RETRO/v2014-07/orig_kgC/xylene_kgC.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/CAC/v2016-09/CAC_NH3.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_NO.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_CO.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_SO2.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_NH3.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_CH2O.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_C2H6.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_C3H8.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_ALK4.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_ACET.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_MEK.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_ALD2.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/MIX/v2015-03/MIX_Asia_PRPE.generic.025x025.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/ICOADS_SHIP/v2014-07/ICOADS.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/BCOC_BOND/v2014-07/Bond_fossil.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/BCOC_BOND/v2014-07/Bond_biofuel.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/AEIC/v2015-01/AEIC.47L.gen.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/DMS/v2015-07/DMS_lana.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/ALD2/v2017-03/ALD2_seawater.geos.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/LIGHTNOX/v2014-07/OTD-LIS-Local-Redist.CTH.v5.geosfp.4x5.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/DUST_DEAD/v2014-07/dst_tvbds.geos.4x5.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/SOA/v2014-07/NVOC.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GFED4/v2015-10/2013/GFED4_gen.025x025.201307.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/UVALBEDO/v2015-03/uvalbedo.geos.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.ACET.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.ALD2.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.ALK4.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.C2H6.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.C3H8.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CCl4.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CF2Cl2.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CF2ClBr.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CFC113.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CFC114.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CFC115.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CFCl3.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CH2O.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CH3CCl3.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CH3Cl.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CH4.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.CO.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.Cl.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.Cl2.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.Cl2O2.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.ClO.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.EOH.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.GLYC.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.H2402.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.H2O.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.H2O2.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HAC.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HCFC141b.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HCFC142b.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HCFC22.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HCl.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HNO2.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HNO3.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HNO4.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.HOCl.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.ISOP.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.MACR.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.MAP.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.MEK.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.MGLY.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.MP.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.MVK.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.N2O.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.N2O5.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.NO.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.NO2.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.NO3.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.O3.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.OClO.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.PAN.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.PMN.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.PPN.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.PRPE.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.R4N2.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.RCHO.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.RIP.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GMI/v2015-02/gmi.clim.OH.geos5.2x25.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/GEIA/v2014-07/GEIA_monthscal.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/EMEP/v2015-03/EMEP.Seasonal.geos.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/STREETS/v2014-07/2000/Streets_NH3_scale.generic.1x1.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/BROMINE/v2015-02/BromoCarb_Season.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/VOLCANO/v2015-02/2009/volc_so2_gen.1x1.47L.200907.nc
+HEMCO: Opening /home/ubuntu/gcdata/ExtData/HEMCO/SOILNOX/v2014-07/soilNOx.fert_res.generic.05x05.nc
+     - GEOS-FP A1 met fields for 2013/07/01 00:30 have been read already
+     - GEOS-FP A3 met fields for 2013/07/01 01:30 have been read already
+     - Found all 4  GEOS-FP I3     met fields for 2013/07/01 03:00
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Opening file  : For_Olson_2001/MODIS.LAIv.V5.generic.025x025.2008.nc
+%%  in directory : /home/ubuntu/gcdata/ExtData/CHEM_INPUTS/MODIS_LAI_201204/
+%%
+%% Successfully read MODIS [cm2 cm-2] for month = 06
+%% Successfully closed file!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Opening file  : For_Olson_2001/MODIS.LAIv.V5.generic.025x025.2008.nc
+%%  in directory : /home/ubuntu/gcdata/ExtData/CHEM_INPUTS/MODIS_LAI_201204/
+%%
+%% Successfully read MODIS [cm2 cm-2] for month = 07
+%% Successfully closed file!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+===============================================================================
+TPCORE_FVDAS (based on GMI) Tracer Transport Module successfully initialized
+===============================================================================
+ Obtained restart variable from HEMCO config: DEP_RESERVOIR
+ Obtained restart variable from HEMCO config: GWET_PREV
+ Obtained restart variable from HEMCO config: PFACTOR
+ Obtained restart variable from HEMCO config: DRYPERIOD
+ Obtained restart variable from HEMCO config: LAI_PREVDAY
+ Obtained restart variable from HEMCO config: T_PREVDAY
+ Obtained restart variable from HEMCO config: T_DAVG
+ Obtained restart variable from HEMCO config: PARDR_DAVG
+ Obtained restart variable from HEMCO config: PARDF_DAVG
+===============================================================================
+GET_GLOBAL_CH4: YEAR = 2007
+CH4 (90N - 30N) :  1855.5 [ppbv]
+CH4 (30N - 00 ) :  1801.4 [ppbv]
+CH4 (00  - 30S) :  1741.7 [ppbv]
+CH4 (30S - 90S) :  1732.5 [ppbv]
+===============================================================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% USING O3 COLUMNS FROM THE MET FIELDS! %%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     - UCX: Initialize PSC from restart
+################################
+# FLEX_CHEMDR: DO_HETCHEM  =T #
+# FLEX_CHEMDR: DO_PHOTCHEM =T #
+################################
+     - RDAER: Using online SO4 NH4 NIT!
+     - RDAER: Using online BCPI OCPI BCPO OCPO!
+     - RDAER: Using online SALA SALC
+     - DO_STRAT_CHEM: Linearized strat chemistry at 2013/07/01 00:00
+###############################################################################
+# Interpolating Linoz fields for jul
+###############################################################################
+     - LINOZ_CHEM3: Doing LINOZ
+---> DATE: 2013/07/01  GMT: 00:10  X-HRS:       0.167
+---> DATE: 2013/07/01  GMT: 00:20  X-HRS:       0.333
+     - DO_STRAT_CHEM: Linearized strat chemistry at 2013/07/01 00:20
+     - LINOZ_CHEM3: Doing LINOZ
+---> DATE: 2013/07/01  GMT: 00:30  X-HRS:       0.500
+---> DATE: 2013/07/01  GMT: 00:40  X-HRS:       0.667
+     - DO_STRAT_CHEM: Linearized strat chemistry at 2013/07/01 00:40
+     - LINOZ_CHEM3: Doing LINOZ
+---> DATE: 2013/07/01  GMT: 00:50  X-HRS:       0.833
+---> DATE: 2013/07/01  GMT: 01:00  X-HRS:       1.000
+ HEMCO WARNING: No diagnostics returned: ANTHROPOGENIC_CH4 - will write zeros!
+ --> LOCATION: DIAG2BPCH (diag3.F)
+ HEMCO WARNING: No diagnostics returned: CH4_WETLANDS - will write zeros!
+ --> LOCATION: DIAG3 (diag3.F)
+ HEMCO WARNING: No diagnostics returned: CH4_OTHERNATUR - will write zeros!
+ --> LOCATION: DIAG3 (diag3.F)
+ HEMCO WARNING: No diagnostics returned: CH4_SOILABSORB - will write zeros!
+ --> LOCATION: DIAG3 (diag3.F)
+     - DIAG3: Diagnostics written to bpch!
+ 
+===============================================================================
+  Strat-Trop Exchange
+-------------------------------------------------------------------------------
+  Global stratosphere-to-troposphere fluxes estimated over
+  2013-07-01 00:00 to 2013-07-01 01:00
+ 
+   Species:    [moles a-1]    * [g/mol]     = [Tg a-1]
+        NO:      0.554E+13         30.0       166.1624
+        O3:      0.922E+14         48.0      4424.0541
+       PAN:     -0.641E+11        121.0        -7.7531
+        CO:      0.165E+13         28.0        46.2556
+      ALK4:      0.968E+10         12.0         0.1162
+      ISOP:      0.570E+09         12.0         0.0068
+      HNO3:     -0.193E+14         63.0     -1218.5531
+      H2O2:      0.576E+11         34.0         1.9599
+      ACET:      0.603E+11         12.0         0.7241
+       MEK:     -0.211E+10         12.0        -0.0253
+      ALD2:     -0.736E+10         12.0        -0.0884
+      RCHO:     -0.521E+10         58.0        -0.3020
+       MVK:     -0.105E+11         70.0        -0.7342
+      MACR:     -0.664E+10         70.0        -0.4648
+       PMN:     -0.129E+09        147.0        -0.0189
+       PPN:     -0.377E+09        135.0        -0.0509
+      R4N2:      0.438E+09        119.0         0.0521
+      PRPE:     -0.623E+09         12.0        -0.0075
+      C3H8:      0.108E+11         12.0         0.1293
+      CH2O:      0.156E+12         30.0         4.6859
+      C2H6:      0.742E+10         12.0         0.0890
+      N2O5:      0.853E+12        108.0        92.0963
+      HNO4:      0.667E+12         79.0        52.6889
+        MP:      0.183E+11         48.0         0.8775
+       DMS:      0.513E+09         62.0         0.0318
+       SO2:      0.203E+09         64.0         0.0130
+       SO4:     -0.223E+11         96.0        -2.1420
+      SO4s:      0.452E+04         31.4         0.0000
+       MSA:     -0.204E+09         96.0        -0.0196
+       NH3:     -0.129E+10         17.0        -0.0219
+       NH4:      0.152E+10         18.0         0.0273
+       NIT:      0.185E+14         62.0      1145.4510
+      NITs:      0.558E+04         31.4         0.0000
+      BCPI:     -0.201E+09         12.0        -0.0024
+      OCPI:     -0.119E+10         12.0        -0.0142
+      BCPO:      0.444E+08         12.0         0.0005
+      OCPO:      0.233E+09         12.0         0.0028
+      DST1:     -0.125E+10         29.0        -0.0362
+      DST2:     -0.639E+09         29.0        -0.0185
+      DST3:      0.353E+09         29.0         0.0102
+      DST4:      0.597E+08         29.0         0.0017
+      SALA:     -0.210E+08         31.4        -0.0007
+      SALC:      0.302E+09         31.4         0.0095
+       Br2:      0.365E+10        160.0         0.5842
+        Br:      0.364E+11         80.0         2.9104
+       BrO:     -0.186E+12         96.0       -17.8896
+      HOBr:     -0.261E+11         97.0        -2.5307
+       HBr:     -0.199E+10         81.0        -0.1616
+     BrNO2:      0.899E+10        126.0         1.1328
+     BrNO3:      0.119E+12        142.0        16.9037
+     CHBr3:      0.527E+08        253.0         0.0133
+    CH2Br2:      0.315E+08        174.0         0.0055
+     CH3Br:      0.526E+09         95.0         0.0500
+       MPN:     -0.172E+12         93.0       -15.9798
+    ISOPND:     -0.389E+09        147.0        -0.0572
+    ISOPNB:     -0.373E+09        147.0        -0.0548
+      MOBA:      0.773E+10        114.0         0.8811
+    PROPNN:      0.130E+11        119.0         1.5486
+       HAC:     -0.535E+11         74.0        -3.9624
+      GLYC:     -0.230E+11         60.0        -1.3825
+      MVKN:     -0.427E+09        149.0        -0.0636
+     MACRN:      0.892E+08        149.0         0.0133
+       RIP:      0.476E+12        118.0        56.1756
+     IEPOX:     -0.339E+12        118.0       -40.0085
+       MAP:      0.958E+10         76.0         0.7278
+       NO2:     -0.692E+13         46.0      -318.3242
+       NO3:      0.594E+11         62.0         3.6817
+      HNO2:     -0.694E+11         47.0        -3.2602
+       N2O:      0.192E+12         44.0         8.4674
+       OCS:      0.830E+09         60.0         0.0498
+       CH4:     -0.292E+14         16.0      -467.8786
+      BrCl:      0.416E+11        115.0         4.7834
+       HCl:      0.561E+12         36.0        20.1896
+      CCl4:      0.991E+08        152.0         0.0151
+     CH3Cl:      0.154E+10         50.0         0.0772
+   CH3CCl3:      0.137E+08        133.0         0.0018
+    CFC113:      0.783E+08        187.0         0.0146
+    CFC114:      0.162E+07        187.0         0.0003
+    CFC115:     -0.459E+07        187.0        -0.0009
+   HCFC123:      0.000E+00        117.0         0.0000
+  HCFC141b:      0.601E+08        117.0         0.0070
+  HCFC142b:      0.187E+07        117.0         0.0002
+     CFC11:      0.298E+09        137.0         0.0408
+     CFC12:      0.250E+09        121.0         0.0302
+    HCFC22:      0.220E+08         86.0         0.0019
+     H1211:      0.718E+07        165.0         0.0012
+     H1301:      0.434E+07        149.0         0.0006
+     H2402:      0.489E+06        260.0         0.0001
+        Cl:      0.584E+10         35.0         0.2043
+       ClO:      0.727E+12         51.0        37.0976
+      HOCl:     -0.223E+12         52.0       -11.5936
+     ClNO3:     -0.278E+12         97.0       -26.9999
+     ClNO2:      0.242E+10         81.0         0.1962
+      ClOO:      0.190E+07         67.0         0.0001
+      OClO:      0.233E+10         67.0         0.1558
+       Cl2:     -0.357E+12         71.0       -25.3547
+     Cl2O2:     -0.651E+11        103.0        -6.7017
+       H2O:      0.374E+18         18.0    ***********
+      MTPA:      0.135E+08        136.2         0.0018
+      LIMO:      0.212E+06        136.2         0.0000
+      MTPO:      0.369E+06        136.2         0.0001
+     TSOG1:     -0.142E+11        150.0        -2.1344
+     TSOG2:     -0.267E+12        150.0       -39.9989
+     TSOG3:     -0.416E+12        150.0       -62.4326
+     TSOG0:     -0.375E+10        150.0        -0.5626
+     TSOA1:      0.142E+11        150.0         2.1293
+     TSOA2:      0.266E+12        150.0        39.9732
+     TSOA3:      0.416E+12        150.0        62.3899
+     TSOA0:      0.371E+10        150.0         0.5565
+     ISOG1:     -0.821E+11        150.0       -12.3111
+     ISOG2:     -0.311E+11        150.0        -4.6647
+     ISOG3:     -0.654E+12        150.0       -98.0320
+     ISOA1:      0.820E+11        150.0        12.3043
+     ISOA2:      0.311E+11        150.0         4.6643
+     ISOA3:      0.653E+12        150.0        97.9988
+      BENZ:      0.364E+10         12.0         0.0437
+      TOLU:      0.772E+09         12.0         0.0093
+      XYLE:      0.149E+09         12.0         0.0018
+     ASOG1:     -0.680E+10        150.0        -1.0194
+     ASOG2:     -0.899E+10        150.0        -1.3487
+     ASOG3:     -0.142E+12        150.0       -21.2279
+     ASOAN:     -0.190E+08        150.0        -0.0029
+     ASOA1:      0.678E+10        150.0         1.0165
+     ASOA2:      0.899E+10        150.0         1.3480
+     ASOA3:      0.141E+12        150.0        21.2040
+       EOH:     -0.840E+02         12.0        -0.0000
+      MGLY:     -0.379E+01         72.0        -0.0000
+ 
+===============================================================================
+ 
+===============================================================================
+R E S T A R T   F I L E   O U T P U T ( NetCDF )
+
+WRITE_GC_RESTART: Writing GEOSChem_restart.201307010100
+===============================================================================
+     - INITIALIZE: Diag arrays zeroed!
+     - INITIALIZE: Diag counters zeroed!
+
+===============================================================================
+ ND23: Mass-Weighted OH Concentration
+ Mean OH =    11.174823137711719       [1e5 molec/cm3]
+===============================================================================
+     - CLEANUP: deallocating arrays now...
+     - Closing the GEOS-FP A1     file at end of simulation
+     - Closing the GEOS-FP A3cld  file at end of simulation
+     - Closing the GEOS-FP A3dyn  file at end of simulation
+     - Closing the GEOS-FP A3mstC file at end of simulation
+     - Closing the GEOS-FP A3mstE file at end of simulation
+     - Closing the GEOS-FP I3_1   file at end of simulation
+     - Closing the GEOS-FP I3_2   file at end of simulation
+ 
+===============================================================================
+G E O S - C H E M   T I M E R S
+ 
+  Timer name                       DD-hh:mm:ss.SSS
+-------------------------------------------------------
+  GEOS-Chem                     :  00-00:05:43.843
+  Initialization                :  00-00:00:03.867
+  Timesteps                     :  00-00:05:39.892
+  HEMCO                         :  00-00:00:09.283
+  All chemistry                 :  00-00:04:26.814
+  => Strat chem                 :  00-00:00:00.494
+  => Gas-phase chem             :  00-00:04:13.261
+  => All aerosol chem           :  00-00:00:12.060
+  Transport                     :  00-00:00:26.224
+  Convection                    :  00-00:00:16.816
+  Dry deposition                :  00-00:00:00.470
+  Wet deposition                :  00-00:00:06.599
+  RRTMG                         : The timer did not run
+  Diagnostics                   :  00-00:00:10.398
+  Reading met fields            :  00-00:00:00.044
+  Reading restart file          :  00-00:00:00.521
+  Writing restart file          :  00-00:00:05.265
+
+===> SIMULATION END TIME: 2017/04/22 00:43 <===
+
+
+**************   E N D   O F   G E O S -- C H E M   **************

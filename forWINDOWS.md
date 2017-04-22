@@ -1,6 +1,6 @@
 * For MobaXterm:
 
-Split the ssh command into "Remote" and "username" boxes - 
+Split the ssh command into "Remote host" and "username" boxes - 
 Click on "Advanced SSH settings" - 
 Click on "Use private key" - 
 Choose the Key Pair you just downloaded.

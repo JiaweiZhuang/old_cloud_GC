@@ -1,4 +1,6 @@
 # Cloud-GC
+Author: Jiawei Zhuang Email:jiaweizhuang@g.harvard.edu 
+
 ## Running the GEOS-Chem CTM on cloud computing platforms
 
 * Run GEOS-Chem without buying local machines -- get a virtual Linux server on the cloud in seconds 

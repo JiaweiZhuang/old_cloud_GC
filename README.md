@@ -93,7 +93,7 @@ The only way to share your password with others is to share that file.
 
 Use any name you like for that KeyPair, click on "Download Key Pair", and finally click on "Launch Instances".
 
-(for the next time, you can simply select "Choose and existing Key Pair" and launch)
+(for the next time, you can simply select "Choose an existing Key Pair" and launch)
 
 <img src="img/7.png" width="480">
 

@@ -88,9 +88,38 @@ Now your own server is running on the cloud!
 Select your instance, click on the "Connect" button near the "Launch Instance Button", then you should see this page:
 <img src="img/9.png" width="480">
 
-Log in the run GEOS-Chem
+Copy the command below "Example:". Before using it to ssh to your server, you need to make some minor changes:
+
+- cd to the directory that you store the Key Pair (preferably /.ssh)
+- type "chmod 400 your\_key\_pair.pem" to change the permission.
+- change "root" to "ubuntu". (You'll be asked to use "ubuntu" if you keep the "root")
+- (optional)add -Y to allow x11 forwarding. 
+
+Your terminal will look like this:
 
 <img src="img/10.png" width="480">
+
+That's a system with GEOS-Chem already built!
+
+**Trouble shooting: If you cannot ssh to it, the most likely cause is security 
+configuration. Click on "Security Groups in the EC2 Dashboard", set "Inbound to "Anywhere" or "My IP"**
+
+You can test the compiliation by executing <br/>
+$cd ~/GCv11-02 <br/>
+$./compile.sh <br/>
+
+or just run the pre-compiled the model by <br/> 
+$cd ~/GCv11-02/geosfp_4x5_standard <br/>
+$./geos <br/>
+
+You should get the same results as in those log files:
+[test\_compile.log](log/test_compile.log)
+[test\_run.log](log/test_run.log)
+
+Here we only test an 1-hour run to demonstrate the capability of running GEOS-Chem in cloud.
+The "r4.large" instance type we chosed has only a single core (so it is cheap), 
+while its memory is large enough for GEOS-Chem to start.
+To test longer runs, it is recommended to use "Compute Optimized" instance types with multiple cores such as "c4.4xlarge".
 
 #### Step 4:**(Very important!) Always remember to shut down the instance when you finish the simulation!**
 
@@ -98,11 +127,9 @@ Log in the run GEOS-Chem
 
 The lifetime of an "instance" is from launching to termination. 
 
-
 ## Advanced Usages 
 
 #### Save your system's current status (e.g. all the files and software) so the information is not lost after termination
-
 
 
 #### Use the "Spot Instance" to minimize the cost
@@ -155,18 +182,6 @@ http://www.sciencedirect.com/science/article/pii/S0098300416304721
 Although there's only very little chance for spot instances to shut down, 
 there should be a strategy to ensure the model runs safely.
 
-#### Provide friendly tutorials for more complicated scientific computing tasks
-
-Most of the documents on AWS cloud computing are not for scientists. They are full of computer system jargons.
-They are not like GEOS-Chem wiki where you can often find useful solutions. 
-That means, if you encounter any technical issues, you are likely to get more confused by looking through their documents.
-That's the basic reason why I wrote this tutorial. 
-
-But that's not their fault.
-Although cloud computing is getting popular among the scientific computing community, 
-the majorities of the cloud platform users are still web developers and system engineers, not scientists.
-
-*Scientific Computing on Cloud --  the Guide for Dummies* has yet to be written. 
 
 #### Look at more cloud computing platforms and seek collaborations
 
@@ -192,16 +207,35 @@ Less time on debugging, more time on science.
 The biggest trouble for users seems to be building the NetCDF library. 
 Almost all earth science models need NetCDF, so it would be an one-for-all work.
 
+#### Provide friendly tutorials for more complicated scientific computing tasks
+
+Most of the documents on AWS cloud computing are NOT for scientists. There are so many computer system jargons.
+It's not like the GEOS-Chem wiki where you can often find useful solutions. 
+That means, if you encounter any technical issues, you are likely to get more confused by looking through their documents.
+That's the basic reason why I wrote this tutorial even though they already provide a huge amount of tutorials (for non-scientists) online. 
+
+But that's not their fault.
+Although cloud computing is getting popular among the scientific computing community, 
+the majorities of the cloud platform users are still web developers and system engineers, not scientists.
+
+*Scientific Computing in Cloud --  the Guide for Dummies* has yet to be written. 
+
+
 ## Additional resources
 
 [1] *Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
 gives a nice overview of various cloud computing applications in our field.
 It doesn't tell you how to actually do cloud computing, though.
 
-[2] Consoles are excellent to start with. But as you become familiar with AWS, 
+[2] Review the (most basic) official AWS-EC2 tutorial: <br />
+https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/ <br />
+The only difference from my tutorial is that you'll launch a brand new machine with nothing on it.
+Other tutorials beyond this one has almost nothing to do with scientific computing.
+
+[3] Consoles are excellent to start with. But as you become familiar with AWS, 
 you might feel using the command line (https://aws.amazon.com/cli) is more efficient 
 for managing your cloud servers.
 
-(Warning: Just like any other AWS documents, you are likely to see a lot of information 
-that is totally unnecessary for a scientist to know, even for a computational scientist.)
+Again, just like any other AWS documents, you are likely to see a lot of information 
+that is totally unnecessary for a scientist to know, even for a computational scientist.
 

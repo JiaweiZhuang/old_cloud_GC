@@ -125,7 +125,7 @@ Before using it to ssh to your server, you need to make some minor changes:
 
 Your terminal will look like this:
 
-<img src="img/10.png" width="480">
+<img src="img/10.png" width="720">
 
 That's a system with GEOS-Chem already built!
 

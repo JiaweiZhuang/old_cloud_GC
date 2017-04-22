@@ -13,12 +13,13 @@
 Disclaimer:
 
 This tutorial is a proof of concept, aiming to show the capability of GEOS-Chem to run on commercial clouds.
-You will be able to finish a GEOS-Chem run successfully in this tutorial, 
+
+You will be able to finish a GEOS-Chem simulation successfully in this tutorial, 
 but for real applications (i.e. long-term, data-intensive simulations), there are much more discuss. 
 See "Future Plans and Possible Directions" at the end of this page for more information. 
 
 I came up with this idea and finished all the current work in 2 days, 
-so things are still preliminary although promising. All feedback will be appreciated.
+so things are still very preliminary although promising. All feedback will be appreciated.
 
 #### Step 1: sign up an Amazon Web Service(AWS) account
 Go to <br />

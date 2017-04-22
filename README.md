@@ -52,12 +52,14 @@ Now you should have an AWS account! It's time to run the model in cloud.
 
 Log in to AWS console, and click on **EC2**(Elastic Compute Cloud), which is the cloud computing platform. 
 Other options are other services such as storage. You don't need to care about them at this time.
+
 <img src="img/4.png" width="480">
 
 In the EC2 console, click on "AMI" (Amazon Machine Image) under "IMAGES" on the left of the page.
 
 Select "Public images" and search for "ami-0b851a1d" or "cloud_GC_20170421" -- 
 that's the system with GEOS-Chem installed. Select it and click on "Launch": 
+
 <img src="img/5.png" width="480">
 
 **This one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
@@ -68,7 +70,8 @@ After that, everyone is able to get a copy of my system, with everything install
 **Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" as shown 
 in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
 better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.**
-<img src="img/5a.png" width="480">
+
+<img src="img/5a.png" width="80">
 
 You have already specified your operating system, or the "software" side of the virtual server. 
 Then it's time to specify the "hardware" side, mostly about CPUs.
@@ -98,16 +101,19 @@ Within < 1min of initialization, "Instance State" should become "running":
 
 <img src="img/8.png" width="480">
 
-Now your own server is running on the cloud!
+Now your own server appears on the cloud!
 
 #### Step 3: log in to the virtual server and run GEOS-Chem
 
 Select your instance, click on the "Connect" button near the "Launch Instance Button", then you should see this page:
+
 <img src="img/9.png" width="480">
 
-Copy the command below "Example:". Before using it to ssh to your server, you need to make some minor changes:
+Copy the "ssh -i ..." command under "Example" in the above page. 
 
-- cd to the directory that you store the Key Pair (preferably /.ssh)
+Before using it to ssh to your server, you need to make some minor changes:
+
+- cd to the directory that you store the Key Pair (preferably $HOME/.ssh)
 - type "chmod 400 your\_key\_pair.pem" to change the permission.
 - change "root" to "ubuntu". (You'll be asked to use "ubuntu" if you keep the "root")
 - (optional) add -Y to allow x11 forwarding. 
@@ -145,7 +151,7 @@ To test longer runs, it is recommended to use "Compute Optimized" instance types
 There are two different ways to stop being charged:
 
 - "stop" will make the system inactive, so that you'll not be charged by the CPU time, 
-and only be charged by the negligible storage fee. (~0.1$/GB/mo, see https://aws.amazon.com/ebs/pricing/)
+and only be charged by the negligible storage fee. (~$0.1/GB/month, see https://aws.amazon.com/ebs/pricing/)
 - "terminate" will completely remove that virtual server so you won't be charged at all after that.
 Unless you save your system (see below), you will lose all your data and software.
 
@@ -153,9 +159,11 @@ Unless you save your system (see below), you will lose all your data and softwar
 
 #### Save your system's current status (e.g. all the files and software) so the information is not lost after termination
 
-Click on "Create Image" to save
+Click on "Create Image" to convert a snapshot of your system to an "AMI":
+
 <img src="img/12.png" width="480">
-Then, you will be only charged by the storage 
+
+Then, you will be only charged by the storage. 
 
 The lifetime of an "instance" is from launching to termination. 
 The lifetime of an "AMI" can be infinitely long if you don't delete it. 
@@ -170,12 +178,13 @@ It can be 70%~80% cheaper than the standard ("on-demand") method.
 A typical spot price is 0.01$/core/hour, 
 which means less than $2.0 for a 1-month 4x5 run (need ~100 core\*hours).
 
-The "price" you pay for this free lunch is the server is not guaranteed to be 100% stable.
-It has very little chance of shutting down (although I've never encountered this situation)
-For maintaining a web server that's intolerable, but it suits scientific computing pretty well.
+The "price" you pay for this "free lunch" is the server is not guaranteed to be 100% stable.
+It has very little chance of shutting down 
+(although I've launched an spot instance for weeks and never encountered this situation)
+For maintaining a web server, that's intolerable, but it suits scientific computing pretty well.
 
-Also, spot instance doesn't allow "stop", and only allows "terminate", 
-which means you should have clever use of saving AMIs and transfering data to other Amazon storage services.
+Also, spot instance doesn't allow "stop", but only allows "terminate", 
+which means you should have a clever use of saving AMIs and transfering data to other Amazon storage services.
 
 <br/>
 ============================================================
@@ -205,11 +214,11 @@ they can be very easily handled by any languages. This is expected to be finishe
 
 * (Long-term) Make GCHP run on the cloud.
 
-GCHP is not compatible with gfortran now. Setting an MPI cluster on the cloud is also much tricker, although doable.
+GCHP is not compatible with gfortran yet. Setting an MPI cluster on the cloud is also much tricker, although doable.
 
 #### Design a strategy for long-term, economical workflow.
 
-* Cheaper and more efficient data storage and sharing in cloud.
+* Cheaper and more efficient data storage and data sharing in cloud.
 
 Currently I put all the input data under the root directory, 
 which is convenient for illustration but bad for actual practice. 
@@ -276,7 +285,7 @@ The only difference from my tutorial is that you'll launch a brand new machine w
 Other tutorials beyond this one has almost nothing to do with scientific computing.
 
 [3] Consoles are excellent to start with. But as you become familiar with AWS, 
-you might feel using the command line (https://aws.amazon.com/cli) is more efficient 
+you might feel using the command line (https://aws.amazon.com/cli) more efficient 
 for managing your cloud servers.
 
 Again, just like any other AWS documents, you are likely to see a lot of information 

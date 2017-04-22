@@ -93,7 +93,7 @@ Copy the command below "Example:". Before using it to ssh to your server, you ne
 - cd to the directory that you store the Key Pair (preferably /.ssh)
 - type "chmod 400 your\_key\_pair.pem" to change the permission.
 - change "root" to "ubuntu". (You'll be asked to use "ubuntu" if you keep the "root")
-- (optional)add -Y to allow x11 forwarding. 
+- (optional) add -Y to allow x11 forwarding. 
 
 Your terminal will look like this:
 
@@ -102,7 +102,7 @@ Your terminal will look like this:
 That's a system with GEOS-Chem already built!
 
 **Trouble shooting: If you cannot ssh to it, the most likely cause is security 
-configuration. Click on "Security Groups in the EC2 Dashboard", set "Inbound to "Anywhere" or "My IP"**
+configuration. Click on "Security Groups" in the EC2 Dashboard, set "Inbound" to "Anywhere" or "My IP"**
 
 You can test the compiliation by executing <br/>
 $cd ~/GCv11-02 <br/>
@@ -112,12 +112,12 @@ or just run the pre-compiled the model by <br/>
 $cd ~/GCv11-02/geosfp_4x5_standard <br/>
 $./geos <br/>
 
-You should get the same results as in those log files:
-[test\_compile.log](log/test_compile.log)
-[test\_run.log](log/test_run.log)
+You should get the same results as in those log files: <br/>
+[test\_compile.log](log/test_compile.log) <br/>
+[test\_run.log](log/test_run.log) <br/>
 
 Here we only test an 1-hour run to demonstrate the capability of running GEOS-Chem in cloud.
-The "r4.large" instance type we chosed has only a single core (so it is cheap), 
+The "r4.large" instance type we chose has only a single core (so it is cheap), 
 while its memory is large enough for GEOS-Chem to start.
 To test longer runs, it is recommended to use "Compute Optimized" instance types with multiple cores such as "c4.4xlarge".
 
@@ -146,23 +146,26 @@ https://aws.amazon.com/ec2/spot/spot-and-science/
 
 #### Update GEOS-Chem source code and post-processing tools 
 
-* Make the public release of GEOS-Chem fully compatible with gfortran
+* Make the public release version of GEOS-Chem fully compatible with gfortran
 
 The public release of v11-01 is now compatible with gfortran-5 but not gfortran-6. 
 
 v11-02 (in development) works with gfortran-6.
 
+gfortran is the key to make this entire thing possible. 
+Unlike ifort, it is free and can be quickly installed on any systems.
+
 * Replace IDL with python, which is free and open-source 
 
-I developed a python tool(https://bitbucket.org/gcst/gcpy) primarily for GCHP, but we will make it fully compatible with GEOS-Chem classic too.
+I've developed a python tool(https://bitbucket.org/gcst/gcpy) primarily for GCHP, but we will make it fully compatible with GEOS-Chem classic too.
 
 It actually requires more change to the GEOS-Chem code than to the python code. 
 Once GEOS-Chem can output all diagnostics in NetCDF format instead of in bpch format,
 they can be very easily handled by any languages. This is expected to be finished in v11-02.
 
-* (Long-term) Enable GCHP to run on the cloud.
+* (Long-term) Make GCHP run on the cloud.
 
-GCHP is not compatible with gfortran now.
+GCHP is not compatible with gfortran now. Setting an MPI cluster on the cloud is also much tricker, although doable.
 
 #### Design a strategy for long-term, economical workflow.
 

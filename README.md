@@ -43,7 +43,7 @@ We will cover some of the jargons in that page throughout this tutorial.
 
 (Optional) If you are a student, checkout the $100 credit for AWS cloud computing: <br />
 https://aws.amazon.com/education/ <br />
-I haven't used up my credit for after playing with EC2 for several months, 
+I haven't used up my credit for after playing with AWS for several months, 
 so haven't actually paid any money to them :)
 
 Simply choose the basic plan when you encounter this page:

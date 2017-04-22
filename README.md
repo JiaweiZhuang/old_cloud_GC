@@ -10,7 +10,7 @@
 ## Tutorial
 ### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.
 
-#### Step 1: sign up an AWS account
+#### Step 1: sign up an Amazon Web Service(AWS) account
 Go to <br />
 http://aws.amazon.com  <br />
 Click on "sign in to the console". <br />
@@ -37,14 +37,13 @@ Now you should have an AWS account! It's time to run the model in the cloud.
 
 #### Step 2: launch a virtual server with GEOS-Chem installed 
 
-Log into AWS console, and click on **EC2**, which is the cloud computing platform. 
-The other options are other services such as storage.
-You don't need to care about them at this time.
+Log into AWS console, and click on **EC2**(Elastic Compute Cloud), which is the cloud computing platform. 
+Other options are other services such as storage. You don't need to care about them at this time.
 <img src="img/4.png" width="480">
 
-In the EC2 console, click on "AMI" (Amazon Machine learning) under "IMAGES" in the left of the page.
+In the EC2 console, click on "AMI" (Amazon Machine learning) under "IMAGES" on the left of the page.
 
-Select the "Public images" and search for the AMI with GEOS-Chem installed. Select it and click on "Launch" 
+Select "Public images" and search for the AMI with GEOS-Chem installed. Select it and click on "Launch" 
 <img src="img/5.png" width="480">
 
 This the game-changing feature of cloud computing. An AMI means a copy of a specifc system. 
@@ -52,24 +51,26 @@ I started with a brand new Linux operating system, and built GEOS-Chem
 (and all the necessary software, of course) on it. 
 Then, everyone is able to get a copy of my system, with everything installed correctly.
 
-You have chosen your "software" or "operating system", now it's time to choose the hardware, mostly about CPUs.
+You have chosen your "software" or "operating system", then it's time to choose the hardware, mostly about CPUs.
 
 In this toy example, choose "Memory optimized"-"r4.large" to test GEOS-Chem with the minimum fee.
 
 <img src="img/6.png" width="480">
 
-There are many CPU options (including numbers and types) to choose. AWS free tier also gives you 750 free hours of "t2.micro", which
-is the tiniest CPU. Its memory is too small to run GEOS-Chem, but it is good for testing library installation.
-
+There are many CPU options (including numbers and types). AWS free tier also gives you 750 free hours of "t2.micro", which
+is the tiniest CPU. Its memory is too small to run GEOS-Chem, but it is good for testing library installation if you
+need to.
 
 <br />
 
 For the first time of using EC2, you need to create and download a "KeyPair". 
 This is equivalent to the password you enter to ssh to your local server. 
 Here, such "password" is a file, being stored in your own computer. 
-The only way to share your password to others is to share that file.
+The only way to share your password with others is to share that file.
 
-Use any name you like for that KeyPair - click on "Download Key Pair" - click on "Launch Instances"
+- Use any name you like for that KeyPair 
+- click on "Download Key Pair" <br/>
+- click on "Launch Instances" <br/>
 
 <img src="img/7.png" width="480">
 
@@ -97,14 +98,16 @@ https://aws.amazon.com/ec2/spot/spot-and-science/
 #### Update GEOS-Chem source code and post-processing tools 
 
 * Make the public release of GEOS-Chem fully compatible with gfortran
-v11-01 is compatible with gfortran5 and v11-02 (in development) works with gfortran6.
+
+The public release of v11-01 is now compatible with gfortran5 but not gfortran6. v11-02 (in development) works with gfortran6.
 
 * Replace IDL with python, which is free and open-source 
+
 I developed a python tool(https://bitbucket.org/gcst/gcpy) primarily for GCHP, but we will make it fully compatible with GEOS-Chem classic too.
 
 It actually requires more change to the GEOS-Chem code than to the python code. 
-Once GEOS-Chem diagnostics are all in NetCDF format instead of bpch format,
-they can be handled by any languages.
+Once GEOS-Chem can output all diagnostics in NetCDF format instead of in bpch format,
+they can be very easily handled by any languages.
 
 #### Design a strategy for long-term, economical workflow.
 
@@ -113,7 +116,7 @@ they can be handled by any languages.
 Currently I put all the input data under the root directory, 
 which is convenient for illustration but bad for actual practice. 
 
-Should make use of standalone Amazon Elastic Block Store(EBS) volumes and Simple Storage Service (S3) to store and share
+Should make use of standalone *Amazon Elastic Block Store(EBS) volumes* and *Simple Storage Service (S3)* to store and share
 data.
 
 May refer to the CESM work: http://www.sciencedirect.com/science/article/pii/S0098300416304721
@@ -140,8 +143,8 @@ the majorities of the cloud platform users are still web developers or system en
 
 Besides Amazon EC2, Google Compute Engine and Microsoft Azure also provide similar services.
 
-Many of their services have one-to-one mappings to AWS: <br/>
-https://cloud.google.com/docs/compare/aws/compute <br/>
+Many of their services have one-to-one mappings to AWS: <br />
+https://cloud.google.com/docs/compare/aws/compute <br />
 https://docs.microsoft.com/en-us/azure/architecture/aws-professional/
 
 * Possible to get some research grants from them?
@@ -163,6 +166,6 @@ Almost all earth science models need NetCDF, so it would be an one-for-all work.
 
 ## Additional resources
 
-*Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
+[1]*Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
 gives a nice overview of various cloud computing applications in our field.
 It doesn't tell you how to actually do cloud computing, though.

@@ -1,5 +1,6 @@
 # Cloud-GC
-Author: Jiawei Zhuang Email:jiaweizhuang@g.harvard.edu 
+Author: Jiawei Zhuang  Email:jiaweizhuang@g.harvard.edu <br/>
+Last main edit: 4/22/2017
 
 ## Running the GEOS-Chem CTM on cloud computing platforms
 

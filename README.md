@@ -42,7 +42,7 @@ You can view the pricing at: <br />
 https://aws.amazon.com/ec2/pricing/ <br />
 We will cover some of the jargons in that page throughout this tutorial.
 
-(Optional) If you are a student, checkout the $100 credit for AWS cloud computing: <br />
+(Optional) If you are a student, check out the $100 credit for AWS cloud computing: <br />
 https://aws.amazon.com/education/awseducate/ <br />
 I haven't used up my credit for after playing with AWS for several months, 
 so haven't actually paid any money to them :)

@@ -18,7 +18,7 @@ Then you should see:
 
 <img src="img/1.png" width="480">
 
-After entering some basic information, you will be required to enter you credit card number:
+After entering some basic information, you will be required to enter your credit card number:
 
 <img src="img/2.png" width="480">
 
@@ -33,7 +33,9 @@ https://aws.amazon.com/education/
 Simply choose the basic plan when you encounter this page:
 <img src="img/3.png" width="480">
 
-Now you should have an AWS account! It's time to run the model in cloud.
+Now you should have an AWS account! It's time to run the model in cloud. 
+
+(You can skip Step 1 for the next time, of course)
 
 #### Step 2: launch a virtual server with GEOS-Chem installed 
 
@@ -41,7 +43,7 @@ Log in to AWS console, and click on **EC2**(Elastic Compute Cloud), which is the
 Other options are other services such as storage. You don't need to care about them at this time.
 <img src="img/4.png" width="480">
 
-In the EC2 console, click on "AMI" (Amazon Machine learning) under "IMAGES" on the left of the page.
+In the EC2 console, click on "AMI" (Amazon Machine Image) under "IMAGES" on the left of the page.
 
 Select "Public images" and search for the AMI with GEOS-Chem installed. Select it and click on "Launch" 
 <img src="img/5.png" width="480">
@@ -51,14 +53,14 @@ I started with a brand new Linux operating system, and built GEOS-Chem
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a copy of my system, with everything installed correctly.
 
-You have already specified your operating system, or the "software" side of the virtual server, 
-then it's time to choose the hardware, mostly about CPUs.
+You have already specified your operating system, or the "software" side of the virtual server. 
+Then it's time to specify the "hardware" side, mostly about CPUs.
 
 In this toy example, choose "Memory optimized"-"r4.large" to test GEOS-Chem with the minimum fee.
 
 <img src="img/6.png" width="480">
 
-There are many CPU options (including numbers and types). AWS free tier also gives you 750 free hours of "t2.micro", which
+There are many CPU options, including numbers and types. AWS free tier also gives you 750 free hours of "t2.micro", which
 is the tiniest CPU. Its memory is too small to run GEOS-Chem, but it is good for testing library installation if you
 need to.
 
@@ -71,30 +73,43 @@ The only way to share your password with others is to share that file.
 
 Use any name you like for that KeyPair, click on "Download Key Pair", and finally click on "Launch Instances".
 
+(for the next time, you can simply select "Choose and existing Key Pair" and launch)
+
 <img src="img/7.png" width="480">
 
+Within < 1min of initialization, "Instance State" should become "running"
 
 <img src="img/8.png" width="480">
 
+Now your own server is running on the cloud!
+
 #### Step 3: log in to the virtual server and run GEOS-Chem
 
+Select your instance, click on the "Connect" button near the "Launch Instance Button", then you should see page:
 <img src="img/9.png" width="480">
 
 Log in the run GEOS-Chem
 
 <img src="img/10.png" width="480">
 
-**Very important! Always remember to shut down the instance when you finish the simulation!**
+#### Step 4:**(Very important!) Always remember to shut down the instance when you finish the simulation!**
 
 <img src="img/11.png" width="480">
 
+The lifetime of an "instance" is from launching to termination. 
+
+
 ## Advanced Usages 
 
-#### Change the underlining hardware while keeping the operating system (software) untouched
+#### Save your system's current status (e.g. all the files and software) 
+so the information is not lost after termination
+
+
 
 #### Use the "Spot Instance" to minimize the cost
 
 https://aws.amazon.com/ec2/spot/spot-and-science/
+
 
 <br/>
 ============================================================
@@ -163,11 +178,9 @@ https://docs.microsoft.com/en-us/azure/architecture/aws-professional/
 
 * Possible to get some research grants from them?
 
-For example,
-
-https://aws.amazon.com/research-credits/
-
-https://research.google.com/research-outreach.html#/research-outreach/faculty-engagement/faculty-research-awards
+For example,<br />
+https://aws.amazon.com/research-credits/ <br />
+https://research.google.com/research-outreach.html#/research-outreach/faculty-engagement/faculty-research-awards/
 
 #### Cooperate with other free, open-source community models like CESM and WRF?
 

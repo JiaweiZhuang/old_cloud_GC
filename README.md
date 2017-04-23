@@ -5,8 +5,9 @@ Last main edit: 4/22/2017
 ## Running the GEOS-Chem CTM on cloud computing platforms
 
 * Run GEOS-Chem without buying local machines -- get a virtual Linux server on the cloud in seconds 
-* 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model
 * No compilation error anymore -- all software and libraries are pre-installed
+* 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model
+* Almost no limit on computational resources and storage -- pay for more whenever you need to
 
 (All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
 
@@ -27,7 +28,7 @@ so things are still very preliminary although promising. Any feedback will be ap
 #### Step 1: sign up an Amazon Web Service(AWS) account
 Go to <br />
 http://aws.amazon.com  <br />
-Click on "sign in to the console". <br />
+Click on "sign in to the console" （or you might see "create an AWS account"）. <br />
 Then you should see:
 
 <img src="img/1.png" width="480">
@@ -68,23 +69,23 @@ that's the system with GEOS-Chem installed. Select it and click on "Launch":
 
 <img src="img/5.png" width="480">
 
+**（Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" region as shown 
+in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
+better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.）**
+
+<img src="img/5a.png" width="160">
+
 **This is one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
 I started with a brand new Linux operating system, and built GEOS-Chem 
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a copy of my system, with everything installed correctly.
-
-**Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" region as shown 
-in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
-better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.**
-
-<img src="img/5a.png" width="160">
 
 You have already specified your operating system, or the "software" side of the virtual server. 
 Then it's time to specify the "hardware" side, mostly about CPUs.
 
 In this toy example, choose "Memory optimized"-"r4.large" to test GEOS-Chem with the minimum fee.
 
-<img src="img/6.png" width="480">
+<img src="img/6.png" width="720">
 
 There are many CPU options, including numbers and types. AWS free tier also gives you 750 free hours of "t2.micro", which
 is the tiniest CPU. Its memory is too small to run GEOS-Chem, but it is good for testing library installation if you
@@ -115,8 +116,8 @@ Select your instance, click on the "Connect" button near the blue "Launch Instan
 
 <img src="img/9.png" width="480">
 
-If you use the terminal to log in (e.g. on Mac or Linux)
-,copy the "ssh -i ..." command under "Example" in the above page. 
+If you use the terminal to log in (e.g. on Mac or Linux), 
+copy the "ssh -i ..." command under "Example" in the above page. 
 
 If you use other tools on Windows, [see here](forWINDOWS.md). 
 
@@ -133,8 +134,8 @@ Your terminal will look like this:
 
 That's a system with GEOS-Chem already built!
 
-**Trouble shooting: If you cannot ssh to it, the most likely cause is security 
-configuration. Click on "Security Groups" in the EC2 Dashboard, set "Inbound" to "Anywhere" or "My IP"**
+（**Trouble shooting: If you cannot ssh to it, the most likely cause is security 
+configuration. Click on "Security Groups" in the EC2 Dashboard, set "Inbound" to "Anywhere" or "My IP"**）
 
 You can test the compiliation by executing <br/>
 $cd ~/GCv11-02 <br/>

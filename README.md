@@ -28,7 +28,7 @@ so things are still very preliminary although promising. Any feedback will be ap
 #### Step 1: sign up an Amazon Web Service(AWS) account
 Go to <br />
 http://aws.amazon.com  <br />
-Click on "sign in to the console". <br />
+Click on "sign in to the console" （or you might see "create an AWS account"）. <br />
 Then you should see:
 
 <img src="img/1.png" width="480">

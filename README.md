@@ -67,16 +67,16 @@ In the EC2 console, click on "AMI" (Amazon Machine Image) under "IMAGES" on the 
 Select "Public images" and search for "ami-0b851a1d" or "cloud_GC_20170421" -- 
 that's the system with GEOS-Chem installed. Select it and click on "Launch": 
 
+**（Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" region as shown 
+in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
+better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.）**
+
 <img src="img/5.png" width="480">
 
 **This is one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
 I started with a brand new Linux operating system, and built GEOS-Chem 
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a copy of my system, with everything installed correctly.
-
-**Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" region as shown 
-in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
-better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.**
 
 <img src="img/5a.png" width="160">
 
@@ -134,8 +134,8 @@ Your terminal will look like this:
 
 That's a system with GEOS-Chem already built!
 
-**Trouble shooting: If you cannot ssh to it, the most likely cause is security 
-configuration. Click on "Security Groups" in the EC2 Dashboard, set "Inbound" to "Anywhere" or "My IP"**
+（**Trouble shooting: If you cannot ssh to it, the most likely cause is security 
+configuration. Click on "Security Groups" in the EC2 Dashboard, set "Inbound" to "Anywhere" or "My IP"**）
 
 You can test the compiliation by executing <br/>
 $cd ~/GCv11-02 <br/>

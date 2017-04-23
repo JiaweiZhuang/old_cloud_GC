@@ -64,16 +64,16 @@ Other options are other services such as storage. You don't need to care about t
 
 In the EC2 console, click on "AMI" (Amazon Machine Image) under "IMAGES" on the left of the page.
 
+Then, make sure you are in the "US East (N. Virginia)" region as shown 
+in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
+better network. To keep this tutorial minimal, we skip how to share AMIs cross regions for now.
+
+<img src="img/5a.png" width="160">
+
 Select "Public images" and search for "ami-0b851a1d" or "cloud_GC_20170421" -- 
 that's the system with GEOS-Chem installed. Select it and click on "Launch": 
 
 <img src="img/5.png" width="480">
-
-**（Trouble shooting: if you cannot find that AMI, make sure you are in the "US East (N. Virginia)" region as shown 
-in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
-better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.）**
-
-<img src="img/5a.png" width="160">
 
 **This is one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
 I started with a brand new Linux operating system, and built GEOS-Chem 

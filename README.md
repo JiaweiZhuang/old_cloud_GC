@@ -73,12 +73,12 @@ that's the system with GEOS-Chem installed. Select it and click on "Launch":
 in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
 better network. To keep this tutorial minimal, we skip how to share AMIs cross regions.）**
 
+<img src="img/5a.png" width="160">
+
 **This is one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
 I started with a brand new Linux operating system, and built GEOS-Chem 
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a copy of my system, with everything installed correctly.
-
-<img src="img/5a.png" width="160">
 
 You have already specified your operating system, or the "software" side of the virtual server. 
 Then it's time to specify the "hardware" side, mostly about CPUs.

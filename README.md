@@ -7,7 +7,7 @@ Last main edit: 4/22/2017
 * Run GEOS-Chem without buying local machines -- get a virtual Linux server on the cloud in seconds 
 * No compilation error anymore -- all software and libraries are pre-installed
 * 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model
-* Almost no limit on computational resources - pay for more whenever you need them
+* Almost no limit on computational resources - pay for more whenever you need to
 
 (All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
 

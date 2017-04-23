@@ -85,7 +85,7 @@ Then it's time to specify the "hardware" side, mostly about CPUs.
 
 In this toy example, choose "Memory optimized"-"r4.large" to test GEOS-Chem with the minimum fee.
 
-<img src="img/6.png" width="480">
+<img src="img/6.png" width="720">
 
 There are many CPU options, including numbers and types. AWS free tier also gives you 750 free hours of "t2.micro", which
 is the tiniest CPU. Its memory is too small to run GEOS-Chem, but it is good for testing library installation if you

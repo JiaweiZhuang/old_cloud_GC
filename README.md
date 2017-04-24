@@ -80,8 +80,8 @@ that's the system with GEOS-Chem installed. Select it and click on "Launch":
 I started with a brand new Linux operating system, and built GEOS-Chem 
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a perfect clone of my system, with everything installed correctly. 
-This magic can hardly happen on traditional machines. 
-You can make any modifications you like to your copy of the system, such as changing the model code, downloading more data and installing additional software. If you screw things up (e.g. install some bad software, delete the original data unintentionally...), you can launch again and start over.
+This magic can hardly happen on traditional machines!
+You can make any modifications you like to your copy, such as changing the model code, downloading more data or installing additional software. If you screw things up (e.g. install some bad software, delete the original files unintentionally...), you can launch again and start over.
 
 You have already specified your operating system, or the "software" side of the virtual server. 
 Then it's time to specify the "hardware" side, mostly about CPUs.

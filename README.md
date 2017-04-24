@@ -1,6 +1,6 @@
 # Cloud-GC
 Author: Jiawei Zhuang  Email:jiaweizhuang@g.harvard.edu <br/>
-Last main edit: 4/22/2017
+Last main edit: 4/22/2017  <br/>
 (All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
 
 ## Running the GEOS-Chem CTM on cloud computing platforms

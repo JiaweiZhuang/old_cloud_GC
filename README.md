@@ -76,7 +76,7 @@ that's the system with GEOS-Chem installed. Select it and click on "Launch":
 
 <img src="img/5.png" width="480">
 
-**This is one of the game-changing features of cloud computing.** An AMI means a copy of a specifc system. 
+**This is one of the game-changing features of cloud computing.** An AMI means a copy of a specific system. 
 I started with a brand new Linux operating system, and built GEOS-Chem 
 (and all the necessary software, of course) on it. 
 After that, everyone is able to get a perfect clone of my system, with everything installed correctly. 

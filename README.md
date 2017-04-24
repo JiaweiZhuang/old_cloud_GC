@@ -1,6 +1,7 @@
 # Cloud-GC
 Author: Jiawei Zhuang  Email:jiaweizhuang@g.harvard.edu <br/>
 Last main edit: 4/22/2017
+(All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
 
 ## Running the GEOS-Chem CTM on cloud computing platforms
 
@@ -9,7 +10,7 @@ Last main edit: 4/22/2017
 * 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model
 * Almost no limit on computational resources and storage -- pay for more whenever you need to
 
-(All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
+[See here](CloudExplain.md) for the most basic idea of cloud computing.
 
 ## Tutorial
 ### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.

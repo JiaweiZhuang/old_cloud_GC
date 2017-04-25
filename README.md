@@ -65,7 +65,7 @@ Other options are other services such as storage. You don't need to care about t
 
 In the EC2 console, make sure you are in the "US East (N. Virginia)" region as shown 
 in the upper-right corner of your console. Choosing regions closer to your physical location will give you 
-better network. However, to keep this tutorial minimal, I only built the system in only one region. 
+better network. However, to keep this tutorial minimal, I built the system in only one region. 
 But working across regions is straightforward.
 
 <img src="img/5a.png" width="160">

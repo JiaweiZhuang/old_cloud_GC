@@ -221,29 +221,6 @@ which means you should have a clever use of saving AMIs and transfering data to 
 
 ## Future Plans and Possible Directions
 
-#### Update GEOS-Chem source code and post-processing tools 
-
-* Make the public release version of GEOS-Chem fully compatible with gfortran
-
-gfortran is the key to make this entire thing possible. 
-Unlike ifort, it is free and can be quickly installed on any systems.
-
-The public release of v11-01 is now compatible with gfortran-5 but not gfortran-6. 
-
-v11-02 (in development) works with gfortran-6.
-
-* Replace IDL with python, which is free and open-source 
-
-I've developed a python tool(https://bitbucket.org/gcst/gcpy) primarily for GCHP, but we will make it fully compatible with GEOS-Chem classic too.
-
-It actually requires more change to the GEOS-Chem code than to the python code. 
-Once GEOS-Chem can output all diagnostics in NetCDF format instead of in bpch format,
-they can be very easily handled by any languages. This is expected to be finished in v11-02.
-
-* (Long-term) Make GCHP run on the cloud.
-
-GCHP is not compatible with gfortran yet. Setting an MPI cluster on the cloud is also much tricker, although doable.
-
 #### Design a strategy for long-term, economical workflow.
 
 * Cheaper and more efficient data storage and data sharing in cloud.
@@ -260,6 +237,26 @@ May refer to [this CESM work](http://www.sciencedirect.com/science/article/pii/S
 Although there's only very little chance for spot instances to shut down, 
 there should be a strategy to ensure the model runs safely.
 
+#### Update GEOS-Chem source code and post-processing tools 
+
+* Make the public release version of GEOS-Chem fully compatible with gfortran
+
+gfortran is the key to make this entire thing possible. 
+Unlike ifort, it is free and can be quickly installed on any systems.
+
+The public release of v11-01 is now compatible with gfortran-4 but not newer, and v11-02 (in development) works with gfortran-6.
+
+* Replace IDL with python, which is free and open-source 
+
+I've developed a python tool(https://bitbucket.org/gcst/gcpy) primarily for GCHP, but we will make it fully compatible with GEOS-Chem classic too.
+
+It actually requires more change to the GEOS-Chem code than to the python code. 
+Once GEOS-Chem can output all diagnostics in NetCDF format instead of in bpch format,
+they can be very easily handled by any languages. This is expected to be finished in v11-02.
+
+* (Long-term) Make GCHP run on the cloud.
+
+GCHP is not compatible with gfortran yet. Setting an MPI cluster on the cloud is also much tricker, although doable.
 
 #### Look at more cloud computing platforms and seek collaborations
 

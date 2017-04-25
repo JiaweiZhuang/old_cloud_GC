@@ -195,7 +195,7 @@ You've already launched an instance from an AMI in Step 2 of the basic tutorial.
 That's how I share the system-with-GEOSChem with you. 
 
 I don't recommend to save this GEOS-Chem instance because it containts large amounts of data. 
-A better practice is to separate the core operating system and the data storage, 
+A much cheaper way is to separate the core operating system and the data storage, 
 but it is beyond the scope of this basic tutorial.
 
 However, this "saving-and-relaunching" method is crucial to building you own sustainable system in cloud.

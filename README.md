@@ -251,11 +251,9 @@ GCHP is not compatible with gfortran yet. Setting an MPI cluster on the cloud is
 Currently I put all the input data under the root directory, 
 which is convenient for illustration but bad for actual practice. 
 
-Should make use of standalone *Amazon Elastic Block Store(EBS) volumes* and *Simple Storage Service (S3)* to store and share
-data.
+Should make use of standalone *Amazon Elastic Block Store(EBS) volumes* and *Simple Storage Service (S3)* to store data. Might also use the *Elastic File System (EFS)* to share data.
 
-May also refer to this CESM work for how to manage the workflow: 
-http://www.sciencedirect.com/science/article/pii/S0098300416304721
+May refer to [this CESM work](http://www.sciencedirect.com/science/article/pii/S0098300416304721) for how to manage the workflow: 
 
 * How to handle unexpected shut-down for spot instances while still minimizing the cost?
 

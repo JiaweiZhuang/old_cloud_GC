@@ -1,7 +1,7 @@
 #### That's the (oversimplified) idea of cloud computing:
 
 1) Companies such as Amazon and Google set up a huge amount of computers that are distributed across the world. <br/>
-No one actually know how large their total computing power is,
+No one actually knows how large their total computing power is,
 but it is expected to be comparable to top supercomputers in the world.  
 
 2) A user requests a certain amount of computational resources, including CPU, memory and disk space. 

@@ -129,7 +129,7 @@ Before using it to ssh to your server, you need to make some minor changes:
 
 - cd to the directory that you store the Key Pair (preferably $HOME/.ssh)
 - type "chmod 400 your\_key\_pair.pem" to change the permission.
-- change "root" to "ubuntu". (You'll be asked to use "ubuntu" if you keep the "root")
+- change the user name "root" to "ubuntu". (You'll be asked to use "ubuntu" if you keep "root")
 - (optional) add -Y to allow x11 forwarding. 
 
 Your terminal will look like this:

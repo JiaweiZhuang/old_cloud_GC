@@ -240,10 +240,9 @@ Although there's only very little chance for spot instances to shut down, there 
 
 * Make the public release version of GEOS-Chem fully compatible with gfortran
 
-gfortran is the key to make this entire thing possible. 
-Unlike ifort, it is free and can be quickly installed on any systems.
+gfortran is the key to make this entire thing possible. Unlike ifort, it is free and can be quickly installed on any systems.
 
-The public release of v11-01 is now compatible with gfortran-4 but not newer, and v11-02 (in development) works with gfortran-6.
+The public release of v11-01 is now compatible with gfortran-4 but not newer, and v11-02 (in development) works with all versions up to gfortran-6.
 
 * Replace IDL with python, which is free and open-source 
 

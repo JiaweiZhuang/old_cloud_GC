@@ -12,6 +12,11 @@ Last main edit: 4/22/2017  <br/>
 
 [See here](CloudExplain.md) for the most basic idea of cloud computing.
 
+# Table of Contents
+  * [Tutorial](##Tutorial)
+  * [Advanced Usages](##Advanced-Usages)
+  * [Future Plans](##Future-Plans-and-Possible-Directions)
+
 ## Tutorial
 ### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.
 

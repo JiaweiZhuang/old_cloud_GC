@@ -303,6 +303,13 @@ the majorities of the cloud platform users are still web developers and system e
 
 *Scientific Computing in Cloud --  the Guide for Dummies* has yet to be written. 
 
+## Near-term plans
+
+Some of the future plans can be achieved very soon, hopefully this summer (after I get rid of the annoying final exams). 
+
+* Timing test and cost analysis
+
+* Separate the core operating system and the data storage, provide more complete input data.
 
 ## Additional resources
 

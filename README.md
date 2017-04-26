@@ -307,9 +307,9 @@ the majorities of the cloud platform users are still web developers and system e
 
 Some of the future plans can be achieved very soon, hopefully this summer (after I get rid of the annoying final exams). 
 
-* Timing test and cost analysis
+* Detailed timing test and cost analysis
 
-* Separate the core operating system and the data storage, provide more complete input data.
+* Separate the core operating system and the data storage; provide more complete input data.
 
 ## Additional resources
 

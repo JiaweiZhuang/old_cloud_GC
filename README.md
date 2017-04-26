@@ -3,6 +3,11 @@ Author: Jiawei Zhuang  Email:jiaweizhuang@g.harvard.edu <br/>
 Last main edit: 4/22/2017  <br/>
 (All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
 
+# Table of Contents
+  * [Tutorial](#Tutorial)
+  * [Advanced Usages](#Advanced-Usages)
+  * [Future Plans](#Future-Plans-and-Possible-Directions)
+
 ## Running the GEOS-Chem CTM on cloud computing platforms
 
 * Run GEOS-Chem without buying local machines -- get a virtual Linux server on the cloud in seconds 
@@ -11,11 +16,6 @@ Last main edit: 4/22/2017  <br/>
 * Almost no limit on computational resources and storage -- pay for more whenever you need to
 
 [See here](CloudExplain.md) for the most basic idea of cloud computing.
-
-# Table of Contents
-  * [Tutorial](##Tutorial)
-  * [Advanced Usages](##Advanced-Usages)
-  * [Future Plans](##Future-Plans-and-Possible-Directions)
 
 ## Tutorial
 ### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.

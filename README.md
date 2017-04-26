@@ -1,14 +1,19 @@
 # Cloud-GC
+## Running the GEOS-Chem CTM on cloud computing platforms
 Author: Jiawei Zhuang  Email:jiaweizhuang@g.harvard.edu <br/>
 Last main edit: 4/22/2017  <br/>
 (All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
 
 # Table of Contents
+  * [Introduction](#introduction)
   * [Tutorial](#tutorial)
   * [Advanced Usages](#advanced-usages)
   * [Future Plans](#future-plans-and-possible-directions)
+  * [Additional resources](#additional-resources)
 
-## Running the GEOS-Chem CTM on cloud computing platforms
+## Introduction
+
+You'll get those advantages over traditional platforms:
 
 * Run GEOS-Chem without buying local machines -- get a virtual Linux server on the cloud in seconds 
 * No compilation error anymore -- all software and libraries are pre-installed

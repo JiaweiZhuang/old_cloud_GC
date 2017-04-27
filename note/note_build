@@ -14,7 +14,7 @@ $git checkout Dev
 
 modify CopyRunDirs.input:
 DATA_ROOT      : /home/ubuntu/gcdata/ExtData
-UNIT_TEST_ROOT : /home/ubuntu/GCv11-02/ut_bleeding_edg
+UNIT_TEST_ROOT : /home/ubuntu/GCv11-02/ut_bleeding_edge
 COPY_PATH      : /home/ubuntu/GCv11-02/
 
 It runs until reading data

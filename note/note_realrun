@@ -54,14 +54,14 @@ Just execute the model directly. No need to submit to other nodes.
     - Attach the data volume
         - View the attached EBS volume and the directory name
           $lsblk
-        - Check if mounted or not
+        - Check if initialized 
           $sudo file -s /dev/xvdf (directory name might change)
-          "data" mean not mounted yet
+          "data" mean not initialized yet 
         - (!!) Only needed for empty, newly created volume
           never do this with a volume containing data launched from snapshot
           $sudo mkfs -t ext4 /dev/xvdf
         - Mount the volume: create a data directory
-          $sudo mkdir /gcdata
+          $sudo mkdir ~/gcdata
           $sudo mount /dev/xvdf ~/gcdata
         - Change the writting permission for convenience
           $sudo chmod 777 ~/gcdata
@@ -84,3 +84,6 @@ Just execute the model directly. No need to submit to other nodes.
 
 - To share a volume between us-east-a and us-east-b, and share with other people
     http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html
+    - recreate from snapshot. USe provisioned high IOPS to speed up HEMCO
+      https://aws.amazon.com/ebs/pricing/
+

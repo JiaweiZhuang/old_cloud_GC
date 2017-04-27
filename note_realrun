@@ -1,0 +1,86 @@
+Note for myself for real simulation workflow.
+Trying to minimize the cost. Cheaper ways require more complicated procedures. Need trade-off.
+
+
+Do we need a job queuing system like PBS or Slurm? No. It's on cloud so you don't need to queue.
+Just execute the model directly. No need to submit to other nodes.
+
+1) Need those resources to finish a complete workflow:
+
+- One AMI for core software, call it "core AMI" (8GB)
+    - gcc and gfortran compiler
+    - NetCDF library
+    - git
+    - python (Anaconda) ?
+    - GEOS-Chem source code and UT?
+    * Additional note:
+        - Save a new AMI ONLY when installing new software. Keep other data files separate.
+
+- One EBS volume for input data, call it "data volume" (50GB~1T. The largest EBS could be 16TB!)
+    - HEMCO data
+    - Metfield
+    - Restart file
+    * Additional note:
+        - Only read, seldom write. 
+        - Should eventually copied from one single Elastic File System.
+        - A short term solution is to share an EBS snapshot, just like sharing an AMI (limited to one region). 
+        - Google provides "Read-only volumes" that can be attached to multiple instances
+
+- One EBS volume for working, call it "working volume". (8GB~1T)
+    - GEOS-Chem source code and UT again? (might need to preserve the change to the source code)
+    - Working run directory
+    - Also contains output data to facilitate postprocessing? 
+    * Additional note:
+        - It will be passed between EC2 instances 
+
+2) Typical workflow 
+
+- Compile source code and configure the rundir directory
+    - Launch a tiny instance (e.g. t2.micro) from the core AMI, with on-demand mode
+    - Attach a working volume and mount to it. 
+    - Compile the code and configure the rundir directory inside the working volume.
+    - For model developing, also work on code modification
+    - (Optional) attach the data volume and start a short run for debugging purpose
+    - (Optional) Stop this tiny instance (or just leave it here for after use)
+    - Detach extra EBS volumes
+    * Additional note:
+        - If the configuration is quick, you can just skip this entire step and configure the
+          settings in the compute instance!! However, for many hours of model developing and debugging,
+          it is much cheaper to work on a tiny instance! It's like the log-in node of local HPC clusters. 
+
+- Run the model
+    - Launch a compute instance (e.g. c4.8xlarge) from the core AMI, with spot mode
+    - Attach the working volume (probably the one you work on in the previous step)
+    - Attach the data volume
+        - View the attached EBS volume and the directory name
+          $lsblk
+        - Check if mounted or not
+          $sudo file -s /dev/xvdf (directory name might change)
+          "data" mean not mounted yet
+        - (!!) Only needed for empty, newly created volume
+          never do this with a volume containing data launched from snapshot
+          $sudo mkfs -t ext4 /dev/xvdf
+        - Mount the volume: create a data directory
+          $sudo mkdir /gcdata
+          $sudo mount /dev/xvdf ~/gcdata
+        - Change the writting permission for convenience
+          $sudo chmod 777 ~/gcdata
+        - If needed, detach the volume
+          $sudo umount -d  /dev/xvdf
+    - Execute the model
+        $nohup ./geos > run.log &
+    - When the simulation finishes, detach volumes and terminate compute instance
+      (Anyway to automate that? Command line script? Autoscaling?)
+
+- Post-processing
+    - Use the tiny instance to analyze data 
+    - Shift to S3 for long-term storage
+    - Or just shift back to local machines
+
+3) Note for filesystem
+   
+- To connect EBS volume and EC2-instance
+   http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumes.html
+
+- To share a volume between us-east-a and us-east-b, and share with other people
+    http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSSnapshots.html

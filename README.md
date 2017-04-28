@@ -292,16 +292,13 @@ Almost all earth science models need NetCDF, so it would be an one-for-all work.
 
 #### Provide friendly tutorials for more complicated scientific computing tasks
 
-Most of the documents on AWS cloud computing are NOT for scientists. There are so many computer system jargons.
-It's not like the GEOS-Chem wiki where you can often find useful solutions. 
-That means, if you encounter any technical issues, you are likely to get more confused by looking through their documents.
-That's the basic reason why I wrote this tutorial even though AWS already provides a huge amount of tutorials (for non-scientists) online. 
+Most of the documents on AWS cloud computing are NOT for scientists. There are so many computer system jargons. Although cloud computing is getting popular among the scientific computing community, the majorities of the cloud platform users are still web developers and system engineers, not scientists. It's not like the GEOS-Chem wiki where you can often find useful solutions. That means, if you encounter any technical issues, you are likely to get more confused by looking through their documents. That's the basic reason why I wrote this tutorial even though AWS already provides a huge amount of tutorials (for non-scientists) online. 
 
-But that's not their fault.
-Although cloud computing is getting popular among the scientific computing community, 
-the majorities of the cloud platform users are still web developers and system engineers, not scientists.
+If you want to dig deeper into cloud computing technology, the most (and perhaps the only) useful AWS document for you is 
 
-*Scientific Computing in Cloud --  the Guide for Dummies* has yet to be written. 
+https://aws.amazon.com/government-education/research-and-technical-computing/research-cloud-program/
+
+Sign up for the **Research Cloud Program** and download the **Researcher’s Handbook** !
 
 ## Near-term plans
 

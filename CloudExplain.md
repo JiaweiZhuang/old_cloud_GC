@@ -11,3 +11,7 @@ Then, some of the computers are assigned to (i.e. temporarily belong to) that sp
 which is exactly the same as working with your local servers.
 The only thing new in cloud computing is the way to request and control computational resources. 
 How to actually run programs on them is not too different.
+
+#### Current status
+
+Cloud computing platforms have already been widely adopted by the data science community to perform machine learning simulations, which can be computationally intensive. However, cloud technology seems to be much less popular in the traditional scientific computing community. It is said that *"almost everything required by a scientic application is available in the cloud. The main challenge is then that, despite the low prices and flexible set of resources, the complex deployment and execution procedures are an obstacle for researchers to adopt the technology."*  (from *Chapter 6 Closing the Gap between Cloud Providers and Scientific Users"* of *Terzo, O., & Mossucca, L. (Eds.). (2015). Cloud computing with e-science applications. Crc Press.*)

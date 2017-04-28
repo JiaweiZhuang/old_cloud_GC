@@ -17,7 +17,7 @@ You'll get those advantages over traditional platforms:
 
 * Run GEOS-Chem without buying local machines -- get a virtual Linux server on the cloud in seconds 
 * No compilation error anymore -- all software and libraries are pre-installed
-* 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model
+* 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model [cost analysis](Timing-and-Cost.md)
 * Almost no limit on computational resources and storage -- pay for more whenever you need to
 
 [See here](CloudExplain.md) for the most basic idea of cloud computing.
@@ -25,16 +25,13 @@ You'll get those advantages over traditional platforms:
 ## Tutorial
 ### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.
 
-Disclaimer:
+#### Important Note:
 
 This tutorial is a proof of concept, aiming to show the capability of GEOS-Chem to run on commercial clouds.
 
-You will be able to finish a GEOS-Chem simulation successfully in this tutorial, 
-but for real applications (i.e. long-term, data-intensive simulations), there are much more to discuss. 
-See "Future Plans and Possible Directions" at the end of this page for more information. 
+You will be able to finish a short GEOS-Chem simulation successfully in this tutorial, to get a feeling of cloud computing. A more pracitical tutorial for moderate simulations will also be available soon. But for long-term, data-intensive simulations, there are much more to discuss. See [Future Plans](#future-plans-and-possible-directions) for more information. 
 
-I came up with this idea and finished all the current work in 2 days, 
-so things are still very preliminary although promising. Any feedback will be appreciated.
+This project is still at is very beginning and any feedback will be appreciated.
 
 #### Step 1: sign up an Amazon Web Service(AWS) account
 Go to <br />

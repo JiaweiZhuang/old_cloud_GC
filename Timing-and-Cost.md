@@ -12,12 +12,12 @@
  * CPU: "c4.4xlarge" containing 16 CPUs [(detail)](log/cpuinfo.log) <br/>
  * compiler: gfortran-6 <br/>
 
-### Total time use: **5h50min**  
+### Total time use: **5h 50min**  
 
  * [detail](log/timing_1month_c4.4xlarge_1500IOPS.log) <br/>
 
 ### Estimated simulation cost: **$1.2**
 
- * Spot price for "c4.4xlarge" around $0.2/hour at the time the test was performed <br/>
+ * Spot price for "c4.4xlarge" around $0.2/hour when the test was performed <br/>
  * Charged for 6 hours, $0.2*6=$1.2 <br/>
  * Short-term storage cost is less than an order of magnitude <br/>

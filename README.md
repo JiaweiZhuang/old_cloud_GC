@@ -261,7 +261,7 @@ they can be very easily handled by any languages. This is expected to be finishe
 
 * (Long-term) Make GCHP run on the cloud.
 
-GCHP is not compatible with gfortran yet. Setting an MPI cluster on the cloud is also much tricker, although doable.
+GCHP is not compatible with gfortran yet. Setting up an MPI cluster on the cloud is also much tricker, although doable.
 
 #### Look at more cloud computing platforms and seek collaborations
 

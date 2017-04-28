@@ -3,7 +3,7 @@
 ### Test specification
 
 * 1-month 4x5 standard chemistry (UCX included) simulation <br/>
-* Default time step (10min for dynamics and 20min for chemistry) <br/>
+* Default time step (10min for advection/convection and 20min for chemistry/emission) <br/>
 * NEI2011 disabled to save storage <br/>
 * Version: the newest v11-02 (bleeding egde version) <br/>
 

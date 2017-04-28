@@ -18,6 +18,6 @@
 
 ### Estimated simulation cost: **$1.2**
 
- * Spot price for "c4.4xlarge" around $0.2/hour at the time the test was performed <br/>aaaaaa
+ * Spot price for "c4.4xlarge" around $0.2/hour at the time the test was performed <br/>
  * Charged for 6 hours, $0.2*6=$1.2 <br/>
- * Storage cost is less than an order of magnitude <br/>
+ * Short-term storage cost is less than an order of magnitude <br/>

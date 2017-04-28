@@ -297,14 +297,6 @@ https://aws.amazon.com/government-education/research-and-technical-computing/res
 
 Sign up for the **Research Cloud Program** and download the **Researcher’s Handbook** !
 
-## Near-term plans
-
-Some of the future plans can be achieved very soon, hopefully this summer (after I get rid of the annoying final exams). 
-
-* Detailed timing test and cost analysis
-
-* Separate the core operating system and the data storage; provide more complete input data.
-
 ## Additional resources
 
 [1] *Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 

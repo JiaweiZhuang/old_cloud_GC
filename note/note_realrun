@@ -68,7 +68,9 @@ Just execute the model directly. No need to submit to other nodes.
         - If needed, detach the volume
           $sudo umount -d  /dev/xvdf
     - Execute the model
+        $export OMP_NUM_THREADS=16
         $nohup ./geos > run.log &
+        $ps xw (monitor nohup jobs)
     - When the simulation finishes, detach volumes and terminate compute instance
       (Anyway to automate that? Command line script? Autoscaling?)
 

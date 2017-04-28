@@ -298,7 +298,7 @@ If you want to dig deeper into cloud computing technology, the most (and perhaps
 
 https://aws.amazon.com/government-education/research-and-technical-computing/research-cloud-program/
 
-Sign up for the **Research Cloud Program** and download the **Researcher’s Handbook**
+Sign up for the **Research Cloud Program** and download the **Researcher’s Handbook** !
 
 ## Near-term plans
 

@@ -14,6 +14,8 @@ How to actually run programs on them is not too different.
 
 #### Current status
 
-Cloud computing platforms have already been widely adopted by the data science community to perform machine learning simulations, which can be computationally intensive.
+Cloud computing platforms have already been widely adopted by the data science community to perform machine learning simulations, which are often computationally intensive.
 
 However, the cloud technology seems to be much less popular in the traditional scientific computing community. It is said that *"almost everything required by a scientic application is available in the cloud. The main challenge is then that, despite the low prices and flexible set of resources, the complex deployment and execution procedures are an obstacle for researchers to adopt the technology."*  (from *Chapter 6 Closing the Gap between Cloud Providers and Scientific Users"* of *Terzo, O., & Mossucca, L. (Eds.). (2015). Cloud computing with e-science applications. Crc Press.*)
+
+But this challenge is mostly for developrs, not for users. I have found that users can skip almost all technical details and just perform the simulation in their familiar ways, once I finished building the system in the cloud and provided detailed tutorials for them.

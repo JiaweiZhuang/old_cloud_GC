@@ -29,7 +29,7 @@ You'll get those advantages over traditional platforms:
 
 This tutorial is a proof of concept, aiming to show the capability of GEOS-Chem to run on commercial clouds.
 
-You will be able to finish a short GEOS-Chem simulation successfully in this tutorial, to get a feeling of cloud computing. A more pracitical tutorial for moderate simulations will also be available soon. But for long-term, data-intensive simulations, there are much more to discuss. See [Future Plans](#future-plans-and-possible-directions) for more information. 
+You will be able to finish a short GEOS-Chem simulation successfully in this tutorial, to get a feeling of cloud computing. A more pracitical tutorial for moderate simulations will also be available soon. However, for long-term, data-intensive simulations, there are much more to discuss. See [Future Plans](#future-plans-and-possible-directions) for more information. 
 
 This project is still at is very beginning and any feedback will be appreciated.
 

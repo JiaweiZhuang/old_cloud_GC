@@ -76,7 +76,7 @@ Just execute the model directly. No need to submit to other nodes.
 
 - Post-processing
     - Use the tiny instance to analyze data 
-    - Shift to S3 for long-term storage
+    - Shift to S3 or Glacier for long-term storage
     - Or just shift back to local machines
 
 3) Note for filesystem

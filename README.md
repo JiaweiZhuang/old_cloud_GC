@@ -19,7 +19,7 @@ You'll get those advantages over traditional platforms:
 * No compilation error anymore -- all software and libraries are pre-installed
 * 1-month 4x5 standard chemistry simulation costs $1~2 -- no charge when you are not running the model <br/> [(cost analysis)](Timing-and-Cost.md)
 * Almost no limit on computational resources and storage -- pay for more whenever you need to
-* Explore more [earth science applications on the cloud](https://aws.amazon.com/earth/)
+* Get access to more [earth science applications on the cloud](https://aws.amazon.com/earth/)
 
 [See here](CloudExplain.md) for the most basic idea of cloud computing.
 

@@ -23,6 +23,8 @@ You'll get those advantages over traditional platforms:
 
 [See here](CloudExplain.md) for the most basic idea of cloud computing.
 
+View [my poster](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html) presented at the [International GEOS-Chem Meeting](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html).
+
 ## Tutorial
 ### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.
 

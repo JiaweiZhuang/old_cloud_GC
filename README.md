@@ -240,7 +240,7 @@ Currently I put all the input data under the root directory, which is convenient
 
 * How to handle unexpected shut-down for spot instances while still minimizing the cost?
 
-Although there's only very little chance for spot instances to shut down, there should be a strategy to ensure the model runs safely. The easiest way it to output the time series of the mixing ratios of **all** tracers, so you can use them as the restart file for the continued run. However, this method wastes storage if you don't need those time series for analysis. To save storage, we might need a new option to save the instantaneous fields constantly, but it overwrites the previous file so no additional storage is needed (i.e. checkpoints). This ability is actually helpful for running on local machines too, because they can also have unexpected shut-down!
+Although there's only very little chance for spot instances to shut down, there should be a strategy to ensure the model runs safely. The easiest way is to output the time series of the mixing ratios of **all** tracers, so you can use them as the restart file for the continued run. However, this method wastes storage if you don't need those time series for analysis. To save storage, we might need a new option to save the instantaneous fields constantly, but it overwrites the previous file so no additional storage is needed (i.e. checkpoints). This ability is actually helpful for running on local machines too, because they can also have unexpected shut-down!
 
 #### Update GEOS-Chem source code and post-processing tools 
 

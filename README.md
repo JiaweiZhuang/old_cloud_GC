@@ -1,7 +1,7 @@
 # Cloud-GC
 # Running GEOS-Chem on cloud computing platforms
 
-**View [my poster](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html) presented at the [International GEOS-Chem Meeting](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html).**
+**View [my poster](http://acmg.seas.harvard.edu/presentations/IGC8/posters/Mon_Posters_Zhuang_Jiawei.pdf) presented at the [International GEOS-Chem Meeting](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html).**
 
 Author: Jiawei Zhuang  Email:jiaweizhuang@g.harvard.edu <br/>
 Last main edit: 4/22/2017  <br/>

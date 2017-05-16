@@ -1,5 +1,8 @@
 # Cloud-GC
 # Running GEOS-Chem on cloud computing platforms
+
+**View [my poster](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html) presented at the [International GEOS-Chem Meeting](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html).**
+
 Author: Jiawei Zhuang  Email:jiaweizhuang@g.harvard.edu <br/>
 Last main edit: 4/22/2017  <br/>
 (All the other files in this repo are for myself to build cloud environments. Users only need to look at this page.)
@@ -22,8 +25,6 @@ You'll get those advantages over traditional platforms:
 * Get access to more [earth science applications on the cloud](https://aws.amazon.com/earth/)
 
 [See here](CloudExplain.md) for the most basic idea of cloud computing.
-
-View [my poster](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html) presented at the [International GEOS-Chem Meeting](http://acmg.seas.harvard.edu/geos/meetings/2017/index.html).
 
 ## Tutorial
 ### Start a GEOS-Chem simulation within 10 minutes (and within 30 seconds for the next time) <br /> -- all you need is the computer you are currently using, to connect to the cloud.

@@ -180,7 +180,7 @@ Right-click on the instance in your console to get a menu:
 There are two different ways to stop being charged:
 
 - "stop" will make the system inactive, so that you'll not be charged by the CPU time, 
-and only be charged by the negligible storage fee. (~$0.1/GB/month, see https://aws.amazon.com/ebs/pricing/)
+and only be charged by the negligible storage fee. (~$0.1/GB/month, see https://aws.amazon.com/ebs/pricing/, "Amazon EBS General Purpose SSD (gp2) volumes")
 - "terminate" will completely remove that virtual server so you won't be charged at all after that.
 Unless you save your system (see below), you will lose all your data and software.
 
@@ -197,7 +197,7 @@ Click on "Create Image" to convert a snapshot of your system to an "AMI":
 
 <img src="img/12.png" width="480">
 
-This is the way to safely archive your system. You will only be charged by the storage for it.
+This is the way to safely archive your system. You will only be charged by the storage for it. (~$0.05/GB/month, see https://aws.amazon.com/ebs/pricing/, "Amazon EBS Snapshots to Amazon S3")
 
 The lifetime of an "instance" is from launching to termination. 
 The lifetime of an "AMI" can be infinitely long if you don't delete it. 

@@ -236,36 +236,27 @@ which means you should have a clever use of saving AMIs and transfering data to 
 
 * Cheaper and more efficient data storage and data sharing in cloud.
 
-Currently I put all the input data under the root directory, 
-which is convenient for illustration but bad for actual practice. 
-
-Should make use of standalone *Amazon Elastic Block Store(EBS) volumes* and *Simple Storage Service (S3)* to store data. Might also use the *Elastic File System (EFS)* to share data.
-
-May refer to [this CESM work](http://www.sciencedirect.com/science/article/pii/S0098300416304721) for how to manage the workflow.
+Currently I put all the input data under the root directory, which is convenient for illustration but bad for actual practice. We should eventually make GEOS-Chem's input data as one of the [AWS public data sets](https://aws.amazon.com/public-datasets/). 
 
 * How to handle unexpected shut-down for spot instances while still minimizing the cost?
 
-Although there's only very little chance for spot instances to shut down, there should be a strategy to ensure the model runs safely. The easiest way it to output the time series of the mixing ratios of **all** tracers, so you can use them as the restart file for the continued run. However, this method wastes storage if you don't need those time series for analysis. To save storage, might need a new option to save the instantaneous fields constantly （i.e. checkpoints）, but it overwrites the previous file so no additional storage is needed. This ability is actually helpful for running on local machines too, because they can also have unexpected shut-down!
+Although there's only very little chance for spot instances to shut down, there should be a strategy to ensure the model runs safely. The easiest way it to output the time series of the mixing ratios of **all** tracers, so you can use them as the restart file for the continued run. However, this method wastes storage if you don't need those time series for analysis. To save storage, we might need a new option to save the instantaneous fields constantly, but it overwrites the previous file so no additional storage is needed (i.e. checkpoints). This ability is actually helpful for running on local machines too, because they can also have unexpected shut-down!
 
 #### Update GEOS-Chem source code and post-processing tools 
 
 * Make the public release version of GEOS-Chem fully compatible with gfortran
 
-gfortran is the key to make this entire thing possible. Unlike ifort, it is free and can be quickly installed on any systems.
-
-The public release of v11-01 is now compatible with gfortran-4 but not newer, and v11-02 (in development) works with all versions up to gfortran-6.
+gfortran is the key to make this entire thing possible. Unlike ifort, it is free and can be quickly installed on any systems. The public release of v11-01 is now compatible with gfortran-4 but not newer, and v11-02 (in development) works with all versions up to gfortran-6.
 
 * Replace IDL with python, which is free and open-source 
 
 I've developed a python tool(https://bitbucket.org/gcst/gcpy) primarily for GCHP, but we will make it fully compatible with GEOS-Chem classic too.
 
-It actually requires more change to the GEOS-Chem code than to the python code. 
-Once GEOS-Chem can output all diagnostics in NetCDF format instead of in bpch format,
-they can be very easily handled by any languages. This is expected to be finished in v11-02.
+It actually requires more change to the GEOS-Chem code than to the python code. Once GEOS-Chem can output all diagnostics in NetCDF format instead of in bpch format, they can be very easily handled by any languages. This is expected to be finished in v11-02.
 
 * (Long-term) Make GCHP run on the cloud.
 
-GCHP is not compatible with gfortran yet. Setting up an MPI cluster on the cloud is also much tricker, although doable.
+GCHP is not compatible with gfortran yet. Setting up an MPI cluster on the cloud is also much trickier, although doable. The current highest bandwidth between AWS nodes is 10~20GB/s, which is significantly lower than the Infiniband in local HPC clusters (50GB/s). This would affect model's scalability, as suggested by [this CESM work](http://www.sciencedirect.com/science/article/pii/S0098300416304721).
 
 #### Look at more cloud computing platforms and seek collaborations
 
@@ -285,11 +276,9 @@ https://research.google.com/research-outreach.html#/research-outreach/faculty-en
 
 * Something like cloud-computing-for-atmospheric-modeling-project?
 
-Think of launching a virtual server with all commonly used models installed, and with all the input data available.
-Less time on debugging, more time on science.
+Think of launching a virtual server with all commonly used models installed, and with all the input data available. This will allow all earth science modeling researchers to fully focus on the science, rather than software engineering.
 
-The biggest trouble for users seems to be building the NetCDF library. 
-Almost all earth science models need NetCDF, so it would be an one-for-all work.
+The biggest trouble for average users seems to be building and linking the NetCDF library. Almost all earth science models need NetCDF, so it would be an one-for-all work.
 
 #### Provide friendly tutorials for more complicated scientific computing tasks
 

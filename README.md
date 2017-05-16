@@ -205,7 +205,7 @@ An AMI can be used to launch any number of instances.
 You've already launched an instance from an AMI in Step 2 of the basic tutorial.
 That's how I share the system-with-GEOSChem with you. 
 
-I don't recommend to save this GEOS-Chem instance because it containts large amounts of data. 
+I don't recommend to save this GEOS-Chem instance because it contains large amounts of data. 
 A much cheaper way is to separate the core operating system and the data storage, 
 but it is beyond the scope of this basic tutorial.
 

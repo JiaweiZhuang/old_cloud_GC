@@ -282,27 +282,18 @@ The biggest trouble for average users seems to be building and linking the NetCD
 
 #### Provide friendly tutorials for more complicated scientific computing tasks
 
-Most of the documents on AWS cloud computing are NOT for scientists. There are so many computer system jargons. Although cloud computing is getting popular among the scientific computing community, the majorities of the cloud platform users are still web developers and system engineers, not scientists. It's not like the GEOS-Chem wiki where you can often find useful solutions. That means, if you encounter any technical issues, you are likely to get more confused by looking through their documents. That's the basic reason why I wrote this tutorial even though AWS already provides a huge amount of tutorials (for non-scientists) online. 
-
-If you want to dig deeper into cloud computing technology, the most (and perhaps the only) useful AWS document for you is 
-
-https://aws.amazon.com/government-education/research-and-technical-computing/research-cloud-program/
-
-Sign up for the **Research Cloud Program** and download the **Researcher’s Handbook** !
+Most of the documents on AWS cloud computing are NOT for scientists. There are so many computer system jargons. Although cloud computing is getting popular among the scientific computing community, the majorities of the cloud platform users are still web developers and system engineers, not scientists. There are a few tutorials (see below) but definitely not enough.
 
 ## Additional resources
 
-[1] *Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
+[1]*Cloud Computing for Science and Engineering* is the first textbook I am aware of that provides hands-on tutorials for **scientists**. The book is available online https://cloud4scieng.org/chapters/
+
+[2] *Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
 gives a nice overview of various cloud computing applications in our field.
 It doesn't tell you how to actually do cloud computing, though.
 
-[2] Review the (most basic) official AWS-EC2 tutorial: <br />
-https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/ <br />
-The only difference from my tutorial is that you'll launch a brand new machine with nothing on it.
-Other tutorials beyond this one has almost nothing to do with scientific computing.
+[3] The most useful AWS document for you (as a scientist, not an IT people) is 
 
-[3] Consoles are excellent to start with. But as you become familiar with AWS, 
-you might feel using the command line (https://aws.amazon.com/cli) more efficient 
-for managing your cloud servers. Again, just like any other AWS documents, you are likely to see a lot of information 
-that is totally unnecessary for a scientist to know, even for a computational scientist.
+https://aws.amazon.com/government-education/research-and-technical-computing/research-cloud-program/
 
+Sign up for the **Research Cloud Program** and download the **Researcher’s Handbook**.

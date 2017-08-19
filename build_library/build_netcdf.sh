@@ -68,10 +68,10 @@ echo "Installing HDF-5 to $H5DIR"
 cd $srcDir
 mkdir -p hdf5
 cd hdf5
-wget -c -nd "https://support.hdfgroup.org/ftp/HDF5/current18/src/hdf5-1.8.18.tar.gz"
-tar -xzf hdf5-1.8.18.tar.gz
-cd hdf5-1.8.18
-./configure --with-zlib=${ZDIR} --prefix=${H5DIR}
+wget -c -nd "https://support.hdfgroup.org/ftp/HDF5/current/src/hdf5-1.10.1.tar.gz" 
+tar -xzf hdf5-1.10.1.tar.gz 
+cd hdf5-1.10.1
+CC=/usr/bin/mpicc ./configure --enable-parallel --prefix=${H5DIR} --with-zlib=${ZDIR}
 sudo make
 sudo make check
 sudo make install

@@ -286,13 +286,15 @@ Most of the documents on AWS cloud computing are NOT for scientists. There are s
 
 ## Additional resources
 
-[1] *Cloud Computing for Science and Engineering* is the first textbook I am aware of that provides hands-on tutorials for **scientists**. The book is available online https://cloud4scieng.org/chapters/.
+[1] University of Washington has a very nice [high-level overview](https://itconnect.uw.edu/research/cloud-computing-for-research/cloud-computing-basics/) and [technical documentation](https://cloudmaven.github.io/documentation/) about cloud computing for scientific research.
 
-[2] *Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
+[2] *Cloud Computing for Science and Engineering* is the first textbook I am aware of that provides hands-on tutorials for **scientists**. The book is available online https://cloud4scieng.org/chapters/.
+
+[3] *Cloud Computing in Ocean and Atmospheric Sciences[M]. Elsevier, 2016.* 
 gives a nice overview of various cloud computing applications in our field.
 It doesn't tell you how to actually do cloud computing, though.
 
-[3] The most useful AWS document for you (as a scientist, not an IT people) is 
+[4] The most useful AWS document for you (as a scientist, not an IT people) is 
 
 https://aws.amazon.com/government-education/research-and-technical-computing/research-cloud-program/
 

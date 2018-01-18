@@ -89,6 +89,8 @@ html_theme_options = {
     'display_version': False,
 }
 
+html_title = project  # don't show version number
+
 def setup(app):
     app.add_stylesheet('css/cloud_GC.css')
 

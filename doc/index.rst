@@ -14,3 +14,4 @@ Contents
 
    motivation
    tutorial
+   test_markdown

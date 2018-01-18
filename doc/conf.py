@@ -39,8 +39,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
@@ -173,3 +173,9 @@ texinfo_documents = [
      author, 'cloud_GC', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+# -- Markdown support through recommonmark ------
+
+source_parsers = {
+   '.md': 'recommonmark.parser.CommonMarkParser',
+}

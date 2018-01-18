@@ -33,6 +33,11 @@ export GC_F_BIN=$NETCDF_FORTRAN_HOME/bin
 export GC_F_INCLUDE=$NETCDF_FORTRAN_HOME/include
 export GC_F_LIB=$NETCDF_FORTRAN_HOME/lib
 
+# Max out the stack memory for OpenMP
+# http://wiki.seas.harvard.edu/geos-chem/index.php/GNU_Fortran_compiler#Requesting_sufficient_stack_memory_for_GEOS-Chem
+ulimit -s unlimited
+export OMP_STACKSIZE=500m
+
 #==========================
 # personal settings
 #==========================

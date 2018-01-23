@@ -14,4 +14,5 @@ Contents
 
    motivation
    tutorial
-   test_markdown
+   advanced
+   additional

@@ -173,6 +173,8 @@ There are two different ways to stop being charged:
 - "stop" will make the system inactive, so that you'll not be charged by the CPU time, 
   and only be charged by the negligible storage fee. (~$0.1/GB/month, see https://aws.amazon.com/ebs/pricing/, "Amazon EBS General Purpose SSD (gp2) volumes")
 - "terminate" will completely remove that virtual server so you won't be charged at all after that.
-  Unless you save your system (see below), you will lose all your data and software.
+  Unless you save your system as an AMI or transfer the data to other storage services
+  (`issue#3 <https://github.com/JiaweiZhuang/cloud_GC/issues/3>`_), 
+  you will lose all your data and software.
 
 That's the end of the basic tutorial. 

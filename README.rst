@@ -19,3 +19,5 @@ The old tutorial is renamed to `README_2017.md <./README_2017.md>`_ for archival
 .. |license| image:: https://img.shields.io/badge/License-MIT-blue.svg
    :target: https://github.com/JiaweiZhuang/cloud_GC/blob/master/LICENSE
    :alt: License
+
+.. _GEOS-Chem: http://acmg.seas.harvard.edu/geos/

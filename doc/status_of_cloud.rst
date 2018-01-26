@@ -26,7 +26,7 @@ Relavant applications
   OpenFOAM is a popular library for computational fluid dynamics (CFD).
   The team `started cloud migration in 2015 <https://cfd.direct/cloud/year-1-cloud/>`_
   and the project is now very mature. CFD simulations share a lot of similarities with
-  atmospheric simualtions. They both solve variants of Navier–Stokes equations
+  atmospheric simulations. They both solve variants of Navier–Stokes equations
   using MPI-based domain decomposition (several studies
   `couple OpenFOAM with WRF <https://scholar.google.com/scholar?q=OpenFOAM+WRF>`_).
 

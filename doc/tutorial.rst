@@ -1,7 +1,18 @@
 .. _tutorial-label:
 
-Beginner Tutorial
+Beginner tutorial
 =================
+
+.. warning::
+  This tutorial shows how to perform proof-of-concept GEOS-Chem simulations. 
+  AWS has agreed to host all GEOS-Chem input data for free. After the data 
+  transfer is done, I will add tutorials for real research workflow
+  (`issue#4 <https://github.com/JiaweiZhuang/cloud_GC/issues/4>`_).
+
+  The current version is the same as what was presented at 
+  `IGC8 <http://acmg.seas.harvard.edu/geos/meetings/2017/index.html>`_ on May 2017. 
+  I will provide a more up-to-date version soon
+  (`issue#1 <https://github.com/JiaweiZhuang/cloud_GC/issues/1>`_).
 
 Step 1: Sign up an Amazon Web Service(AWS) account
 --------------------------------------------------

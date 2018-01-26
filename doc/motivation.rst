@@ -64,11 +64,12 @@ Data
 GEOS-Chem currently have 30 TB of GEOS-FP/MERRA2 meteorological input data.
 With a bandwidth of 1 MB/s, it takes two weeks to download a 1-TB subset 
 and a year to download the full 30 TB. To set up a high-resolution
-nested simulation, one often need to spend long time getting the
+nested simulation, one often needs to spend long time getting the
 corresponding meteorological fields. `GCHP <http://wiki.seas.harvard.edu/geos-chem/index.php/GEOS-Chem_HP>`_
 can ingest global high-resolution data and will further push the data size to increase.
 
-The new paradigm to solve this big data challenge is to "move compute to data" 
+The new paradigm to solve this big data challenge is to "move compute to data",
+i.e. perform computing directly in the cloud environment where data is already available.
 (also see :ref:`earth-data-label`).
 AWS has agreed to host all GEOS-Chem input data for free under the Public Data Set Program.
 By having all the data already available in the cloud environment, 

@@ -48,7 +48,18 @@ than CPUs for training neural nets. Pre-configured environment on the cloud
 allows users to run the program immediately without wasting time configuring 
 GPU libraries (mostly `cuDNN <https://developer.nvidia.com/cudnn>`_).
 
-Instructions on using cloud are often included in deep learning textbooks and course materials:
+Instructions on using cloud are often included in the official documentations of ML/DL frameworks:
+
+- `Keras on AWS GPU <https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html>`_.
+  Keras is the most popular high-level deep learning library, built on top of TensorFlow.
+
+- `XGBoost on AWS cluster <https://xgboost.readthedocs.io/en/latest/tutorials/aws_yarn.html>`_.
+  XGBoost is the most popular library for 
+  `gradient boosting <https://xgboost.readthedocs.io/en/latest/model.html>`_,
+  and is also `the most widely used tool in Kaggle 
+  <http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/>`_.
+
+... and in deep learning textbooks and course materials:
 
 - `Stanford CS231n: Convolutional Neural Networks for Visual Recognition 
   <http://cs231n.github.io/>`_. 
@@ -68,14 +79,3 @@ Instructions on using cloud are often included in deep learning textbooks and co
   `an instruction on using AWS <https://zh.gluon.ai/chapter_preface/aws.html>`_.
   See `AWS official docs <https://docs.aws.amazon.com/mxnet/latest/dg/gs.html>`_
   for the equivalent English version.
-
-... and in the official documentations of ML/DL frameworks:
-
-- `Keras on AWS GPU <https://blog.keras.io/running-jupyter-notebooks-on-gpu-on-aws-a-starter-guide.html>`_.
-  Keras is the most popular high-level deep learning library, built on top of TensorFlow.
-
-- `XGBoost on AWS cluster <https://xgboost.readthedocs.io/en/latest/tutorials/aws_yarn.html>`_.
-  XGBoost is the most popular library for 
-  `gradient boosting <https://xgboost.readthedocs.io/en/latest/model.html>`_,
-  and is also `the most widely used tool in Kaggle 
-  <http://blog.kaggle.com/2017/01/23/a-kaggle-master-explains-gradient-boosting/>`_.

@@ -40,6 +40,7 @@ I haven't used up my credit for after playing with AWS for several months,
 so haven't actually paid any money to them :)
 
 Simply choose the basic plan when you encounter this page:
+
 .. image:: img/3.png
 
 Now you should have an AWS account! It's time to run the model in cloud. 
@@ -111,10 +112,12 @@ Select your instance, click on the "Connect" button near the blue "Launch Instan
 
 .. image:: img/9.png
 
-If you use the terminal to log in (e.g. on Mac or Linux), 
-copy the "ssh -i ..." command under "Example" in the above page. 
+If you use Mac or Linux, copy the "ssh -i ..." command under "Example" in the above page. 
 
-If you use other tools on Windows, [see here](forWINDOWS.md). 
+If you use Windows, please refer to the guide for
+`MobaXterm <http://angus.readthedocs.io/en/2016/amazon/log-in-with-mobaxterm-win.html>`_
+and `Putty <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html>`_
+(Your life would probably be easier with MobaXterm).
 
 Before using it to ssh to your server, you need to make some minor changes:
 

@@ -38,7 +38,9 @@ as illustrated clearly by the AGU 2017 Fall meeting
 (`H082 <https://agu.confex.com/agu/fm17/preliminaryview.cgi/Session22660>`_, 
 `A028 <https://agu.confex.com/agu/fm17/preliminaryview.cgi/Session26710>`_)
 and AMS 2018 meeting
-(`AMS-AI <https://ams.confex.com/ams/98Annual/webprogram/17AI.html>`_).
+(`AMS-AI <https://ams.confex.com/ams/98Annual/webprogram/17AI.html>`_,
+and `its summary <https://ams.confex.com/ams/98Annual/webprogram/Handout/Paper329697/
+Current_State_of_Artificial_Intelligence_Exploitation_in_AMS_Community_Final_122017.pdf>`_).
 
 Cloud platforms are the go-to choice for training machine learning models, especially 
 deep neural networks. There are massive amounts of GPUs on the cloud,

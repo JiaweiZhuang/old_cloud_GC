@@ -5,27 +5,23 @@
 #==========================
 
 #==========================
-# Finish up NetCDF environment settings after installation
-#==========================
-export PATH=$HOME/local/bin:$PATH
-export NETCDF_HOME=$HOME/local
-export NETCDF_FORTRAN_HOME=$HOME/local
-
-#==========================
 # GEOS-Chem environment variables
 # see http://wiki.seas.harvard.edu/geos-chem/index.php/Setting_Unix_environment_variables_for_GEOS-Chem
 #==========================
-export FC=gfortran-6
+
+# package manager installs NC library to /usr by default
+export NETCDF_HOME=/usr
+export NETCDF_FORTRAN_HOME=/usr
+
+export FC=gfortran
 export CC=gcc
 export CXX=g++
 export COMPILER=$FC
-export COMPILER_FAMILY=GNU
 
 # Tell GEOS-Chem where to find netCDF library files
 export GC_BIN=$NETCDF_HOME/bin
 export GC_INCLUDE=$NETCDF_HOME/include
 export GC_LIB=$NETCDF_HOME/lib
-export LD_LIBRARY_PATH=$GC_LIB:$LD_LIBRARY_PATH
 
 # NOTE: If netCDF-Fortran was loaded as a separate module, then
 # also define these variables.  (Otherwise comment these out.)

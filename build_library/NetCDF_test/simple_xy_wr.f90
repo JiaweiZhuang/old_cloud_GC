@@ -20,7 +20,7 @@ program simple_xy_wr
   implicit none
 
   ! This is the name of the data file we will create.
-  character (len = *), parameter :: FILE_NAME = "simple_xy.nc"
+  character (len = *), parameter :: FILE_NAME = "simple_xy_f90.nc"
 
   ! We are writing 2D data, a 6 x 12 grid. 
   integer, parameter :: NDIMS = 2
@@ -80,7 +80,7 @@ program simple_xy_wr
   ! associated with the file, and flushes any buffers.
   call check( nf90_close(ncid) )
 
-  print *, "*** SUCCESS writing example file simple_xy.nc! "
+  print *, "*** SUCCESS writing example file simple_xy_f90.nc! "
 
 contains
   subroutine check(status)

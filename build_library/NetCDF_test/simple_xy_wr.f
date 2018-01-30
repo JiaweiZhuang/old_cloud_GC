@@ -21,7 +21,7 @@ C     $Id: simple_xy_wr.f,v 1.9 2007/01/24 19:45:09 russ Exp $
 
 C     This is the name of the data file we will create.
       character*(*) FILE_NAME
-      parameter (FILE_NAME='simple_xy.nc')
+      parameter (FILE_NAME='simple_xy_f77.nc')
 
 C     We are writing 2D data, a 6 x 12 grid. 
       integer NDIMS
@@ -91,7 +91,7 @@ C     associated with the file, and flushes any buffers.
       retval = nf_close(ncid)
       if (retval .ne. nf_noerr) call handle_err(retval)
 
-      print *,'*** SUCCESS writing example file simple_xy.nc!'
+      print *,'*** SUCCESS writing example file simple_xy_f77.nc!'
       end
 
       subroutine handle_err(errcode)

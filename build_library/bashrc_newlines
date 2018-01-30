@@ -16,7 +16,6 @@ export NETCDF_FORTRAN_HOME=/usr
 export FC=gfortran
 export CC=gcc
 export CXX=g++
-export COMPILER=$FC
 
 # Tell GEOS-Chem where to find netCDF library files
 export GC_BIN=$NETCDF_HOME/bin
